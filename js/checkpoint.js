@@ -140,7 +140,77 @@ const levelValues = {
         lavaPos: [[0,0,"|"], [1,0,"|"], [2,0,"|"], [3,0,"|"], [0,1,"|"], [1,1,"|"], [3,2,"|"], [4,2,"|"]],
         alertMessage: "",
         loopValidation: true
-    }
+    },
+    "13": {
+      "gridHeight": 5,
+      "gridWidth": 5,
+      "flurbCellX": 0,
+      "flurbCellY": 0,
+      "fruitCellX": 4,
+      "fruitCellY": 4,
+      "flurbPosition": { "x": 0, "y": 0 },
+      "lavaPos": [[0, 2, "|"], [1, 2, "|"], [2, 0, "|"], [3, 2, "|"], [4, 2, "|"]],
+      "alertMessage": "Find the one true path to the Fruit!",
+      "loopValidation": true
+    },
+    "14": {
+      "gridHeight": 5,
+      "gridWidth": 5,
+      "flurbCellX": 0,
+      "flurbCellY": 0,
+      "fruitCellX": 4,
+      "fruitCellY": 1,
+      "flurbPosition": { "x": 0, "y": 0 },
+      "lavaPos": [[0, 1, "|"], [0, 2, "|"], [1, 3, "|"], [2, 0, "|"], [2, 1, "|"], [3, 2, "|"], [3, 3, "|"], [4, 0, "|"]],
+      "alertMessage": "Navigate through the labyrinth to reach the Fruit!",
+      "loopValidation": true
+    },
+    "15": {
+      "gridHeight": 5,
+      "gridWidth": 5,
+      "flurbCellX": 4,
+      "flurbCellY": 0,
+      "fruitCellX": 0,
+      "fruitCellY": 4,
+      "flurbPosition": { "x": 4, "y": 0 },
+      "lavaPos": [[0, 2, "|"], [1, 0, "|"], [2, 2, "|"], [2, 3, "|"], [3, 0, "|"], [4, 2, "|"]],
+      "alertMessage": "Navigate through the lava maze to reach the Fruit!",
+      "loopValidation": true
+    },
+    "16": {
+      "gridHeight": 5,
+      "gridWidth": 5,
+      "flurbCellX": 0,
+      "flurbCellY": 2,
+      "fruitCellX": 4,
+      "fruitCellY": 4,
+      "lavaPos": [[0, 3, "|"], [0, 4, "|"], [1, 0, "|"], [1, 2, "|"], [2, 2, "|"], [3, 0, "|"], [3, 3, "|"], [4, 1, "|"]],
+      "alertMessage": "Wind your way through to the Fruit!",
+      "loopValidation": true
+    },
+    "17": {
+      "gridHeight": 5,
+      "gridWidth": 5,
+      "flurbCellX": 0,
+      "flurbCellY": 2,
+      "fruitCellX": 4,
+      "fruitCellY": 1,
+      "lavaPos": [[1, 0, "|"], [2, 0, "|"], [0, 1, "|"], [4, 0, "|"], [2, 2, "|"], [3, 2, "|"], [0, 3, "|"], [1, 4, "|"], [4, 4, "|"]],
+      "alertMessage": "Zigzag to success!",
+      "loopValidation": true
+    },
+    "18": {
+      "gridHeight": 5,
+      "gridWidth": 5,
+      "flurbCellX": 4,
+      "flurbCellY": 0,
+      "fruitCellX": 0,
+      "fruitCellY": 4,
+      "lavaPos": [[0, 0, "|"], [2, 0, "|"], [3, 0, "|"], [4, 4, "|"], [2, 2, "|"], [3, 2, "|"], [0, 3, "|"], [3, 3, "|"], [4, 3, "|"], [2, 4, "|"]],
+      "alertMessage": "There's more than meets the eye.",
+      "loopValidation": true
+    },
+  
 }
 
 var msg = levelValues[level]["alertMessage"]
