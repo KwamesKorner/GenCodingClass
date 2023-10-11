@@ -184,6 +184,7 @@ const levelValues = {
       "flurbCellY": 2,
       "fruitCellX": 4,
       "fruitCellY": 4,
+      "flurbPosition": { "x": 0, "y": 2 },
       "lavaPos": [[0, 3, "|"], [0, 4, "|"], [1, 0, "|"], [1, 2, "|"], [2, 2, "|"], [3, 0, "|"], [3, 3, "|"], [4, 1, "|"]],
       "alertMessage": "Wind your way through to the Fruit!",
       "loopValidation": true
@@ -195,6 +196,7 @@ const levelValues = {
       "flurbCellY": 2,
       "fruitCellX": 4,
       "fruitCellY": 1,
+      "flurbPosition": { "x": 0, "y": 2 },
       "lavaPos": [[1, 0, "|"], [2, 0, "|"], [0, 1, "|"], [4, 0, "|"], [2, 2, "|"], [3, 2, "|"], [0, 3, "|"], [1, 4, "|"], [4, 4, "|"]],
       "alertMessage": "Zigzag to success!",
       "loopValidation": true
@@ -206,6 +208,7 @@ const levelValues = {
       "flurbCellY": 0,
       "fruitCellX": 0,
       "fruitCellY": 4,
+      "flurbPosition": { "x": 4, "y": 0 },
       "lavaPos": [[0, 0, "|"], [2, 0, "|"], [3, 0, "|"], [4, 4, "|"], [2, 2, "|"], [3, 2, "|"], [0, 3, "|"], [3, 3, "|"], [4, 3, "|"], [2, 4, "|"]],
       "alertMessage": "There's more than meets the eye.",
       "loopValidation": true
@@ -301,6 +304,7 @@ Blockly.JavaScript['move_right'] = function(block) {
     return 'moveRight(); await sleep(250);\n';
 };
 
+var alerts = new Set()
 var gameArea = document.getElementById('game-area');
 var flurbCell;  // This will store the table cell that the flurb is in
 console.log(lavaPos.toString())
@@ -332,65 +336,81 @@ for (var y = 0; y < gridHeight; y++) {
 }
 
 // var flurbPosition = {x: 0, y: 0}; // Start at the top-left corner
-var flurbDirection = 0; // Start facing right
-var directions = [{x: 1, y: 0}, {x: 0, y: 1}, {x: -1, y: 0}, {x: 0, y: -1}]; // EAST, SOUTH, WEST, NORTH
+// var flurbDirection = 0; // Start facing right
+// var directions = [{x: 1, y: 0}, {x: 0, y: 1}, {x: -1, y: 0}, {x: 0, y: -1}]; // EAST, SOUTH, WEST, NORTH
 
-function moveForward() {
-  flurbPosition.x += directions[flurbDirection].x;
-  flurbPosition.y += directions[flurbDirection].y;
-  if (checkBounds()) {
-    updateFlurbPosition();
-  }
-}
+// function moveForward() {
+//   flurbPosition.x += directions[flurbDirection].x;
+//   flurbPosition.y += directions[flurbDirection].y;
+//   if (checkBounds()) {
+//     updateFlurbPosition();
+//   }
+// }
 
-function turnRight() {
-  flurbDirection = (flurbDirection + 1) % 4;
-}
+// function turnRight() {
+//   flurbDirection = (flurbDirection + 1) % 4;
+// }
 
-function turnLeft() {
-  flurbDirection = (flurbDirection + 3) % 4; // "+3" is the same as "-1", but handles negative numbers correctly
-}
+// function turnLeft() {
+//   flurbDirection = (flurbDirection + 3) % 4; // "+3" is the same as "-1", but handles negative numbers correctly
+// }
 
 /*Easier Commands -- Up, Down, Left, Right*/
 
 function moveUp() {
     flurbPosition.y -= 1;
-    if (checkBounds()) {
+    if (checkBounds().success) {
       updateFlurbPosition();
+    } else {
+      alerts.add(checkBounds().msg)
     }
 }
 
 function moveDown() {
     flurbPosition.y += 1;
-    if (checkBounds()) {
+    if (checkBounds().success) {
       updateFlurbPosition();
+    } else {
+      alerts.add(checkBounds().msg)
     }
 }
 
 function moveLeft() {
     flurbPosition.x -= 1;
-    if (checkBounds()) {
+    if (checkBounds().success) {
       updateFlurbPosition();
+    } else {
+      alerts.add(checkBounds().msg)
     }
 }
 
 function moveRight() {
     flurbPosition.x += 1;
-    if (checkBounds()) {
+    if (checkBounds().success) {
       updateFlurbPosition();
+    } else {
+      alerts.add(checkBounds().msg)
     }
 }
 
 function checkBounds() {
   if (flurbPosition.x < 0 || flurbPosition.y < 0 || flurbPosition.x > gridWidth - 1 || flurbPosition.y > gridHeight - 1) {
-    alert("Flurb went out of bounds!");
-    return false
+    // alert("Flurb went out of bounds!");
+    return {
+      "success": false,
+      "msg": "Flurb went out of bounds!"
+    }
   }
   else if (lavaPos.toString().indexOf([flurbPosition.x, flurbPosition.y].toString()) != -1) {
-    alert("Flurb fell into lava!");
-    return false
+    // alert("Flurb fell into lava!");
+    return {
+      "success": false,
+      "msg": "Flurb fell into lava!"
+    }
   }
-  return true
+  return {
+    "success": true
+  }
 }
 
 function updateFlurbPosition() {
@@ -420,6 +440,15 @@ async function runCode() {
             updateFlurbPosition()
             return;
         }
+    }
+    else if(alerts.size > 0) {
+      for(var error of alerts){
+        alert(error)
+      }
+      alerts.clear()
+      flurbPosition = {x: flurbCellX, y: flurbCellY};
+      updateFlurbPosition()
+      return;
     }
     flurbCell.removeChild(flurbCell.querySelector('#apple'));
     await sleep(100)
