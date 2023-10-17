@@ -213,7 +213,78 @@ const levelValues = {
       "alertMessage": "There's more than meets the eye.",
       "loopValidation": true
     },
-  
+    "19": {
+      "gridHeight": 6,
+      "gridWidth": 6,
+      "flurbCellX": 0,
+      "flurbCellY": 0,
+      "fruitCellX": 5,
+      "fruitCellY": 5,
+      "flurbPosition": { "x": 0, "y": 0 },
+      "lavaPos": [[2, 2, "|"], [3, 3, "|"], [4, 1, "|"], [1, 4, "|"], [5, 0, "|"], [0, 5, "|"]],
+      "alertMessage": "A larger grid awaits! Find your way to the fruit.",
+      "loopValidation": true
+    },
+    "20": {
+      "gridHeight": 6,
+      "gridWidth": 6,
+      "flurbCellX": 0,
+      "flurbCellY": 5,
+      "fruitCellX": 5,
+      "fruitCellY": 0,
+      "flurbPosition": { "x": 0, "y": 5 },
+      "lavaPos": [[0, 0, "|"], [1, 3, "|"], [3, 3, "|"], [4, 4, "|"], [2, 1, "|"], [2, 4, "|"], [3, 1, "|"], [1, 2, "|"], [5, 5, "|"]],
+      "alertMessage": "The path is narrower with more obstacles. Tread carefully!",
+      "loopValidation": true
+    },
+    "21": {
+      "gridHeight": 7,
+      "gridWidth": 7,
+      "flurbCellX": 0,
+      "flurbCellY": 0,
+      "fruitCellX": 6,
+      "fruitCellY": 6,
+      "flurbPosition": { "x": 0, "y": 0 },
+      "lavaPos": [[0, 5, "|"], [5, 0, "|"], [5, 5, "|"], [1, 4, "|"], [4, 1, "|"], [3, 3, "|"], [2, 2, "|"], [4, 6, "|"], [6, 3, "|"]],
+      "alertMessage": "A growing grid and more lava. Plan your moves wisely!",
+      "loopValidation": true
+    },
+    "22": {
+      "gridHeight": 7,
+      "gridWidth": 7,
+      "flurbCellX": 3,
+      "flurbCellY": 3,
+      "fruitCellX": 0,
+      "fruitCellY": 6,
+      "flurbPosition": { "x": 3, "y": 3 },
+      "lavaPos": [[1, 1, "|"], [3, 0, "|"], [3, 1, "|"], [2, 5, "|"], [3, 6, "|"], [4, 4, "|"], [5, 5, "|"], [1, 4, "|"], [2, 3, "|"], [4, 3, "|"], [5, 3, "|"], [6, 3, "|"]],
+      "alertMessage": "Traverse from bottom left to top right. The lava won't make it easy!",
+      "loopValidation": true
+    },
+    "23": {
+      "gridHeight": 8,
+      "gridWidth": 8,
+      "flurbCellX": 0,
+      "flurbCellY": 7,
+      "fruitCellX": 7,
+      "fruitCellY": 0,
+      "flurbPosition": { "x": 0, "y": 7 },
+      "lavaPos": [[0, 5, "|"], [1, 1, "|"], [1, 4, "|"], [2, 2, "|"], [2, 6, "|"], [3, 1, "|"], [3, 4, "|"], [4, 2, "|"], [4, 5, "|"], [4, 7, "|"], [5, 1, "|"], [5, 4, "|"], [5, 6, "|"], [6, 3, "|"], [6, 7, "|"]],
+      "alertMessage": "Lava pockets are everywhere. Navigate with precision!",
+      "loopValidation": true
+    },
+    "24": {
+      "gridHeight": 8,
+      "gridWidth": 8,
+      "flurbCellX": 0,
+      "flurbCellY": 0,
+      "fruitCellX": 7,
+      "fruitCellY": 7,
+      "flurbPosition": { "x": 0, "y": 0 },
+      "lavaPos": [[7,0, "|"],[0,7, "|"], [1, 1, "|"], [2, 3, "|"], [3, 5, "|"], [4, 2, "|"], [4, 6, "|"], [5, 4, "|"], [6, 3, "|"], [6, 6, "|"]],
+      "alertMessage": "The ultimate challenge on an 8x8 grid. Best of luck!",
+      "loopValidation": true
+    }
 }
 
 var msg = levelValues[level]["alertMessage"]
@@ -453,6 +524,12 @@ async function runCode() {
     flurbCell.removeChild(flurbCell.querySelector('#apple'));
     await sleep(100)
     alert("Success!")
+    let level_val = Number(level)
+    if (level_val < 25) {
+      location.href = `flurb.html?level=${level_val+1}`;
+    } else {
+      alert("you beat the game! congratulations!!!")
+    }
   } else {
     await sleep(500)
     alert("Try Again!");
