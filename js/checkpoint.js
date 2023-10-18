@@ -2,6 +2,8 @@ const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 let params = new URLSearchParams(document.location.search);
 
 let level = params.get("level")
+let levelText = document.getElementById("level")
+levelText.innerHTML = `Level ${level}`
 const levelValues = {
     "1": {
         gridHeight: 2,
