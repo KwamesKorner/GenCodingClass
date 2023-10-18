@@ -527,7 +527,7 @@ async function runCode() {
     await sleep(100)
     alert("Success!")
     let level_val = Number(level)
-    if (level_val < 25) {
+    if (level_val < 24) {
       location.href = `flurb.html?level=${level_val+1}`;
     } else {
       alert("you beat the game! congratulations!!!")
