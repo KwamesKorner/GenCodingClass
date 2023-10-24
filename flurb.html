@@ -76,13 +76,30 @@
             <block type="move_left"></block>
             <block type="move_right"></block>
             <block type="controls_repeat"></block>
-              
+            <!-- <block type="math_random_int"></block> -->
+            <block type="math_number"></block>
+            <block type="controls_if"></block>
+            <block type="logic_compare"></block>
+            <!-- <block type="variables_set"></block>
+            <block type="variables_get"></block> -->
+            <!-- <block type="procedures_defnoreturn"></block>
+            <block type="procedures_callnoreturn">
+                <mutation name="myFunc"></mutation>
+            </block> -->
         </xml>
         <div id="blocklyDiv" style="height: auto; width: 45%; border-radius: 5px; margin-left: 0.5%;"></div>
-        <button id="button" onclick="runCode()">Run Code</button>
-        <table id="game-area">
-            <!-- Game area will be filled in using JavaScript -->
-        </table>
+        <div class="col-1">
+            <select class="conditional" id="condition" style="display: none;">
+                <option value="yes" selected>Yes</option>
+                <option value="no">No</option>
+            </select>
+            <button id="button" onclick="runCode()">Run Code</button>
+        </div>
+        <div class="col-5">
+            <table id="game-area" style="width: 100%; height:100%">
+                <!-- Game area will be filled in using JavaScript -->
+            </table>
+        </div>
     </div>
     <div class="row" style="background-color: #f2f2f2; margin: 0 auto;">
         <!-- <code><a href="?level=1">Level 1</a>|</code>
