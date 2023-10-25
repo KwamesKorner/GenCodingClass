@@ -767,7 +767,7 @@ const levelValues = {
           </statement>
         </block>
       </xml>`,
-    "dropdown": true,
+    "dropdown": false,
     "readOnly": false,
     "editDisabled": true,
     "alertMessage": "Update the code so that the flurb makes it to the fruit!"
@@ -809,8 +809,19 @@ const levelValues = {
                 <block type="controls_repeat">
                 <field name="TIMES">3</field>
                 <statement name="DO">
-                  <block type="move_down">
+                  <block type="move_up">
                 </statement>
+                <next>
+                  <block type="controls_repeat">
+                    <field name="TIMES">4</field>
+                    <statement name="DO">
+                      <block type="move_down">
+                    </statement>
+                    <next>
+                      <block type="move_left">
+                    </next>
+                  </block>
+                </next>
                 </block>
               </next>
             </block>
@@ -823,14 +834,17 @@ const levelValues = {
                   <statement name="DO">
                     <block type="move_down">
                   </statement>
+                  <next>
+                    <block type="move_right">
+                  </next>
                 </block>
               </next>
             </block>
           </statement>
         </block>
       </xml>`,
-    "dropdown": true,
-    "readOnly": true,
+    "dropdown": false,
+    "readOnly": false,
     "editDisabled": true,
     "alertMessage": "Update the code so that the flurb makes it to the fruit!"
   },
@@ -871,19 +885,19 @@ const levelValues = {
                 <block type="controls_repeat">
                 <field name="TIMES">3</field>
                 <statement name="DO">
-                  <block type="move_down">
+                  <block type="move_up">
                 </statement>
                 </block>
               </next>
             </block>
           </statement>
           <statement name="ELSE">
-            <block type="move_left">
+            <block type="move_right">
               <next>
                 <block type="controls_repeat">
                   <field name="TIMES">4</field>
                   <statement name="DO">
-                    <block type="move_down">
+                    <block type="move_up">
                   </statement>
                 </block>
               </next>
@@ -891,8 +905,8 @@ const levelValues = {
           </statement>
         </block>
       </xml>`,
-    "dropdown": true,
-    "readOnly": true,
+    "dropdown": false,
+    "readOnly": false,
     "editDisabled": true,
     "alertMessage": "Update the code so that the flurb makes it to the fruit!"
   }, 
@@ -931,6 +945,9 @@ const levelValues = {
               </statement>
               <next>
                 <block type="move_right">
+                <next>
+                  <block type="move_left">
+              </next>
               </next>
             </block>
           </statement>
@@ -942,14 +959,94 @@ const levelValues = {
                   <statement name="DO">
                     <block type="move_down">
                   </statement>
+                  <next>
+                    <block type="move_right">
+                  </next>
                 </block>
               </next>
             </block>
           </statement>
         </block>
       </xml>`,
-    "dropdown": true,
-    "readOnly": true,
+    "dropdown": false,
+    "readOnly": false,
+    "editDisabled": true,
+    "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+  },
+  "37": {
+    "gridHeight": 8,
+    "gridWidth": 8,
+    "flurbCellX": 0,
+    "flurbCellY": 7,
+    "fruitCellX": 7,
+    "fruitCellY": 0,
+    "flurbPosition": { "x": 0, "y": 7 },
+    "lavaPos": [
+      [1, 6, "|"], [2, 6, "|"], [3, 6, "|"], [4, 6, "|"], [5, 6, "|"], [6, 6, "|"],
+      [2, 5, "|"], [3, 5, "|"], [4, 5, "|"], [5, 5, "|"],
+      [1, 3, "|"], [2, 3, "|"], [3, 3, "|"],
+      [0, 2, "|"], [1, 2, "|"], [2, 2, "|"],
+      [1, 1, "|"], [0, 0, "|"], [7, 7, "|"]
+    ],
+    "xml": `
+      <xml>
+        <block type="controls_ifelse">
+          <value name="IF0">
+            <block type="logic_compare">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="math_number">
+                  <field name="NUM">7</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="math_number">
+                  <field name="NUM">${getRandomInt(15)}</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="controls_repeat">
+              <field name="TIMES">4</field>
+              <statement name="DO">
+                <block type="move_up">
+              </statement>
+              <next>
+                <block type="move_right">
+                <next>
+                  <block type="move_left">
+              </next>
+              </next>
+            </block>
+          </statement>
+          <statement name="ELSE">
+            <block type="move_left">
+              <next>
+                <block type="controls_repeat">
+                  <field name="TIMES">4</field>
+                  <statement name="DO">
+                    <block type="move_up">
+                  </statement>
+                  <next>
+                    <block type="move_right">
+                    <next>
+                      <block type="controls_repeat">
+                        <field name="TIMES">4</field>
+                        <statement name="DO">
+                          <block type="move_up">
+                        </statement>
+                      </block>
+                    </next>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>`,
+    "dropdown": false,
+    "readOnly": false,
     "editDisabled": true,
     "alertMessage": "Update the code so that the flurb makes it to the fruit!"
   }
@@ -1230,7 +1327,7 @@ async function runCode() {
     await sleep(100)
     alert("Success!")
     let level_val = Number(level)
-    if (level_val < 36) {
+    if (level_val < 37) {
       location.href = `flurb.html?level=${level_val+1}`;
     } else {
       alert("you beat the game! congratulations!!!")
