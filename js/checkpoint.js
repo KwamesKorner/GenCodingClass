@@ -772,7 +772,7 @@ const levelValues = {
     "editDisabled": true,
     "alertMessage": "Update the code so that the flurb makes it to the fruit!"
   },
-  "34": {
+  "36": {
     "gridHeight": 5,
     "gridWidth": 5,
     "flurbCellX": 0,
@@ -910,7 +910,7 @@ const levelValues = {
     "editDisabled": true,
     "alertMessage": "Update the code so that the flurb makes it to the fruit!"
   }, 
-  "36": {
+  "34": {
     "gridHeight": 8,
     "gridWidth": 8,
     "flurbCellX": 0,
