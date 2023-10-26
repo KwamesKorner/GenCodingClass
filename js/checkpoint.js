@@ -331,7 +331,7 @@ const levelValues = {
                   <field name="OP">EQ</field>
                   <value name="A">
                       <block type="math_number">
-                        <field name="NUM">5</field>
+                        <field name="NUM">${getRandomInt(10)}</field>
                       </block>
                   </value>
                   <value name="B">
@@ -370,7 +370,7 @@ const levelValues = {
                   <field name="OP">EQ</field>
                   <value name="A">
                       <block type="math_number">
-                        <field name="NUM">5</field>
+                        <field name="NUM">${getRandomInt(10)}</field>
                       </block>
                   </value>
                   <value name="B">
@@ -409,7 +409,7 @@ const levelValues = {
                   <field name="OP">EQ</field>
                   <value name="A">
                       <block type="math_number">
-                        <field name="NUM">5</field>
+                        <field name="NUM">${getRandomInt(10)}</field>
                       </block>
                   </value>
                   <value name="B">
@@ -454,7 +454,7 @@ const levelValues = {
                   <field name="OP">EQ</field>
                   <value name="A">
                       <block type="math_number">
-                        <field name="NUM">5</field>
+                        <field name="NUM">${getRandomInt(10)}</field>
                       </block>
                   </value>
                   <value name="B">
@@ -496,10 +496,10 @@ const levelValues = {
           <block type="controls_ifelse">
             <value name="IF0">
                 <block type="logic_compare">
-                  <field name="OP">EQ</field>
+                  <field name="OP">GTE</field>
                   <value name="A">
                       <block type="math_number">
-                        <field name="NUM">5</field>
+                        <field name="NUM">${getRandomInt(10)}</field>
                       </block>
                   </value>
                   <value name="B">
@@ -550,7 +550,7 @@ const levelValues = {
               <field name="OP">EQ</field>
               <value name="A">
                   <block type="math_number">
-                    <field name="NUM">5</field>
+                    <field name="NUM">${getRandomInt(10)}</field>
                   </block>
               </value>
               <value name="B">
@@ -606,7 +606,7 @@ const levelValues = {
               <field name="OP">LT</field>
               <value name="A">
                 <block type="math_number">
-                  <field name="NUM">7</field>
+                  <field name="NUM">${getRandomInt(15)}</field>
                 </block>
               </value>
               <value name="B">
@@ -667,7 +667,7 @@ const levelValues = {
               <field name="OP">GT</field>
               <value name="A">
                 <block type="math_number">
-                  <field name="NUM">7</field>
+                  <field name="NUM">${getRandomInt(15)}</field>
                 </block>
               </value>
               <value name="B">
@@ -732,12 +732,12 @@ const levelValues = {
               <field name="OP">EQ</field>
               <value name="A">
                 <block type="math_number">
-                  <field name="NUM"></field>
+                  <field name="NUM">${getRandomInt(15)}</field>
                 </block>
               </value>
               <value name="B">
                 <block type="math_number">
-                  <field name="NUM"></field>
+                  <field name="NUM">${getRandomInt(15)}</field>
                 </block>
               </value>
             </block>
@@ -789,7 +789,7 @@ const levelValues = {
               <field name="OP">EQ</field>
               <value name="A">
                 <block type="math_number">
-                  <field name="NUM">7</field>
+                  <field name="NUM">${getRandomInt(15)}</field>
                 </block>
               </value>
               <value name="B">
@@ -865,7 +865,7 @@ const levelValues = {
               <field name="OP">EQ</field>
               <value name="A">
                 <block type="math_number">
-                  <field name="NUM">7</field>
+                  <field name="NUM">${getRandomInt(15)}</field>
                 </block>
               </value>
               <value name="B">
@@ -1318,7 +1318,7 @@ async function runCode() {
     await sleep(100)
     alert("Success!")
     let level_val = Number(level)
-    if (level_val < 36) {
+    if (level_val < 37) {
       location.href = `flurb.html?level=${level_val+1}`;
     } else {
       alert("you beat the game! congratulations!!!")
