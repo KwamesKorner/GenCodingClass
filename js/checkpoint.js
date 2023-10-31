@@ -1174,7 +1174,7 @@ const levelValues = {
               <next>
                 <block type="move_right">
                 <next>
-                  <block type="move_up">
+                  <block type="move_down">
               </next>
               </next>
             </block>
