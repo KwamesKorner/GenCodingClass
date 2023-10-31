@@ -772,15 +772,15 @@ const levelValues = {
     "editDisabled": true,
     "alertMessage": "Update the code so that the flurb makes it to the fruit!"
   },
-  "36": {
-    "gridHeight": 5,
-    "gridWidth": 5,
+  "34": {
+    "gridHeight": 8,
+    "gridWidth": 8,
     "flurbCellX": 0,
     "flurbCellY": 0,
-    "fruitCellX": 4,
-    "fruitCellY": 1,
+    "fruitCellX": 7,
+    "fruitCellY": 7,
     "flurbPosition": { "x": 0, "y": 0 },
-    "lavaPos": [[0, 1, "|"], [0, 2, "|"], [1, 3, "|"], [2, 0, "|"], [2, 1, "|"], [3, 2, "|"], [3, 3, "|"], [4, 0, "|"]],
+    "lavaPos": [[7,0, "|"],[0,7, "|"], [1, 1, "|"], [2, 3, "|"], [3, 5, "|"], [4, 2, "|"], [4, 6, "|"], [5, 4, "|"], [6, 3, "|"], [6, 6, "|"]],
     "xml": `
       <xml>
         <block type="controls_ifelse">
@@ -789,7 +789,7 @@ const levelValues = {
               <field name="OP">EQ</field>
               <value name="A">
                 <block type="math_number">
-                  <field name="NUM">${getRandomInt(15)}</field>
+                  <field name="NUM">7</field>
                 </block>
               </value>
               <value name="B">
@@ -801,28 +801,15 @@ const levelValues = {
           </value>
           <statement name="DO0">
             <block type="controls_repeat">
-              <field name="TIMES">2</field>
+              <field name="TIMES">4</field>
               <statement name="DO">
-                <block type="move_right">
+                <block type="move_down">
               </statement>
               <next>
-                <block type="controls_repeat">
-                <field name="TIMES">3</field>
-                <statement name="DO">
-                  <block type="move_up">
-                </statement>
+                <block type="move_right">
                 <next>
-                  <block type="controls_repeat">
-                    <field name="TIMES">4</field>
-                    <statement name="DO">
-                      <block type="move_down">
-                    </statement>
-                    <next>
-                      <block type="move_left">
-                    </next>
-                  </block>
-                </next>
-                </block>
+                  <block type="move_left">
+              </next>
               </next>
             </block>
           </statement>
@@ -909,16 +896,16 @@ const levelValues = {
     "readOnly": false,
     "editDisabled": true,
     "alertMessage": "Update the code so that the flurb makes it to the fruit!"
-  }, 
-  "34": {
-    "gridHeight": 8,
-    "gridWidth": 8,
+  },
+  "36": {
+    "gridHeight": 5,
+    "gridWidth": 5,
     "flurbCellX": 0,
     "flurbCellY": 0,
-    "fruitCellX": 7,
-    "fruitCellY": 7,
+    "fruitCellX": 4,
+    "fruitCellY": 1,
     "flurbPosition": { "x": 0, "y": 0 },
-    "lavaPos": [[7,0, "|"],[0,7, "|"], [1, 1, "|"], [2, 3, "|"], [3, 5, "|"], [4, 2, "|"], [4, 6, "|"], [5, 4, "|"], [6, 3, "|"], [6, 6, "|"]],
+    "lavaPos": [[0, 1, "|"], [0, 2, "|"], [1, 3, "|"], [2, 0, "|"], [2, 1, "|"], [3, 2, "|"], [3, 3, "|"], [4, 0, "|"]],
     "xml": `
       <xml>
         <block type="controls_ifelse">
@@ -927,7 +914,7 @@ const levelValues = {
               <field name="OP">EQ</field>
               <value name="A">
                 <block type="math_number">
-                  <field name="NUM">7</field>
+                  <field name="NUM">${getRandomInt(15)}</field>
                 </block>
               </value>
               <value name="B">
@@ -939,15 +926,28 @@ const levelValues = {
           </value>
           <statement name="DO0">
             <block type="controls_repeat">
-              <field name="TIMES">4</field>
+              <field name="TIMES">2</field>
               <statement name="DO">
-                <block type="move_down">
+                <block type="move_right">
               </statement>
               <next>
-                <block type="move_right">
+                <block type="controls_repeat">
+                <field name="TIMES">3</field>
+                <statement name="DO">
+                  <block type="move_up">
+                </statement>
                 <next>
-                  <block type="move_left">
-              </next>
+                  <block type="controls_repeat">
+                    <field name="TIMES">4</field>
+                    <statement name="DO">
+                      <block type="move_down">
+                    </statement>
+                    <next>
+                      <block type="move_left">
+                    </next>
+                  </block>
+                </next>
+                </block>
               </next>
             </block>
           </statement>
@@ -1038,6 +1038,383 @@ const levelValues = {
                         </statement>
                       </block>
                     </next>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>`,
+    "dropdown": false,
+    "readOnly": false,
+    "editDisabled": true,
+    "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+  },
+  "38": {
+    "gridHeight": 8,
+    "gridWidth": 8,
+    "flurbCellX": 0,
+    "flurbCellY": 7,
+    "fruitCellX": 0,
+    "fruitCellY": 0,
+    "flurbPosition": { "x": 0, "y": 7 },
+    "lavaPos": [
+      [1, 7, "|"], [5, 6, "|"],
+      [2, 6, "|"], [6, 5, "|"],
+      [3, 5, "|"], [7, 4, "|"],
+      [1, 3, "|"], [4, 4, "|"],
+      [2, 2, "|"], [6, 2, "|"],
+      [0, 1, "|"], [5, 1, "|"],
+      [3, 0, "|"], [7, 0, "|"],
+      [1, 1, "|"], [1, 4, "|"],
+      [2, 3, "|"]
+    ],
+    "xml": `
+      <xml>
+        <block type="controls_ifelse">
+          <value name="IF0">
+            <block type="logic_compare">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="math_number">
+                  <field name="NUM">7</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="math_number">
+                  <field name="NUM">${getRandomInt(15)}</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="controls_repeat">
+              <field name="TIMES">4</field>
+              <statement name="DO">
+                <block type="move_up">
+              </statement>
+              <next>
+                <block type="move_right">
+                <next>
+                  <block type="move_up">
+              </next>
+              </next>
+            </block>
+          </statement>
+          <statement name="ELSE">
+            <block type="move_left">
+              <next>
+                <block type="controls_repeat">
+                  <field name="TIMES">4</field>
+                  <statement name="DO">
+                    <block type="move_up">
+                  </statement>
+                  <next>
+                    <block type="controls_repeat">
+                      <field name="TIMES">4</field>
+                      <statement name="DO">
+                        <block type="move_left">
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>`,
+    "dropdown": false,
+    "readOnly": false,
+    "editDisabled": true,
+    "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+  },
+  "39": {
+    "gridHeight": 8,
+    "gridWidth": 8,
+    "flurbCellX": 7,
+    "flurbCellY": 0,
+    "fruitCellX": 0,
+    "fruitCellY": 7,
+    "flurbPosition": {"x": 7, "y": 0},
+    "lavaPos": [
+      [1, 6, "|"], [2, 5, "|"], [3, 4, "|"], [4, 3, "|"],
+      [5, 2, "|"], [6, 1, "|"], [7, 7, "|"], [0, 6, "|"],
+      [1, 5, "|"], [2, 4, "|"], [3, 3, "|"], [4, 2, "|"],
+      [5, 1, "|"], [6, 0, "|"], [0, 5, "|"], [1, 4, "|"],
+      [2, 3, "|"], [3, 2, "|"], [4, 1, "|"], [5, 0, "|"],
+      [0, 4, "|"], [1, 3, "|"], [2, 2, "|"], [3, 1, "|"],
+      [4, 0, "|"], [0, 3, "|"], [1, 2, "|"], [2, 1, "|"],
+      [3, 0, "|"], [0, 2, "|"], [1, 1, "|"], [2, 0, "|"],
+      [0, 1, "|"], [1, 0, "|"], [0, 0, "|"]
+  ],
+    "xml": `
+      <xml>
+        <block type="controls_ifelse">
+          <value name="IF0">
+            <block type="logic_compare">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="math_number">
+                  <field name="NUM">7</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="math_number">
+                  <field name="NUM">${getRandomInt(15)}</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="controls_repeat">
+              <field name="TIMES">4</field>
+              <statement name="DO">
+                <block type="move_up">
+              </statement>
+              <next>
+                <block type="move_right">
+                <next>
+                  <block type="move_up">
+              </next>
+              </next>
+            </block>
+          </statement>
+          <statement name="ELSE">
+            <block type="move_left">
+              <next>
+                <block type="controls_repeat">
+                  <field name="TIMES">4</field>
+                  <statement name="DO">
+                    <block type="move_right">
+                  </statement>
+                  <next>
+                    <block type="controls_repeat">
+                      <field name="TIMES">4</field>
+                      <statement name="DO">
+                        <block type="move_left">
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>`,
+    "dropdown": false,
+    "readOnly": false,
+    "editDisabled": true,
+    "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+  },
+  "40": {
+    "gridHeight": 8,
+    "gridWidth": 8,
+    "flurbCellX": 7,
+    "flurbCellY": 0,
+    "fruitCellX": 0,
+    "fruitCellY": 7,
+    "flurbPosition": {"x": 7, "y": 0},
+    "lavaPos": [
+      [0, 0, "|"],
+      [1, 0, "|"],
+      [2, 0, "|"],
+      [3, 0, "|"],
+      [4, 0, "|"],
+      [5, 0, "|"],
+      [6, 0, "|"],
+      [0, 1, "|"],
+      [0, 2, "|"],
+      [3, 2, "|"],
+      [7, 2, "|"],
+      [0, 3, "|"],
+      [2, 3, "|"],
+      [3, 3, "|"],
+      [4, 3, "|"],
+      [5, 3, "|"],
+      [7, 3, "|"],
+      [0, 4, "|"],
+      [1, 4, "|"],
+      [5, 4, "|"],
+      [7, 4, "|"],
+      [0, 5, "|"],
+      [3, 5, "|"],
+      [7, 5, "|"],
+      [0, 6, "|"],
+      [2, 6, "|"],
+      [7, 6, "|"],
+      [2, 7, "|"],
+      [3, 7, "|"],
+      [4, 7, "|"],
+      [5, 7, "|"],
+      [6, 7, "|"],
+      [7, 7, "|"]
+    ],
+    "xml": `
+      <xml>
+        <block type="controls_ifelse">
+          <value name="IF0">
+            <block type="logic_compare">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="math_number">
+                  <field name="NUM">7</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="math_number">
+                  <field name="NUM">${getRandomInt(15)}</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="controls_repeat">
+              <field name="TIMES">4</field>
+              <statement name="DO">
+                <block type="move_up">
+              </statement>
+              <next>
+                <block type="move_left">
+                <next>
+                  <block type="move_down">
+              </next>
+              </next>
+            </block>
+          </statement>
+          <statement name="ELSE">
+            <block type="move_left">
+              <next>
+                <block type="controls_repeat">
+                  <field name="TIMES">4</field>
+                  <statement name="DO">
+                    <block type="move_right">
+                  </statement>
+                  <next>
+                    <block type="controls_repeat">
+                      <field name="TIMES">4</field>
+                      <statement name="DO">
+                        <block type="move_down">
+                      </statement>
+                    </block>
+                    <next>
+                    <block type="controls_repeat">
+                      <field name="TIMES">4</field>
+                      <statement name="DO">
+                        <block type="move_left">
+                        <next>
+                        <block type="move_down">
+                        </next>
+                      </statement>
+                    </block>
+                  </next>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>`,
+    "dropdown": false,
+    "readOnly": false,
+    "editDisabled": true,
+    "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+  },
+  "41": {
+    "gridHeight": 8,
+    "gridWidth": 8,
+    "flurbCellX": 7,
+    "flurbCellY": 2,
+    "fruitCellX": 1,
+    "fruitCellY": 3,
+    "flurbPosition": {"x": 7, "y": 0},
+    "lavaPos": [
+      [0, 0, "|"],
+      [1, 0, "|"],
+      [2, 0, "|"],
+      [3, 0, "|"],
+      [4, 0, "|"],
+      [5, 0, "|"],
+      [6, 0, "|"],
+      [7, 0, "|"],
+      [0, 1, "|"],
+      [0, 2, "|"],
+      [1, 2, "|"],
+      [2, 2, "|"],
+      [4, 2, "|"],
+      [5, 2, "|"],
+      [6, 2, "|"],
+      [0, 3, "|"],
+      [2, 3, "|"],
+      [4, 3, "|"],
+      [6, 3, "|"],
+      [7, 3, "|"],
+      [0, 4, "|"],
+      [2, 4, "|"],
+      [4, 4, "|"],
+      [5, 4, "|"],
+      [7, 4, "|"],
+      [0, 6, "|"],
+      [1, 6, "|"],
+      [2, 6, "|"],
+      [3, 6, "|"],
+      [4, 6, "|"],
+      [5, 6, "|"],
+      [6, 6, "|"],
+      [0, 7, "|"],
+      [1, 7, "|"],
+      [2, 7, "|"],
+      [7, 7, "|"]
+    ],    
+    "xml": `
+      <xml>
+        <block type="controls_ifelse">
+          <value name="IF0">
+            <block type="logic_compare">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="math_number">
+                  <field name="NUM">7</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="math_number">
+                  <field name="NUM">${getRandomInt(15)}</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="controls_repeat">
+              <field name="TIMES">4</field>
+              <statement name="DO">
+                <block type="move_up">
+              </statement>
+              <next>
+                <block type="move_right">
+                <next>
+                  <block type="move_up">
+              </next>
+              </next>
+            </block>
+          </statement>
+          <statement name="ELSE">
+            <block type="move_left">
+              <next>
+                <block type="controls_repeat">
+                  <field name="TIMES">4</field>
+                  <statement name="DO">
+                    <block type="move_down">
+                  </statement>
+                  <next>
+                    <block type="controls_repeat">
+                      <field name="TIMES">4</field>
+                      <statement name="DO">
+                        <block type="move_left">
+                      </statement>
+                      <next>
+                        <block type="move_up">
+                      </next>
+                    </block>
                   </next>
                 </block>
               </next>
@@ -1318,7 +1695,7 @@ async function runCode() {
     await sleep(100)
     alert("Success!")
     let level_val = Number(level)
-    if (level_val < 37) {
+    if (level_val < 41) {
       location.href = `flurb.html?level=${level_val+1}`;
     } else {
       alert("you beat the game! congratulations!!!")
@@ -1327,7 +1704,7 @@ async function runCode() {
     await sleep(100)
     alert("Success!")
     let level_val = Number(level)
-    if (level_val < 37) {
+    if (level_val < 41) {
       location.href = `flurb.html?level=${level_val+1}`;
     } else {
       alert("you beat the game! congratulations!!!")
