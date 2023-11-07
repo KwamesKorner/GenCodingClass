@@ -314,407 +314,407 @@ const levelValues = {
       "alertMessage": "The ultimate challenge on an 8x8 grid. Best of luck!",
       "loopValidation": true
     },
-    "25": {
-      gridHeight: 2,
-      gridWidth: 3,
-      flurbCellX: 1,
-      flurbCellY: 1,
-      fruitCellX: 1,
-      fruitCellY: 0,
-      flurbPosition: {x: 1, y: 1},
-      lavaPos: [],
-      "xml":
-        `<xml>
-          <block type="controls_ifelse">
-            <value name="IF0">
-                <block type="logic_compare">
-                  <field name="OP">EQ</field>
-                  <value name="A">
-                      <block type="math_number">
-                        <field name="NUM">${getRandomInt(10)}</field>
-                      </block>
-                  </value>
-                  <value name="B">
-                      <block type="math_number">
-                        <field name="NUM">${getRandomInt(10)}</field>
-                      </block>
-                  </value>
-                </block>
-            </value>
-            <statement name="DO0">
-              <block type="move_up">
-            </statement>
-            <statement name="ELSE">
-              <block type="move_down">
-            </statement>
-          </block>
-        </xml>`,
-        "dropdown": true,
-        "readOnly": true,
-        "alertMessage": "Will the flurb make it to the fruit???"
-  },
-  "26": {
-      gridHeight: 2,
-      gridWidth: 3,
-      flurbCellX: 2,
-      flurbCellY: 0,
-      fruitCellX: 2,
-      fruitCellY: 1,
-      flurbPosition: {x: 2, y: 0},
-      lavaPos: [],
-      "xml":
-        `<xml>
-          <block type="controls_ifelse">
-            <value name="IF0">
-                <block type="logic_compare">
-                  <field name="OP">EQ</field>
-                  <value name="A">
-                      <block type="math_number">
-                        <field name="NUM">${getRandomInt(10)}</field>
-                      </block>
-                  </value>
-                  <value name="B">
-                      <block type="math_number">
-                        <field name="NUM">${getRandomInt(10)}</field>
-                      </block>
-                  </value>
-                </block>
-            </value>
-            <statement name="DO0">
-              <block type="move_up">
-            </statement>
-            <statement name="ELSE">
-              <block type="move_down">
-            </statement>
-          </block>
-        </xml>`,
-      "dropdown": true,
-      "readOnly": true,
-      "alertMessage": "Will the flurb make it to the fruit???"
-  },
-  "27": {
-      gridHeight: 2,
-      gridWidth: 3,
-      flurbCellX: 0,
-      flurbCellY: 0,
-      fruitCellX: 1,
-      fruitCellY: 1,
-      flurbPosition: {x: 0, y: 0},
-      lavaPos: [],
-      "xml":
-        `<xml>
-          <block type="controls_ifelse">
-            <value name="IF0">
-                <block type="logic_compare">
-                  <field name="OP">EQ</field>
-                  <value name="A">
-                      <block type="math_number">
-                        <field name="NUM">${getRandomInt(10)}</field>
-                      </block>
-                  </value>
-                  <value name="B">
-                      <block type="math_number">
-                        <field name="NUM">${getRandomInt(10)}</field>
-                      </block>
-                  </value>
-                </block>
-            </value>
-            <statement name="DO0">
-              <block type="move_right">
-              <next>
-                <block type="move_up">
-              </next>
-            </statement>
-            <statement name="ELSE">
-              <block type="move_down">
-              <next>
-                <block type="move_right">
-              </next>
-            </statement>
-          </block>
-        </xml>`,
-      "dropdown": true,
-      "readOnly": true,
-      "alertMessage": "Will the flurb make it to the fruit???"
-  },
-  "28": {
-      gridHeight: 2,
-      gridWidth: 3,
-      flurbCellX: 2,
-      flurbCellY: 0,
-      fruitCellX: 0,
-      fruitCellY: 0,
-      flurbPosition: {x: 2, y: 0},
-      lavaPos: [],
-      "xml":
-        `<xml>
-          <block type="controls_ifelse">
-            <value name="IF0">
-                <block type="logic_compare">
-                  <field name="OP">EQ</field>
-                  <value name="A">
-                      <block type="math_number">
-                        <field name="NUM">${getRandomInt(10)}</field>
-                      </block>
-                  </value>
-                  <value name="B">
-                      <block type="math_number">
-                        <field name="NUM">${getRandomInt(10)}</field>
-                      </block>
-                  </value>
-                </block>
-            </value>
-            <statement name="DO0">
-              <block type="move_left">
-              <next>
-                <block type="move_left">
-              </next>
-            </statement>
-            <statement name="ELSE">
-              <block type="move_right">
-              <next>
-                <block type="move_right">
-              </next>
-            </statement>
-          </block>
-        </xml>`,
-      "dropdown": true,
-      "readOnly": true,
-      "alertMessage": "Will the flurb make it to the fruit???"
-  },
-  "29": {
-      gridHeight: 2,
-      gridWidth: 3,
-      flurbCellX: 0,
-      flurbCellY: 0,
-      fruitCellX: 2,
-      fruitCellY: 1,
-      flurbPosition: {x: 0, y: 0},
-      lavaPos: [],
-      "xml":
-        `<xml>
-          <block type="controls_ifelse">
-            <value name="IF0">
-                <block type="logic_compare">
-                  <field name="OP">GTE</field>
-                  <value name="A">
-                      <block type="math_number">
-                        <field name="NUM">${getRandomInt(10)}</field>
-                      </block>
-                  </value>
-                  <value name="B">
-                      <block type="math_number">
-                        <field name="NUM">${getRandomInt(10)}</field>
-                      </block>
-                  </value>
-                </block>
-            </value>
-            <statement name="DO0">
-              <block type="move_left">
-              <next>
-                <block type="move_left">
-                <next>
-                <block type="move_up">
-              </next>
-              </next>
-            </statement>
-            <statement name="ELSE">
-              <block type="move_right">
-              <next>
-                <block type="move_right">
-                <next>
-                <block type="move_down">
-              </next>
-              </next>
-            </statement>
-          </block>
-        </xml>`,
-      "dropdown": true,
-      "readOnly": true,
-      "alertMessage": "Will the flurb make it to the fruit???"
-  },
-  "30": {
-    "gridHeight": 4,
-    "gridWidth": 7,
-    "flurbCellX": 3,
-    "flurbCellY": 0,
-    "fruitCellX": 2,
-    "fruitCellY": 3,
-    "flurbPosition": { "x": 3, "y": 0 },
-    "lavaPos": [],
-    "xml":`
-    <xml>
-      <block type="controls_ifelse">
-        <value name="IF0">
-            <block type="logic_compare">
-              <field name="OP">EQ</field>
-              <value name="A">
-                  <block type="math_number">
-                    <field name="NUM">${getRandomInt(10)}</field>
-                  </block>
-              </value>
-              <value name="B">
-                  <block type="math_number">
-                    <field name="NUM">${getRandomInt(10)}</field>
-                  </block>
-              </value>
-            </block>
-        </value>
-        <statement name="DO0">
-            <block type="controls_repeat">
-              <field name="TIMES">3</field>
-              <statement name="DO">
-                  <block type="move_down">
-              </statement>
-              <next>
-                  <block type="move_right">
-              </next>
-            </block>
-        </statement>
-        <statement name="ELSE">
-            <block type="move_left">
-              <next>
-                  <block type="controls_repeat">
-                    <field name="TIMES">3</field>
-                    <statement name="DO">
-                        <block type="move_down">
-                    </statement>
-                  </block>
-              </next>
-            </block>
-        </statement>
-      </block>
-    </xml>`,
-    "dropdown": true,
-    "readOnly": true,
-    "alertMessage": "Will the flurb make it to the fruit???"
-  },
-  "31": {
-    "gridHeight": 5,
-    "gridWidth": 6,
-    "flurbCellX": 2,
-    "flurbCellY": 0,
-    "fruitCellX": 4,
-    "fruitCellY": 3,
-    "flurbPosition": { "x": 2, "y": 0 },
-    "lavaPos": [],
-    "xml": `
-      <xml>
-        <block type="controls_ifelse">
-          <value name="IF0">
-            <block type="logic_compare">
-              <field name="OP">LT</field>
-              <value name="A">
-                <block type="math_number">
-                  <field name="NUM">${getRandomInt(15)}</field>
-                </block>
-              </value>
-              <value name="B">
-                <block type="math_number">
-                  <field name="NUM">${getRandomInt(15)}</field>
-                </block>
-              </value>
-            </block>
-          </value>
-          <statement name="DO0">
-            <block type="controls_repeat">
-              <field name="TIMES">2</field>
-              <statement name="DO">
-                <block type="move_right">
-              </statement>
-              <next>
-                <block type="controls_repeat">
-                <field name="TIMES">3</field>
-                <statement name="DO">
-                  <block type="move_down">
-                </statement>
-                </block>
-              </next>
-            </block>
-          </statement>
-          <statement name="ELSE">
-            <block type="move_left">
-              <next>
-                <block type="controls_repeat">
-                  <field name="TIMES">4</field>
-                  <statement name="DO">
-                    <block type="move_down">
-                  </statement>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-      </xml>`,
-    "dropdown": true,
-    "readOnly": true,
-    "alertMessage": "Will the flurb make it to the fruit???"
-  },
-  "32": {
-    "gridHeight": 5,
-    "gridWidth": 6,
-    "flurbCellX": 0,
-    "flurbCellY": 0,
-    "fruitCellX": 4,
-    "fruitCellY": 3,
-    "flurbPosition": { "x": 0, "y": 0 },
-    "lavaPos": [],
-    "xml": `
-      <xml>
-        <block type="controls_ifelse">
-          <value name="IF0">
-            <block type="logic_compare">
-              <field name="OP">GT</field>
-              <value name="A">
-                <block type="math_number">
-                  <field name="NUM">${getRandomInt(15)}</field>
-                </block>
-              </value>
-              <value name="B">
-                <block type="math_number">
-                  <field name="NUM">${getRandomInt(15)}</field>
-                </block>
-              </value>
-            </block>
-          </value>
-          <statement name="DO0">
-            <block type="controls_repeat">
-              <field name="TIMES">4</field>
-              <statement name="DO">
-                <block type="move_right">
-              </statement>
-              <next>
-                <block type="controls_repeat">
-                <field name="TIMES">3</field>
-                <statement name="DO">
-                  <block type="move_down">
-                </statement>
-                </block>
-              </next>
-            </block>
-          </statement>
-          <statement name="ELSE">
-            <block type="controls_repeat">
-              <field name="TIMES">4</field>
-              <statement name="DO">
-                <block type="move_left">
-              </statement>
-              <next>
-                <block type="controls_repeat">
-                <field name="TIMES">3</field>
-                <statement name="DO">
-                  <block type="move_up">
-                </statement>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-      </xml>`,
-    "dropdown": true,
-    "readOnly": true,
-    "alertMessage": "Will the flurb make it to the fruit???"
-  }, 
+  //   "25": {
+  //     gridHeight: 2,
+  //     gridWidth: 3,
+  //     flurbCellX: 1,
+  //     flurbCellY: 1,
+  //     fruitCellX: 1,
+  //     fruitCellY: 0,
+  //     flurbPosition: {x: 1, y: 1},
+  //     lavaPos: [],
+  //     "xml":
+  //       `<xml>
+  //         <block type="controls_ifelse">
+  //           <value name="IF0">
+  //               <block type="logic_compare">
+  //                 <field name="OP">EQ</field>
+  //                 <value name="A">
+  //                     <block type="math_number">
+  //                       <field name="NUM">${getRandomInt(10)}</field>
+  //                     </block>
+  //                 </value>
+  //                 <value name="B">
+  //                     <block type="math_number">
+  //                       <field name="NUM">${getRandomInt(10)}</field>
+  //                     </block>
+  //                 </value>
+  //               </block>
+  //           </value>
+  //           <statement name="DO0">
+  //             <block type="move_up">
+  //           </statement>
+  //           <statement name="ELSE">
+  //             <block type="move_down">
+  //           </statement>
+  //         </block>
+  //       </xml>`,
+  //       "dropdown": true,
+  //       "readOnly": true,
+  //       "alertMessage": "Will the flurb make it to the fruit???"
+  // },
+  // "26": {
+  //     gridHeight: 2,
+  //     gridWidth: 3,
+  //     flurbCellX: 2,
+  //     flurbCellY: 0,
+  //     fruitCellX: 2,
+  //     fruitCellY: 1,
+  //     flurbPosition: {x: 2, y: 0},
+  //     lavaPos: [],
+  //     "xml":
+  //       `<xml>
+  //         <block type="controls_ifelse">
+  //           <value name="IF0">
+  //               <block type="logic_compare">
+  //                 <field name="OP">EQ</field>
+  //                 <value name="A">
+  //                     <block type="math_number">
+  //                       <field name="NUM">${getRandomInt(10)}</field>
+  //                     </block>
+  //                 </value>
+  //                 <value name="B">
+  //                     <block type="math_number">
+  //                       <field name="NUM">${getRandomInt(10)}</field>
+  //                     </block>
+  //                 </value>
+  //               </block>
+  //           </value>
+  //           <statement name="DO0">
+  //             <block type="move_up">
+  //           </statement>
+  //           <statement name="ELSE">
+  //             <block type="move_down">
+  //           </statement>
+  //         </block>
+  //       </xml>`,
+  //     "dropdown": true,
+  //     "readOnly": true,
+  //     "alertMessage": "Will the flurb make it to the fruit???"
+  // },
+  // "27": {
+  //     gridHeight: 2,
+  //     gridWidth: 3,
+  //     flurbCellX: 0,
+  //     flurbCellY: 0,
+  //     fruitCellX: 1,
+  //     fruitCellY: 1,
+  //     flurbPosition: {x: 0, y: 0},
+  //     lavaPos: [],
+  //     "xml":
+  //       `<xml>
+  //         <block type="controls_ifelse">
+  //           <value name="IF0">
+  //               <block type="logic_compare">
+  //                 <field name="OP">EQ</field>
+  //                 <value name="A">
+  //                     <block type="math_number">
+  //                       <field name="NUM">${getRandomInt(10)}</field>
+  //                     </block>
+  //                 </value>
+  //                 <value name="B">
+  //                     <block type="math_number">
+  //                       <field name="NUM">${getRandomInt(10)}</field>
+  //                     </block>
+  //                 </value>
+  //               </block>
+  //           </value>
+  //           <statement name="DO0">
+  //             <block type="move_right">
+  //             <next>
+  //               <block type="move_up">
+  //             </next>
+  //           </statement>
+  //           <statement name="ELSE">
+  //             <block type="move_down">
+  //             <next>
+  //               <block type="move_right">
+  //             </next>
+  //           </statement>
+  //         </block>
+  //       </xml>`,
+  //     "dropdown": true,
+  //     "readOnly": true,
+  //     "alertMessage": "Will the flurb make it to the fruit???"
+  // },
+  // "28": {
+  //     gridHeight: 2,
+  //     gridWidth: 3,
+  //     flurbCellX: 2,
+  //     flurbCellY: 0,
+  //     fruitCellX: 0,
+  //     fruitCellY: 0,
+  //     flurbPosition: {x: 2, y: 0},
+  //     lavaPos: [],
+  //     "xml":
+  //       `<xml>
+  //         <block type="controls_ifelse">
+  //           <value name="IF0">
+  //               <block type="logic_compare">
+  //                 <field name="OP">EQ</field>
+  //                 <value name="A">
+  //                     <block type="math_number">
+  //                       <field name="NUM">${getRandomInt(10)}</field>
+  //                     </block>
+  //                 </value>
+  //                 <value name="B">
+  //                     <block type="math_number">
+  //                       <field name="NUM">${getRandomInt(10)}</field>
+  //                     </block>
+  //                 </value>
+  //               </block>
+  //           </value>
+  //           <statement name="DO0">
+  //             <block type="move_left">
+  //             <next>
+  //               <block type="move_left">
+  //             </next>
+  //           </statement>
+  //           <statement name="ELSE">
+  //             <block type="move_right">
+  //             <next>
+  //               <block type="move_right">
+  //             </next>
+  //           </statement>
+  //         </block>
+  //       </xml>`,
+  //     "dropdown": true,
+  //     "readOnly": true,
+  //     "alertMessage": "Will the flurb make it to the fruit???"
+  // },
+  // "29": {
+  //     gridHeight: 2,
+  //     gridWidth: 3,
+  //     flurbCellX: 0,
+  //     flurbCellY: 0,
+  //     fruitCellX: 2,
+  //     fruitCellY: 1,
+  //     flurbPosition: {x: 0, y: 0},
+  //     lavaPos: [],
+  //     "xml":
+  //       `<xml>
+  //         <block type="controls_ifelse">
+  //           <value name="IF0">
+  //               <block type="logic_compare">
+  //                 <field name="OP">GTE</field>
+  //                 <value name="A">
+  //                     <block type="math_number">
+  //                       <field name="NUM">${getRandomInt(10)}</field>
+  //                     </block>
+  //                 </value>
+  //                 <value name="B">
+  //                     <block type="math_number">
+  //                       <field name="NUM">${getRandomInt(10)}</field>
+  //                     </block>
+  //                 </value>
+  //               </block>
+  //           </value>
+  //           <statement name="DO0">
+  //             <block type="move_left">
+  //             <next>
+  //               <block type="move_left">
+  //               <next>
+  //               <block type="move_up">
+  //             </next>
+  //             </next>
+  //           </statement>
+  //           <statement name="ELSE">
+  //             <block type="move_right">
+  //             <next>
+  //               <block type="move_right">
+  //               <next>
+  //               <block type="move_down">
+  //             </next>
+  //             </next>
+  //           </statement>
+  //         </block>
+  //       </xml>`,
+  //     "dropdown": true,
+  //     "readOnly": true,
+  //     "alertMessage": "Will the flurb make it to the fruit???"
+  // },
+  // "30": {
+  //   "gridHeight": 4,
+  //   "gridWidth": 7,
+  //   "flurbCellX": 3,
+  //   "flurbCellY": 0,
+  //   "fruitCellX": 2,
+  //   "fruitCellY": 3,
+  //   "flurbPosition": { "x": 3, "y": 0 },
+  //   "lavaPos": [],
+  //   "xml":`
+  //   <xml>
+  //     <block type="controls_ifelse">
+  //       <value name="IF0">
+  //           <block type="logic_compare">
+  //             <field name="OP">EQ</field>
+  //             <value name="A">
+  //                 <block type="math_number">
+  //                   <field name="NUM">${getRandomInt(10)}</field>
+  //                 </block>
+  //             </value>
+  //             <value name="B">
+  //                 <block type="math_number">
+  //                   <field name="NUM">${getRandomInt(10)}</field>
+  //                 </block>
+  //             </value>
+  //           </block>
+  //       </value>
+  //       <statement name="DO0">
+  //           <block type="controls_repeat">
+  //             <field name="TIMES">3</field>
+  //             <statement name="DO">
+  //                 <block type="move_down">
+  //             </statement>
+  //             <next>
+  //                 <block type="move_right">
+  //             </next>
+  //           </block>
+  //       </statement>
+  //       <statement name="ELSE">
+  //           <block type="move_left">
+  //             <next>
+  //                 <block type="controls_repeat">
+  //                   <field name="TIMES">3</field>
+  //                   <statement name="DO">
+  //                       <block type="move_down">
+  //                   </statement>
+  //                 </block>
+  //             </next>
+  //           </block>
+  //       </statement>
+  //     </block>
+  //   </xml>`,
+  //   "dropdown": true,
+  //   "readOnly": true,
+  //   "alertMessage": "Will the flurb make it to the fruit???"
+  // },
+  // "31": {
+  //   "gridHeight": 5,
+  //   "gridWidth": 6,
+  //   "flurbCellX": 2,
+  //   "flurbCellY": 0,
+  //   "fruitCellX": 4,
+  //   "fruitCellY": 3,
+  //   "flurbPosition": { "x": 2, "y": 0 },
+  //   "lavaPos": [],
+  //   "xml": `
+  //     <xml>
+  //       <block type="controls_ifelse">
+  //         <value name="IF0">
+  //           <block type="logic_compare">
+  //             <field name="OP">LT</field>
+  //             <value name="A">
+  //               <block type="math_number">
+  //                 <field name="NUM">${getRandomInt(15)}</field>
+  //               </block>
+  //             </value>
+  //             <value name="B">
+  //               <block type="math_number">
+  //                 <field name="NUM">${getRandomInt(15)}</field>
+  //               </block>
+  //             </value>
+  //           </block>
+  //         </value>
+  //         <statement name="DO0">
+  //           <block type="controls_repeat">
+  //             <field name="TIMES">2</field>
+  //             <statement name="DO">
+  //               <block type="move_right">
+  //             </statement>
+  //             <next>
+  //               <block type="controls_repeat">
+  //               <field name="TIMES">3</field>
+  //               <statement name="DO">
+  //                 <block type="move_down">
+  //               </statement>
+  //               </block>
+  //             </next>
+  //           </block>
+  //         </statement>
+  //         <statement name="ELSE">
+  //           <block type="move_left">
+  //             <next>
+  //               <block type="controls_repeat">
+  //                 <field name="TIMES">4</field>
+  //                 <statement name="DO">
+  //                   <block type="move_down">
+  //                 </statement>
+  //               </block>
+  //             </next>
+  //           </block>
+  //         </statement>
+  //       </block>
+  //     </xml>`,
+  //   "dropdown": true,
+  //   "readOnly": true,
+  //   "alertMessage": "Will the flurb make it to the fruit???"
+  // },
+  // "32": {
+  //   "gridHeight": 5,
+  //   "gridWidth": 6,
+  //   "flurbCellX": 0,
+  //   "flurbCellY": 0,
+  //   "fruitCellX": 4,
+  //   "fruitCellY": 3,
+  //   "flurbPosition": { "x": 0, "y": 0 },
+  //   "lavaPos": [],
+  //   "xml": `
+  //     <xml>
+  //       <block type="controls_ifelse">
+  //         <value name="IF0">
+  //           <block type="logic_compare">
+  //             <field name="OP">GT</field>
+  //             <value name="A">
+  //               <block type="math_number">
+  //                 <field name="NUM">${getRandomInt(15)}</field>
+  //               </block>
+  //             </value>
+  //             <value name="B">
+  //               <block type="math_number">
+  //                 <field name="NUM">${getRandomInt(15)}</field>
+  //               </block>
+  //             </value>
+  //           </block>
+  //         </value>
+  //         <statement name="DO0">
+  //           <block type="controls_repeat">
+  //             <field name="TIMES">4</field>
+  //             <statement name="DO">
+  //               <block type="move_right">
+  //             </statement>
+  //             <next>
+  //               <block type="controls_repeat">
+  //               <field name="TIMES">3</field>
+  //               <statement name="DO">
+  //                 <block type="move_down">
+  //               </statement>
+  //               </block>
+  //             </next>
+  //           </block>
+  //         </statement>
+  //         <statement name="ELSE">
+  //           <block type="controls_repeat">
+  //             <field name="TIMES">4</field>
+  //             <statement name="DO">
+  //               <block type="move_left">
+  //             </statement>
+  //             <next>
+  //               <block type="controls_repeat">
+  //               <field name="TIMES">3</field>
+  //               <statement name="DO">
+  //                 <block type="move_up">
+  //               </statement>
+  //               </block>
+  //             </next>
+  //           </block>
+  //         </statement>
+  //       </block>
+  //     </xml>`,
+  //   "dropdown": true,
+  //   "readOnly": true,
+  //   "alertMessage": "Will the flurb make it to the fruit???"
+  // }, 
   "33": {
     "gridHeight": 5,
     "gridWidth": 6,
@@ -1426,7 +1426,674 @@ const levelValues = {
     "readOnly": false,
     "editDisabled": true,
     "alertMessage": "Update the code so that the flurb makes it to the fruit!"
-  }
+  },
+  "25": {
+    gridHeight: 2,
+    gridWidth: 3,
+    flurbCellX: 1,
+    flurbCellY: 1,
+    fruitCellX: 1,
+    fruitCellY: 0,
+    flurbPosition: {x: 1, y: 1},
+    lavaPos: [],
+    "xml":
+      `<xml>
+        <variables>
+          <variable>num</variable>
+        </variables>
+        <block type="variables_set">
+          <field name="VAR">num</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="controls_if">
+              <mutation else="1"></mutation>
+              <value name="IF0">
+                <block type="logic_compare">
+                  <field name="OP">EQ</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">num</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <field name="NUM">${getRandomInt(10)}</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="move_up"></block>
+              </statement>
+              <statement name="ELSE">
+                <block type="move_down"></block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>`,
+      "dropdown": true,
+      "readOnly": true,
+      "alertMessage": "Will the flurb make it to the fruit???"
+  },
+  "26": {
+    gridHeight: 2,
+    gridWidth: 3,
+    flurbCellX: 2,
+    flurbCellY: 0,
+    fruitCellX: 2,
+    fruitCellY: 1,
+    flurbPosition: {x: 2, y: 0},
+    lavaPos: [],
+    "xml":
+      `<xml>
+        <variables>
+          <variable>num</variable>
+        </variables>
+        <block type="variables_set">
+          <field name="VAR">num</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="controls_ifelse">
+              <value name="IF0">
+                <block type="logic_compare">
+                  <field name="OP">EQ</field>
+                  <value name="A">
+                    <block type="math_number">
+                      <field name="NUM">${getRandomInt(10)}</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <field name="VAR">num</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="move_up"></block>
+              </statement>
+              <statement name="ELSE">
+                <block type="move_down"></block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>`,
+    "dropdown": true,
+    "readOnly": true,
+    "alertMessage": "Will the flurb make it to the fruit???"
+  },
+"27": {
+    gridHeight: 2,
+    gridWidth: 3,
+    flurbCellX: 0,
+    flurbCellY: 0,
+    fruitCellX: 1,
+    fruitCellY: 1,
+    flurbPosition: {x: 0, y: 0},
+    lavaPos: [],
+    "xml":
+      `<xml>
+        <variables>
+          <variable>steps</variable>
+        </variables>
+        <block type="variables_set">
+          <field name="VAR">steps</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="controls_ifelse">
+              <value name="IF0">
+                <block type="logic_compare">
+                  <field name="OP">EQ</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">steps</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <field name="NUM">${getRandomInt(10)}</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="move_right">
+                  <next>
+                    <block type="move_up"></block>
+                  </next>
+                </block>
+              </statement>
+              <statement name="ELSE">
+                <block type="move_down">
+                  <next>
+                    <block type="move_right"></block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>`,
+    "dropdown": true,
+    "readOnly": true,
+    "alertMessage": "Will the flurb make it to the fruit???"
+},
+"28": {
+    gridHeight: 2,
+    gridWidth: 3,
+    flurbCellX: 2,
+    flurbCellY: 0,
+    fruitCellX: 0,
+    fruitCellY: 0,
+    flurbPosition: {x: 2, y: 0},
+    lavaPos: [],
+    "xml":
+      `<xml>
+      <variables>
+        <variable>num1</variable>
+        <variable>num2</variable>
+        <variable>sum</variable>
+      </variables>
+      <block type="variables_set">
+        <field name="VAR">num1</field>
+        <value name="VALUE">
+          <block type="math_number">
+            <field name="NUM">${getRandomInt(10)}</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set">
+            <field name="VAR">num2</field>
+            <value name="VALUE">
+              <block type="math_number">
+                <field name="NUM">${getRandomInt(10)}</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set">
+                <field name="VAR">sum</field>
+                <value name="VALUE">
+                  <block type="math_arithmetic">
+                    <field name="OP">ADD</field>
+                    <value name="A">
+                      <block type="variables_get">
+                        <field name="VAR">num1</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="variables_get">
+                        <field name="VAR">num2</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_ifelse">
+                    <value name="IF0">
+                      <block type="logic_compare">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="variables_get">
+                            <field name="VAR">sum</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number">
+                            <field name="NUM">${getRandomInt(10)}</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="move_left">
+                        <next>
+                          <block type="move_left"></block>
+                        </next>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="move_right">
+                        <next>
+                          <block type="move_right"></block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </xml>`,
+    "dropdown": true,
+    "readOnly": false,
+    "alertMessage": "Will the flurb make it to the fruit???"
+},
+"29": {
+    gridHeight: 2,
+    gridWidth: 3,
+    flurbCellX: 0,
+    flurbCellY: 0,
+    fruitCellX: 2,
+    fruitCellY: 1,
+    flurbPosition: {x: 0, y: 0},
+    lavaPos: [],
+    "xml":
+      `<xml>
+        <variables>
+          <variable>num1</variable>
+          <variable>num2</variable>
+          <variable>sum</variable>
+        </variables>
+        <block type="variables_set">
+          <field name="VAR">num1</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set">
+              <field name="VAR">num2</field>
+              <value name="VALUE">
+                <block type="math_number">
+                  <field name="NUM">${getRandomInt(10)}</field>
+                </block>
+              </value>
+              <next>
+                <block type="variables_set">
+                  <field name="VAR">sum</field>
+                  <value name="VALUE">
+                    <block type="math_arithmetic">
+                      <field name="OP">ADD</field>
+                      <value name="A">
+                        <block type="variables_get">
+                          <field name="VAR">num1</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="variables_get">
+                          <field name="VAR">num2</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+            <block type="controls_ifelse">
+              <value name="IF0">
+                  <block type="logic_compare">
+                    <field name="OP">GTE</field>
+                    <value name="A">
+                      <block type="variables_get">
+                        <field name="VAR">sum</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">${getRandomInt(10)}</field>
+                        </block>
+                    </value>
+                  </block>
+              </value>
+              <statement name="DO0">
+                <block type="move_left">
+                <next>
+                  <block type="move_left">
+                  <next>
+                  <block type="move_up">
+                </next>
+                </next>
+              </statement>
+              <statement name="ELSE">
+                <block type="move_right">
+                <next>
+                  <block type="move_right">
+                  <next>
+                  <block type="move_down">
+                </next>
+                </next>
+              </statement>
+              </next>
+              </block>
+              </next>
+              </block>
+              </next>
+          </block>
+        </xml>`,
+    "dropdown": true,
+    "readOnly": true,
+    "alertMessage": "Will the flurb make it to the fruit???"
+},
+"30": {
+  "gridHeight": 4,
+  "gridWidth": 7,
+  "flurbCellX": 3,
+  "flurbCellY": 0,
+  "fruitCellX": 2,
+  "fruitCellY": 3,
+  "flurbPosition": { "x": 3, "y": 0 },
+  "lavaPos": [],
+  "xml":`
+  <xml>
+    <variables>
+    <variable>num1</variable>
+    <variable>num2</variable>
+    <variable>sum</variable>
+    </variables>
+    <block type="variables_set">
+      <field name="VAR">num1</field>
+      <value name="VALUE">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set">
+          <field name="VAR">num2</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+          <block type="variables_set">
+            <field name="VAR">sum</field>
+            <value name="VALUE">
+              <block type="math_arithmetic">
+                <field name="OP">ADD</field>
+                <value name="A">
+                  <block type="variables_get">
+                    <field name="VAR">num1</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="variables_get">
+                    <field name="VAR">num2</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+        <next>
+      <block type="controls_ifelse">
+        <value name="IF0">
+            <block type="logic_compare">
+              <field name="OP">EQ</field>
+              <value name="A">
+                  <block type="math_number">
+                    <field name="NUM">${getRandomInt(10)}</field>
+                  </block>
+              </value>
+              <value name="B">
+                  <block type="variables_get">
+                    <field name="VAR">sum</field>
+                  </block>
+              </value>
+            </block>
+        </value>
+        <statement name="DO0">
+            <block type="controls_repeat">
+              <field name="TIMES">3</field>
+              <statement name="DO">
+                  <block type="move_down">
+              </statement>
+              <next>
+                  <block type="move_right">
+              </next>
+            </block>
+        </statement>
+        <statement name="ELSE">
+            <block type="move_left">
+              <next>
+                  <block type="controls_repeat">
+                    <field name="TIMES">3</field>
+                    <statement name="DO">
+                        <block type="move_down">
+                    </statement>
+                  </block>
+                  </next>
+                  </block>
+                  </next>
+                  </block>
+              </next>
+            </block>
+        </statement>
+      </block>
+    </xml>`,
+  "dropdown": true,
+  "readOnly": true,
+  "alertMessage": "Will the flurb make it to the fruit???"
+},
+"31": {
+  "gridHeight": 5,
+  "gridWidth": 6,
+  "flurbCellX": 2,
+  "flurbCellY": 0,
+  "fruitCellX": 4,
+  "fruitCellY": 3,
+  "flurbPosition": { "x": 2, "y": 0 },
+  "lavaPos": [],
+  "xml": `
+  <xml>
+  <variables>
+  <variable>num1</variable>
+  <variable>num2</variable>
+  <variable>sum</variable>
+  </variables>
+  <block type="variables_set">
+    <field name="VAR">num1</field>
+    <value name="VALUE">
+      <block type="math_number">
+        <field name="NUM">${getRandomInt(15)}</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set">
+        <field name="VAR">num2</field>
+        <value name="VALUE">
+          <block type="math_number">
+            <field name="NUM">${getRandomInt(15)}</field>
+          </block>
+        </value>
+        <next>
+        <block type="variables_set">
+          <field name="VAR">sum</field>
+          <value name="VALUE">
+            <block type="math_arithmetic">
+              <field name="OP">ADD</field>
+              <value name="A">
+                <block type="variables_get">
+                  <field name="VAR">num1</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="variables_get">
+                  <field name="VAR">num2</field>
+                </block>
+              </value>
+            </block>
+          </value>
+      <next>
+      <block type="controls_ifelse">
+        <value name="IF0">
+          <block type="logic_compare">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="variables_get">
+                <field name="VAR">sum</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number">
+                <field name="NUM">${getRandomInt(15)}</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_repeat">
+            <field name="TIMES">2</field>
+            <statement name="DO">
+              <block type="move_right">
+            </statement>
+            <next>
+              <block type="controls_repeat">
+              <field name="TIMES">3</field>
+              <statement name="DO">
+                <block type="move_down">
+              </statement>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="move_left">
+            <next>
+              <block type="controls_repeat">
+                <field name="TIMES">4</field>
+                <statement name="DO">
+                  <block type="move_down">
+                </statement>
+              </block>
+            </next>
+            </block>
+                  </next>
+                  </block>
+                  </next>
+                  </block>
+              </next>
+          </block>
+        </statement>
+      </block>
+    </xml>`,
+  "dropdown": true,
+  "readOnly": true,
+  "alertMessage": "Will the flurb make it to the fruit???"
+},
+"32": {
+  "gridHeight": 5,
+  "gridWidth": 6,
+  "flurbCellX": 0,
+  "flurbCellY": 0,
+  "fruitCellX": 4,
+  "fruitCellY": 3,
+  "flurbPosition": { "x": 0, "y": 0 },
+  "lavaPos": [],
+  "xml": `
+  <xml>
+  <variables>
+  <variable>num1</variable>
+  <variable>num2</variable>
+  <variable>sum</variable>
+  </variables>
+  <block type="variables_set">
+    <field name="VAR">num1</field>
+    <value name="VALUE">
+      <block type="math_number">
+        <field name="NUM">${getRandomInt(15)}</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set">
+        <field name="VAR">num2</field>
+        <value name="VALUE">
+          <block type="math_number">
+            <field name="NUM">${getRandomInt(15)}</field>
+          </block>
+        </value>
+        <next>
+        <block type="variables_set">
+          <field name="VAR">sum</field>
+          <value name="VALUE">
+            <block type="math_arithmetic">
+              <field name="OP">ADD</field>
+              <value name="A">
+                <block type="variables_get">
+                  <field name="VAR">num1</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="variables_get">
+                  <field name="VAR">num2</field>
+                </block>
+              </value>
+            </block>
+          </value>
+      <next>
+      <block type="controls_ifelse">
+        <value name="IF0">
+          <block type="logic_compare">
+            <field name="OP">GT</field>
+            <value name="A">
+              <block type="variables_get">
+                <field name="VAR">sum</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number">
+                <field name="NUM">${getRandomInt(15)}</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_repeat">
+            <field name="TIMES">4</field>
+            <statement name="DO">
+              <block type="move_right">
+            </statement>
+            <next>
+              <block type="controls_repeat">
+              <field name="TIMES">3</field>
+              <statement name="DO">
+                <block type="move_down">
+              </statement>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="controls_repeat">
+            <field name="TIMES">4</field>
+            <statement name="DO">
+              <block type="move_left">
+            </statement>
+            <next>
+              <block type="controls_repeat">
+              <field name="TIMES">3</field>
+              <statement name="DO">
+                <block type="move_up">
+              </statement>
+              </block>
+            </next>
+          </block>
+        </statement>
+        </block>
+                  </next>
+                  </block>
+                  </next>
+                  </block>
+              </next>
+      </block>
+    </xml>`,
+  "dropdown": true,
+  "readOnly": true,
+  "alertMessage": "Will the flurb make it to the fruit???"
+}, 
 }
 
 var msg = levelValues[level]["alertMessage"]
@@ -1450,6 +2117,7 @@ const loopValidation = levelValues[level]["loopValidation"]
 
 if(dropdown) {
   document.getElementById("condition").style.display = "block";
+  document.getElementById("condition-label").style.display = "block";
 }
 
 Blockly.defineBlocksWithJsonArray([
@@ -1657,10 +2325,9 @@ if (xml) {
 }
 
 async function runCode() {
-  // var xmlDom = Blockly.Xml.workspaceToDom(workspace);
-  // var xmlText = Blockly.Xml.domToText(xmlDom);
-  // console.log(xmlText);
-  console.log(document.getElementById("condition").value)
+  var xmlDom = Blockly.Xml.workspaceToDom(workspace);
+  var xmlText = Blockly.Xml.domToText(xmlDom);
+  console.log(xmlText);
   var code = Blockly.JavaScript.workspaceToCode(workspace);
   console.log(code)
   await eval("(async () => {" + code + "})()");

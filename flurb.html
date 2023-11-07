@@ -80,19 +80,23 @@
             <block type="math_number"></block>
             <block type="controls_if"></block>
             <block type="logic_compare"></block>
-            <!-- <block type="variables_set"></block>
-            <block type="variables_get"></block> -->
+            <block type="variables_set"></block>
+            <block type="variables_get"></block>
+            <block type="math_arithmetic" inline="true"></block>
             <!-- <block type="procedures_defnoreturn"></block>
             <block type="procedures_callnoreturn">
                 <mutation name="myFunc"></mutation>
             </block> -->
         </xml>
         <div id="blocklyDiv" style="height: auto; width: 45%; border-radius: 5px; margin-left: 0.5%;"></div>
-        <div class="col-1">
+        <div class="col-1" style="align-items: center">
+            <strong><label for="condition" id="condition-label" style="display: none;">Will the Flurb Make it to the Fruit?:</label></strong>
             <select class="conditional" id="condition" style="display: none;">
-                <option value="yes" selected>Yes</option>
+                <option value="yes" selected>Answer</option>
+                <option value="yes">Yes</option>
                 <option value="no">No</option>
             </select>
+            <br/>
             <button id="button" onclick="runCode()">Run Code</button>
         </div>
         <div class="col-5">
