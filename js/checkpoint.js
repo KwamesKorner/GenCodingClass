@@ -3,10 +3,11 @@ let params = new URLSearchParams(document.location.search);
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
-
-let level = params.get("level")
+let gameScore = localStorage.getItem('getFruitScore') ? parseInt(localStorage.getItem('getFruitScore')): 0;
+let startTime = new Date();
+let level = params.get("level");
 let levelText = document.getElementById("level")
-levelText.innerHTML = `Level ${level}`
+levelText.innerHTML = `Level ${level} Score: ${gameScore}`
 const levelValues = {
     "1": {
         gridHeight: 2,
@@ -3767,6 +3768,18 @@ if (xml) {
   workspace.options.readOnly = readOnly;
 }
 
+function calculateScore() {
+  endTime = new Date();
+  let timeTaken = (endTime - startTime) / 1000; // Time in seconds
+  const basePoints = 1000;
+  const deductionPerSecond = 0.02; // 2% per second
+  const minimumPoints = 300;
+
+  let deduction = basePoints * deductionPerSecond * timeTaken;
+  let finalScore = basePoints - deduction;
+  return finalScore > minimumPoints ? finalScore : minimumPoints;
+}
+
 async function runCode() {
   var xmlDom = Blockly.Xml.workspaceToDom(workspace);
   var xmlText = Blockly.Xml.domToText(xmlDom);
@@ -3803,7 +3816,10 @@ async function runCode() {
     }
     flurbCell.removeChild(flurbCell.querySelector('#apple'));
     await sleep(100)
-    alert("Success!")
+    let score = Math.floor(calculateScore())
+    alert(`Success! - Points Earned: ${score}`)
+    gameScore += score;
+    localStorage.setItem('getFruitScore', gameScore);
     let level_val = Number(level)
     if (level_val < 512) {
       location.href = `flurb.html?level=${level_val+1}`;
@@ -3812,7 +3828,10 @@ async function runCode() {
     }
   } else if (document.getElementById("condition").value == "no") {
     await sleep(100)
-    alert("Success!")
+    let score = calculateScore()
+    alert(`Success! - Points Earned: ${score}`)
+    gameScore += score;
+    localStorage.setItem('getFruitScore', gameScore);
     let level_val = Number(level)
     if (level_val < 512) {
       location.href = `flurb.html?level=${level_val+1}`;
