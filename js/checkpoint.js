@@ -1193,6 +1193,9 @@ const levelValues = {
                       <field name="TIMES">4</field>
                       <statement name="DO">
                         <block type="move_left">
+                        <next>
+                          <block type="move_down">
+                        </next>
                       </statement>
                     </block>
                   </next>
@@ -1258,7 +1261,7 @@ const levelValues = {
               <field name="OP">EQ</field>
               <value name="A">
                 <block type="math_number">
-                  <field name="NUM">7</field>
+                  <field name="NUM">${getRandomInt(15)}</field>
                 </block>
               </value>
               <value name="B">
@@ -1296,7 +1299,6 @@ const levelValues = {
                       <statement name="DO">
                         <block type="move_down">
                       </statement>
-                    </block>
                     <next>
                     <block type="controls_repeat">
                       <field name="TIMES">4</field>
@@ -1308,6 +1310,7 @@ const levelValues = {
                       </statement>
                     </block>
                   </next>
+                  </block>
                   </next>
                 </block>
               </next>
@@ -3789,7 +3792,7 @@ async function runCode() {
   await eval("(async () => {" + code + "})()");
   if(flurbCell.querySelector('#flurb') && flurbCell.querySelector('#apple')) {
     if(loopValidation) {
-        if(code.indexOf("for") == -1) {
+        if(code.indexOf("while") == -1) {
             alert("You got the fruit, but you didn't use the Repeat Block. Try Again!");
             flurbPosition = {x: flurbCellX, y: flurbCellY};
             updateFlurbPosition()
@@ -3821,7 +3824,7 @@ async function runCode() {
     gameScore += score;
     localStorage.setItem('getFruitScore', gameScore);
     let level_val = Number(level)
-    if (level_val < 512) {
+    if (level_val < 24) {
       location.href = `flurb.html?level=${level_val+1}`;
     } else {
       alert("you beat the game! congratulations!!!")
@@ -3833,7 +3836,7 @@ async function runCode() {
     gameScore += score;
     localStorage.setItem('getFruitScore', gameScore);
     let level_val = Number(level)
-    if (level_val < 512) {
+    if (level_val < 24) {
       location.href = `flurb.html?level=${level_val+1}`;
     } else {
       alert("you beat the game! congratulations!!!")
