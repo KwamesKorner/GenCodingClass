@@ -4561,7 +4561,15 @@ const levelValues = {
                         <block type="move_down"></block>
                       </statement>
                       <next> 
-                        <block type="move_up"></block>
+                        <block type="move_up">
+                          <next> 
+                            <block type="move_up">
+                              <next> 
+                                <block type="move_up"></block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
                       </next>
                     </block>
                   </statement>
@@ -7350,7 +7358,7 @@ async function runCode() {
     gameScore += score;
     localStorage.setItem('getFruitScore', gameScore);
     let level_val = Number(level)
-    if (level_val < 515) {
+    if (level_val < 520) {
       location.href = `flurb.html?level=${level_val+1}`;
     } else {
       alert("you beat the game! congratulations!!!")
@@ -7362,7 +7370,7 @@ async function runCode() {
     gameScore += score;
     localStorage.setItem('getFruitScore', gameScore);
     let level_val = Number(level)
-    if (level_val < 515) {
+    if (level_val < 520) {
       location.href = `flurb.html?level=${level_val+1}`;
     } else {
       alert("you beat the game! congratulations!!!")
