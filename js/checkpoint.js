@@ -3830,6 +3830,3242 @@ const levelValues = {
   "readOnly": false,
   "editDisabled": true,
   "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"516": {
+  "gridHeight": 8,
+  "gridWidth": 8,
+  "flurbCellX": 0,
+  "flurbCellY": 7,
+  "fruitCellX": 7,
+  "fruitCellY": 0,
+  "flurbPosition": { "x": 0, "y": 7 },
+  "lavaPos": [
+    [1, 6, "|"], [2, 6, "|"], [3, 6, "|"], [4, 6, "|"], [5, 6, "|"], [6, 6, "|"],
+    [2, 5, "|"], [3, 5, "|"], [4, 5, "|"], [5, 5, "|"],
+    [1, 3, "|"], [2, 3, "|"], [3, 3, "|"],
+    [0, 2, "|"], [1, 2, "|"], [2, 2, "|"],
+    [1, 1, "|"], [0, 0, "|"], [7, 7, "|"]
+  ],
+  "xml": `
+  <xml>
+    <variables>
+      <variable>num1</variable>
+      <variable>num2</variable>
+      <variable>num3</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="variables_set">
+      <field name="VAR">num1</field>
+      <value name="VALUE">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(15)}</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set">
+          <field name="VAR">num2</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(15)}</field>
+            </block>
+          </value>
+          <next>
+        <block type="variables_set">
+          <field name="VAR">num3</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(15)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set">
+              <field name="VAR">product</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">MULTIPLY</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">num1</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <field name="VAR">num2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_ifelse">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <field name="OP">GT</field>
+                      <value name="A">
+                        <block type="variables_get">
+                          <field name="VAR">product</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">${getRandomInt(225)}</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="controls_if">
+                      <mutation else="1"></mutation>
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <field name="OP">GT</field>
+                          <value name="A">
+                            <block type="variables_get">
+                              <field name="VAR">num1</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="variables_get">
+                              <field name="VAR">num3</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="controls_repeat">
+                          <field name="TIMES">5</field>
+                          <statement name="DO">
+                            <block type="move_right"></block>
+                          </statement>
+                          <next>
+                            <block type="controls_repeat">
+                              <field name="TIMES">3</field>
+                              <statement name="DO">
+                                <block type="move_right"></block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="move_up"></block>
+                      </statement>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="controls_repeat">
+                      <field name="TIMES">4</field>
+                      <statement name="DO">
+                        <block type="move_left"></block>
+                      </statement>
+                      <next>
+                        <block type="controls_repeat">
+                          <field name="TIMES">3</field>
+                          <statement name="DO">
+                            <block type="move_up"></block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+              </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </xml>`,
+  "dropdown": false,
+  "readOnly": false,
+  "editDisabled": true,
+  "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"517": {
+  "gridHeight": 8,
+  "gridWidth": 8,
+  "flurbCellX": 7,
+  "flurbCellY": 2,
+  "fruitCellX": 1,
+  "fruitCellY": 3,
+  "flurbPosition": {"x": 7, "y": 0},
+  "lavaPos": [
+    [0, 0, "|"], [1, 0, "|"], [2, 0, "|"], [3, 0, "|"], [4, 0, "|"], [5, 0, "|"], 
+    [6, 0, "|"], [7, 0, "|"], [0, 1, "|"], [0, 2, "|"], [1, 2, "|"], [2, 2, "|"],
+    [4, 2, "|"], [5, 2, "|"], [6, 2, "|"], [0, 3, "|"], [2, 3, "|"], [4, 3, "|"],
+    [6, 3, "|"], [7, 3, "|"], [0, 4, "|"], [2, 4, "|"], [4, 4, "|"], [5, 4, "|"],
+    [7, 4, "|"], [0, 6, "|"], [1, 6, "|"], [2, 6, "|"], [3, 6, "|"], [4, 6, "|"],
+    [5, 6, "|"], [6, 6, "|"], [0, 7, "|"], [1, 7, "|"], [2, 7, "|"], [7, 7, "|"]
+  ],
+  "xml": `
+  <xml>
+    <variables>
+      <variable>num1</variable>
+      <variable>num2</variable>
+      <variable>num3</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="variables_set">
+      <field name="VAR">num1</field>
+      <value name="VALUE">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(15)}</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set">
+          <field name="VAR">num2</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(15)}</field>
+            </block>
+          </value>
+          <next>
+        <block type="variables_set">
+          <field name="VAR">num3</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(15)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set">
+              <field name="VAR">product</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">MULTIPLY</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">num1</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <field name="VAR">num2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_ifelse">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <field name="OP">GT</field>
+                      <value name="A">
+                        <block type="variables_get">
+                          <field name="VAR">product</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">${getRandomInt(225)}</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="controls_if">
+                      <mutation else="1"></mutation>
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <field name="OP">GT</field>
+                          <value name="A">
+                            <block type="variables_get">
+                              <field name="VAR">num1</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="variables_get">
+                              <field name="VAR">num3</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="controls_repeat">
+                          <field name="TIMES">5</field>
+                          <statement name="DO">
+                            <block type="move_down"></block>
+                          </statement>
+                          <next>
+                            <block type="controls_repeat">
+                              <field name="TIMES">3</field>
+                              <statement name="DO">
+                                <block type="move_right"></block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="move_up"></block>
+                      </statement>
+                      <next>
+                          <block type="move_left"></block>
+                        </next>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="controls_repeat">
+                      <field name="TIMES">4</field>
+                      <statement name="DO">
+                        <block type="move_left"></block>
+                      </statement>
+                      <next>
+                        <block type="controls_repeat">
+                          <field name="TIMES">3</field>
+                          <statement name="DO">
+                            <block type="move_up"></block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+              </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </xml>`,
+  "dropdown": false,
+  "readOnly": false,
+  "editDisabled": true,
+  "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"518": {
+  "gridHeight": 8,
+  "gridWidth": 8,
+  "flurbCellX": 7,
+  "flurbCellY": 0,
+  "fruitCellX": 5,
+  "fruitCellY": 6,
+  "flurbPosition": { "x": 4, "y": 0 },
+  "lavaPos": [[0, 2, "|"], [1, 0, "|"], [2, 2, "|"], [2, 3, "|"], [3, 0, "|"], [4, 2, "|"]
+              [4, 2, "|"], [5, 2, "|"], [6, 2, "|"], [0, 3, "|"], [2, 3, "|"], [4, 3, "|"],
+              [6, 3, "|"], [7, 3, "|"], [0, 4, "|"], [2, 4, "|"], [4, 4, "|"], [5, 4, "|"],
+              [7, 4, "|"], [0, 6, "|"], [1, 6, "|"], [2, 6, "|"], [3, 6, "|"], [4, 6, "|"]],
+  "xml": `
+  <xml>
+    <variables>
+      <variable>num1</variable>
+      <variable>num2</variable>
+      <variable>num3</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="variables_set">
+      <field name="VAR">num1</field>
+      <value name="VALUE">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(15)}</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set">
+          <field name="VAR">num2</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(15)}</field>
+            </block>
+          </value>
+          <next>
+        <block type="variables_set">
+          <field name="VAR">num3</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(15)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set">
+              <field name="VAR">product</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">MULTIPLY</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">num1</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <field name="VAR">num2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_ifelse">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <field name="OP">GT</field>
+                      <value name="A">
+                        <block type="variables_get">
+                          <field name="VAR">product</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">${getRandomInt(225)}</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="controls_if">
+                      <mutation else="1"></mutation>
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <field name="OP">GT</field>
+                          <value name="A">
+                            <block type="variables_get">
+                              <field name="VAR">num1</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="variables_get">
+                              <field name="VAR">num3</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="controls_repeat">
+                          <field name="TIMES">5</field>
+                          <statement name="DO">
+                            <block type="move_right">
+                              <next>
+                                <block type="move_left">
+                                  <next>
+                                    <block type="move_down"></block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="controls_repeat">
+                              <field name="TIMES">3</field>
+                              <statement name="DO">
+                                <block type="move_right">
+                                  <next>
+                                    <block type="move_down"></block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="move_up"></block>
+                      </statement>
+                      <next>
+                        <block type="move_down"></block>
+                      </next>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="controls_repeat">
+                      <field name="TIMES">4</field>
+                      <statement name="DO">
+                        <block type="move_left"></block>
+                      </statement>
+                      <next>
+                            <block type="move_up"></block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+              </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </xml>`,
+  "dropdown": false,
+  "readOnly": false,
+  "editDisabled": true,
+  "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"519": {
+  "gridHeight": 8,
+  "gridWidth": 8,
+  "flurbCellX": 0,
+  "flurbCellY": 7,
+  "fruitCellX": 0,
+  "fruitCellY": 3,
+  "flurbPosition": { "x": 0, "y": 7 },
+  "lavaPos": [[0, 5, "|"], [1, 1, "|"], [1, 4, "|"], [2, 2, "|"], [2, 6, "|"], [3, 1, "|"], [3, 4, "|"], [4, 2, "|"], [4, 5, "|"], [4, 7, "|"], [5, 1, "|"], [5, 4, "|"], [5, 6, "|"], [6, 3, "|"], [6, 7, "|"]],
+  "xml": `
+  <xml>
+    <variables>
+      <variable>num1</variable>
+      <variable>num2</variable>
+      <variable>num3</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="variables_set">
+      <field name="VAR">num1</field>
+      <value name="VALUE">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(15)}</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set">
+          <field name="VAR">num2</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(15)}</field>
+            </block>
+          </value>
+          <next>
+        <block type="variables_set">
+          <field name="VAR">num3</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(15)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set">
+              <field name="VAR">product</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">MULTIPLY</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">num1</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <field name="VAR">num2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_ifelse">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <field name="OP">GT</field>
+                      <value name="A">
+                        <block type="variables_get">
+                          <field name="VAR">product</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">${getRandomInt(225)}</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="controls_if">
+                      <mutation else="1"></mutation>
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <field name="OP">GT</field>
+                          <value name="A">
+                            <block type="variables_get">
+                              <field name="VAR">num1</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="variables_get">
+                              <field name="VAR">num3</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="controls_repeat">
+                          <field name="TIMES">5</field>
+                          <statement name="DO">
+                            <block type="move_right"></block>
+                          </statement>
+                          <next>
+                            <block type="controls_repeat">
+                              <field name="TIMES">3</field>
+                              <statement name="DO">
+                                <block type="move_right"></block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="move_up"></block>
+                      </statement>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="controls_repeat">
+                      <field name="TIMES">4</field>
+                      <statement name="DO">
+                        <block type="move_left"></block>
+                      </statement>
+                      <next>
+                        <block type="controls_repeat">
+                          <field name="TIMES">3</field>
+                          <statement name="DO">
+                            <block type="move_up"></block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+              </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </xml>`,
+  "dropdown": false,
+  "readOnly": false,
+  "editDisabled": true,
+  "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"520": {
+  "gridHeight": 5,
+  "gridWidth": 5,
+  "flurbCellX": 0,
+  "flurbCellY": 0,
+  "fruitCellX": 4,
+  "fruitCellY": 1,
+  "flurbPosition": { "x": 0, "y": 0 },
+  "lavaPos": [[0, 1, "|"], [0, 2, "|"], [1, 3, "|"], [2, 0, "|"], [2, 1, "|"], [3, 2, "|"], [3, 3, "|"], [4, 0, "|"]],
+  "xml": `
+  <xml>
+    <variables>
+      <variable>num1</variable>
+      <variable>num2</variable>
+      <variable>num3</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="variables_set">
+      <field name="VAR">num1</field>
+      <value name="VALUE">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(15)}</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set">
+          <field name="VAR">num2</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(15)}</field>
+            </block>
+          </value>
+          <next>
+        <block type="variables_set">
+          <field name="VAR">num3</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(15)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set">
+              <field name="VAR">product</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">MULTIPLY</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">num1</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <field name="VAR">num2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_ifelse">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <field name="OP">GT</field>
+                      <value name="A">
+                        <block type="variables_get">
+                          <field name="VAR">product</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">${getRandomInt(225)}</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="controls_if">
+                      <mutation else="1"></mutation>
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <field name="OP">GT</field>
+                          <value name="A">
+                            <block type="variables_get">
+                              <field name="VAR">num1</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="variables_get">
+                              <field name="VAR">num3</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="controls_repeat">
+                          <field name="TIMES">5</field>
+                          <statement name="DO">
+                            <block type="move_right"></block>
+                          </statement>
+                          <next>
+                            <block type="controls_repeat">
+                              <field name="TIMES">3</field>
+                              <statement name="DO">
+                                <block type="move_right"></block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="move_down"></block>
+                      </statement>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="controls_repeat">
+                      <field name="TIMES">4</field>
+                      <statement name="DO">
+                        <block type="move_down"></block>
+                      </statement>
+                      <next> 
+                        <block type="move_up"></block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+              </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </xml>`,
+  "dropdown": false,
+  "readOnly": false,
+  "editDisabled": true,
+  "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+
+
+
+
+
+"400": {
+  gridHeight: 2,
+  gridWidth: 3,
+  flurbCellX: 1,
+  flurbCellY: 1,
+  fruitCellX: 1,
+  fruitCellY: 0,
+  flurbPosition: {x: 1, y: 1},
+  lavaPos: [],
+  "xml":
+    `<xml>
+      <variables>
+        <variable>num</variable>
+      </variables>
+      <block type="variables_set">
+        <field name="VAR">num</field>
+        <value name="VALUE">
+          <block type="math_number">
+            <field name="NUM">${getRandomInt(10)}</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get">
+                    <field name="VAR">num</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number">
+                    <field name="NUM">${getRandomInt(10)}</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="move_up"></block>
+            </statement>
+            <statement name="ELSE">
+              <block type="move_down"></block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </xml>`,
+    "dropdown": true,
+    "readOnly": true,
+    "alertMessage": "Will the flurb make it to the fruit???"
+},
+"401": {
+  gridHeight: 2,
+  gridWidth: 3,
+  flurbCellX: 2,
+  flurbCellY: 0,
+  fruitCellX: 2,
+  fruitCellY: 1,
+  flurbPosition: {x: 2, y: 0},
+  lavaPos: [],
+  "xml":
+    `<xml>
+      <variables>
+        <variable>num</variable>
+      </variables>
+      <block type="variables_set">
+        <field name="VAR">num</field>
+        <value name="VALUE">
+          <block type="math_number">
+            <field name="NUM">${getRandomInt(10)}</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_ifelse">
+            <value name="IF0">
+              <block type="logic_compare">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="math_number">
+                    <field name="NUM">${getRandomInt(10)}</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="variables_get">
+                    <field name="VAR">num</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="move_up"></block>
+            </statement>
+            <statement name="ELSE">
+              <block type="move_down"></block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </xml>`,
+  "dropdown": true,
+  "readOnly": true,
+  "alertMessage": "Will the flurb make it to the fruit???"
+},
+"402": {
+  gridHeight: 2,
+  gridWidth: 3,
+  flurbCellX: 0,
+  flurbCellY: 0,
+  fruitCellX: 1,
+  fruitCellY: 1,
+  flurbPosition: {x: 0, y: 0},
+  lavaPos: [],
+  "xml":
+    `<xml>
+      <variables>
+        <variable>steps</variable>
+      </variables>
+      <block type="variables_set">
+        <field name="VAR">steps</field>
+        <value name="VALUE">
+          <block type="math_number">
+            <field name="NUM">${getRandomInt(10)}</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_ifelse">
+            <value name="IF0">
+              <block type="logic_compare">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get">
+                    <field name="VAR">steps</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number">
+                    <field name="NUM">${getRandomInt(10)}</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="move_right">
+                <next>
+                  <block type="move_up"></block>
+                </next>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="move_down">
+                <next>
+                  <block type="move_right"></block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </xml>`,
+  "dropdown": true,
+  "readOnly": true,
+  "alertMessage": "Will the flurb make it to the fruit???"
+},
+"403": {
+  gridHeight: 2,
+  gridWidth: 3,
+  flurbCellX: 2,
+  flurbCellY: 0,
+  fruitCellX: 0,
+  fruitCellY: 0,
+  flurbPosition: {x: 2, y: 0},
+  lavaPos: [],
+  "xml":
+    `<xml>
+    <variables>
+      <variable>num1</variable>
+      <variable>num2</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="variables_set">
+      <field name="VAR">num1</field>
+      <value name="VALUE">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set">
+          <field name="VAR">num2</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set">
+              <field name="VAR">product</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">MULTIPLY</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">num1</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <field name="VAR">num2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_ifelse">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <field name="OP">EQ</field>
+                      <value name="A">
+                        <block type="variables_get">
+                          <field name="VAR">product</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">${getRandomInt(100)}</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="move_left">
+                      <next>
+                        <block type="move_left"></block>
+                      </next>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="move_right">
+                      <next>
+                        <block type="move_right"></block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </xml>`,
+  "dropdown": true,
+  "readOnly": false,
+  "alertMessage": "Will the flurb make it to the fruit???"
+},
+"404": {
+  gridHeight: 2,
+  gridWidth: 3,
+  flurbCellX: 0,
+  flurbCellY: 0,
+  fruitCellX: 2,
+  fruitCellY: 1,
+  flurbPosition: {x: 0, y: 0},
+  lavaPos: [],
+  "xml":
+    `<xml>
+      <variables>
+        <variable>num1</variable>
+        <variable>num2</variable>
+        <variable>product</variable>
+      </variables>
+      <block type="variables_set">
+        <field name="VAR">num1</field>
+        <value name="VALUE">
+          <block type="math_number">
+            <field name="NUM">${getRandomInt(10)}</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set">
+            <field name="VAR">num2</field>
+            <value name="VALUE">
+              <block type="math_number">
+                <field name="NUM">${getRandomInt(10)}</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set">
+                <field name="VAR">product</field>
+                <value name="VALUE">
+                  <block type="math_arithmetic">
+                    <field name="OP">MULTIPLY</field>
+                    <value name="A">
+                      <block type="variables_get">
+                        <field name="VAR">num1</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="variables_get">
+                        <field name="VAR">num2</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+          <block type="controls_ifelse">
+            <value name="IF0">
+                <block type="logic_compare">
+                  <field name="OP">GTE</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">product</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                      <block type="math_number">
+                        <field name="NUM">${getRandomInt(10)}</field>
+                      </block>
+                  </value>
+                </block>
+            </value>
+            <statement name="DO0">
+              <block type="move_left">
+              <next>
+                <block type="move_left">
+                <next>
+                <block type="move_up">
+              </next>
+              </next>
+            </statement>
+            <statement name="ELSE">
+              <block type="move_right">
+              <next>
+                <block type="move_right">
+                <next>
+                <block type="move_down">
+              </next>
+              </next>
+            </statement>
+            </next>
+            </block>
+            </next>
+            </block>
+            </next>
+        </block>
+      </xml>`,
+  "dropdown": true,
+  "readOnly": true,
+  "alertMessage": "Will the flurb make it to the fruit???"
+},
+"405": {
+"gridHeight": 4,
+"gridWidth": 7,
+"flurbCellX": 3,
+"flurbCellY": 0,
+"fruitCellX": 2,
+"fruitCellY": 3,
+"flurbPosition": { "x": 3, "y": 0 },
+"lavaPos": [],
+"xml":`
+<xml>
+  <variables>
+  <variable>num1</variable>
+  <variable>num2</variable>
+  <variable>product</variable>
+  </variables>
+  <block type="variables_set">
+    <field name="VAR">num1</field>
+    <value name="VALUE">
+      <block type="math_number">
+        <field name="NUM">${getRandomInt(10)}</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set">
+        <field name="VAR">num2</field>
+        <value name="VALUE">
+          <block type="math_number">
+            <field name="NUM">${getRandomInt(10)}</field>
+          </block>
+        </value>
+        <next>
+        <block type="variables_set">
+          <field name="VAR">product</field>
+          <value name="VALUE">
+            <block type="math_arithmetic">
+              <field name="OP">MULTIPLY</field>
+              <value name="A">
+                <block type="variables_get">
+                  <field name="VAR">num1</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="variables_get">
+                  <field name="VAR">num2</field>
+                </block>
+              </value>
+            </block>
+          </value>
+      <next>
+    <block type="controls_ifelse">
+      <value name="IF0">
+          <block type="logic_compare">
+            <field name="OP">EQ</field>
+            <value name="A">
+                <block type="math_number">
+                  <field name="NUM">${getRandomInt(100)}</field>
+                </block>
+            </value>
+            <value name="B">
+                <block type="variables_get">
+                  <field name="VAR">product</field>
+                </block>
+            </value>
+          </block>
+      </value>
+      <statement name="DO0">
+          <block type="controls_repeat">
+            <field name="TIMES">3</field>
+            <statement name="DO">
+                <block type="move_down">
+            </statement>
+            <next>
+                <block type="move_right">
+            </next>
+          </block>
+      </statement>
+      <statement name="ELSE">
+          <block type="move_left">
+            <next>
+                <block type="controls_repeat">
+                  <field name="TIMES">3</field>
+                  <statement name="DO">
+                      <block type="move_down">
+                  </statement>
+                </block>
+                </next>
+                </block>
+                </next>
+                </block>
+            </next>
+          </block>
+      </statement>
+    </block>
+  </xml>`,
+"dropdown": true,
+"readOnly": true,
+"alertMessage": "Will the flurb make it to the fruit???"
+},
+"406": {
+"gridHeight": 5,
+"gridWidth": 6,
+"flurbCellX": 2,
+"flurbCellY": 0,
+"fruitCellX": 4,
+"fruitCellY": 3,
+"flurbPosition": { "x": 2, "y": 0 },
+"lavaPos": [],
+"xml": 
+  `<xml>
+    <variables>
+      <variable>num1</variable>
+      <variable>num2</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="variables_set">
+      <field name="VAR">num1</field>
+      <value name="VALUE">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set">
+          <field name="VAR">num2</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set">
+              <field name="VAR">product</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">MULTIPLY</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">num1</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <field name="VAR">num2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_ifelse">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <field name="OP">LT</field>
+                      <value name="A">
+                        <block type="variables_get">
+                          <field name="VAR">product</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">${getRandomInt(100)}</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="move_left">
+                      <next>
+                        <block type="controls_repeat">
+                          <field name="TIMES">4</field>
+                          <statement name="DO">
+                            <block type="move_down"></block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="controls_if">
+                      <mutation else="1"></mutation>
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <field name="OP">LT</field>
+                          <value name="A">
+                            <block type="variables_get">
+                              <field name="VAR">num1</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="variables_get">
+                              <field name="VAR">num2</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="controls_repeat">
+                          <field name="TIMES">4</field>
+                          <statement name="DO">
+                            <block type="move_down"></block>
+                          </statement>
+                          <next>
+                            <block type="controls_repeat">
+                              <field name="TIMES">2</field>
+                              <statement name="DO">
+                                <block type="move_right"></block>
+                              </statement>
+                              <next>
+                                <block type="move_up"></block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="controls_repeat">
+                          <field name="TIMES">2</field>
+                          <statement name="DO">
+                            <block type="move_right"></block>
+                          </statement>
+                          <next>
+                            <block type="controls_repeat">
+                              <field name="TIMES">3</field>
+                              <statement name="DO">
+                                <block type="move_down"></block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </xml>`,
+"dropdown": true,
+"readOnly": true,
+"alertMessage": "Will the flurb make it to the fruit???"
+},
+"407": {
+  "gridHeight": 5,
+  "gridWidth": 6,
+  "flurbCellX": 0,
+  "flurbCellY": 0,
+  "fruitCellX": 4,
+  "fruitCellY": 3,
+  "flurbPosition": { "x": 0, "y": 0 },
+  "lavaPos": [],
+  "xml": `
+  <xml>
+    <variables>
+      <variable>num1</variable>
+      <variable>num2</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="variables_set">
+      <field name="VAR">num1</field>
+      <value name="VALUE">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set">
+          <field name="VAR">num2</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set">
+              <field name="VAR">product</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">MULTIPLY</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">num1</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <field name="VAR">num2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_ifelse">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <field name="OP">GT</field>
+                      <value name="A">
+                        <block type="variables_get">
+                          <field name="VAR">product</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">${getRandomInt(100)}</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="controls_if">
+                      <mutation else="1"></mutation>
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <field name="OP">GT</field>
+                          <value name="A">
+                            <block type="variables_get">
+                              <field name="VAR">num1</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="variables_get">
+                              <field name="VAR">num2</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="controls_repeat">
+                          <field name="TIMES">4</field>
+                          <statement name="DO">
+                            <block type="move_right"></block>
+                          </statement>
+                          <next>
+                            <block type="controls_repeat">
+                              <field name="TIMES">3</field>
+                              <statement name="DO">
+                                <block type="move_down"></block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="move_down"></block>
+                      </statement>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="controls_repeat">
+                      <field name="TIMES">4</field>
+                      <statement name="DO">
+                        <block type="move_left"></block>
+                      </statement>
+                      <next>
+                        <block type="controls_repeat">
+                          <field name="TIMES">3</field>
+                          <statement name="DO">
+                            <block type="move_up"></block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </xml>`,
+  "dropdown": true,
+  "readOnly": true,
+  "alertMessage": "Will the flurb make it to the fruit???"
+}, 
+"408": {
+  gridHeight: 2,
+  gridWidth: 3,
+  flurbCellX: 2,
+  flurbCellY: 0,
+  fruitCellX: 0,
+  fruitCellY: 0,
+  flurbPosition: {x: 2, y: 0},
+  lavaPos: [],
+  "xml":
+    `<xml>
+    <variables>
+      <variable>num1</variable>
+      <variable>num2</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="variables_set">
+      <field name="VAR">num1</field>
+      <value name="VALUE">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set">
+          <field name="VAR">num2</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set">
+              <field name="VAR">product</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">MULTIPLY</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">num1</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <field name="VAR">num2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_ifelse">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <field name="OP">EQ</field>
+                      <value name="A">
+                        <block type="variables_get">
+                          <field name="VAR">product</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">${getRandomInt(100)}</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="move_left">
+                      <next>
+                        <block type="move_right"></block>
+                      </next>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="move_right">
+                      <next>
+                        <block type="move_left"></block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </xml>`,
+  "dropdown": false,
+  "readOnly": false,
+  "editDisabled": true,
+  "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"409": {
+  gridHeight: 2,
+  gridWidth: 3,
+  flurbCellX: 0,
+  flurbCellY: 0,
+  fruitCellX: 2,
+  fruitCellY: 1,
+  flurbPosition: {x: 0, y: 0},
+  lavaPos: [],
+  "xml":
+    `<xml>
+      <variables>
+        <variable>num1</variable>
+        <variable>num2</variable>
+        <variable>product</variable>
+      </variables>
+      <block type="variables_set">
+        <field name="VAR">num1</field>
+        <value name="VALUE">
+          <block type="math_number">
+            <field name="NUM">${getRandomInt(10)}</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set">
+            <field name="VAR">num2</field>
+            <value name="VALUE">
+              <block type="math_number">
+                <field name="NUM">${getRandomInt(10)}</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set">
+                <field name="VAR">product</field>
+                <value name="VALUE">
+                  <block type="math_arithmetic">
+                    <field name="OP">MULTIPLY</field>
+                    <value name="A">
+                      <block type="variables_get">
+                        <field name="VAR">num1</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="variables_get">
+                        <field name="VAR">num2</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+          <block type="controls_ifelse">
+            <value name="IF0">
+                <block type="logic_compare">
+                  <field name="OP">GTE</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">product</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                      <block type="math_number">
+                        <field name="NUM">${getRandomInt(10)}</field>
+                      </block>
+                  </value>
+                </block>
+            </value>
+            <statement name="DO0">
+              <block type="move_right">
+              <next>
+                <block type="move_left">
+                <next>
+                <block type="move_up">
+              </next>
+              </next>
+            </statement>
+            <statement name="ELSE">
+              <block type="move_right">
+              <next>
+                <block type="move_left">
+                <next>
+                <block type="move_down">
+              </next>
+              </next>
+            </statement>
+            </next>
+            </block>
+            </next>
+            </block>
+            </next>
+        </block>
+      </xml>`,
+  "dropdown": false,
+  "readOnly": false,
+  "editDisabled": true,
+  "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"410": {
+"gridHeight": 4,
+"gridWidth": 7,
+"flurbCellX": 3,
+"flurbCellY": 0,
+"fruitCellX": 2,
+"fruitCellY": 3,
+"flurbPosition": { "x": 3, "y": 0 },
+"lavaPos": [],
+"xml":`
+<xml>
+  <variables>
+  <variable>num1</variable>
+  <variable>num2</variable>
+  <variable>product</variable>
+  </variables>
+  <block type="variables_set">
+    <field name="VAR">num1</field>
+    <value name="VALUE">
+      <block type="math_number">
+        <field name="NUM">${getRandomInt(10)}</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set">
+        <field name="VAR">num2</field>
+        <value name="VALUE">
+          <block type="math_number">
+            <field name="NUM">${getRandomInt(10)}</field>
+          </block>
+        </value>
+        <next>
+        <block type="variables_set">
+          <field name="VAR">product</field>
+          <value name="VALUE">
+            <block type="math_arithmetic">
+              <field name="OP">MULTIPLY</field>
+              <value name="A">
+                <block type="variables_get">
+                  <field name="VAR">num1</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="variables_get">
+                  <field name="VAR">num2</field>
+                </block>
+              </value>
+            </block>
+          </value>
+      <next>
+    <block type="controls_ifelse">
+      <value name="IF0">
+          <block type="logic_compare">
+            <field name="OP">EQ</field>
+            <value name="A">
+                <block type="math_number">
+                  <field name="NUM">${getRandomInt(100)}</field>
+                </block>
+            </value>
+            <value name="B">
+                <block type="variables_get">
+                  <field name="VAR">product</field>
+                </block>
+            </value>
+          </block>
+      </value>
+      <statement name="DO0">
+          <block type="controls_repeat">
+            <field name="TIMES">3</field>
+            <statement name="DO">
+                <block type="move_down">
+            </statement>
+            <next>
+                <block type="move_right">
+            </next>
+          </block>
+      </statement>
+      <statement name="ELSE">
+          <block type="move_left">
+            <next>
+                <block type="controls_repeat">
+                  <field name="TIMES">3</field>
+                  <statement name="DO">
+                      <block type="move_up">
+                  </statement>
+                </block>
+                </next>
+                </block>
+                </next>
+                </block>
+            </next>
+          </block>
+      </statement>
+    </block>
+  </xml>`,
+"dropdown": false,
+"readOnly": false,
+"editDisabled": true,
+"alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"411": {
+"gridHeight": 5,
+"gridWidth": 6,
+"flurbCellX": 2,
+"flurbCellY": 0,
+"fruitCellX": 4,
+"fruitCellY": 3,
+"flurbPosition": { "x": 2, "y": 0 },
+"lavaPos": [],
+"xml": 
+  `<xml>
+    <variables>
+      <variable>num1</variable>
+      <variable>num2</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="variables_set">
+      <field name="VAR">num1</field>
+      <value name="VALUE">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set">
+          <field name="VAR">num2</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set">
+              <field name="VAR">product</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">MULTIPLY</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">num1</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <field name="VAR">num2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_ifelse">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <field name="OP">LT</field>
+                      <value name="A">
+                        <block type="variables_get">
+                          <field name="VAR">product</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">${getRandomInt(100)}</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="move_left">
+                      <next>
+                        <block type="controls_repeat">
+                          <field name="TIMES">4</field>
+                          <statement name="DO">
+                            <block type="move_down"></block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="controls_if">
+                      <mutation else="1"></mutation>
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <field name="OP">LT</field>
+                          <value name="A">
+                            <block type="variables_get">
+                              <field name="VAR">num1</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="variables_get">
+                              <field name="VAR">num2</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="controls_repeat">
+                          <field name="TIMES">4</field>
+                          <statement name="DO">
+                            <block type="move_down"></block>
+                          </statement>
+                          <next>
+                            <block type="controls_repeat">
+                              <field name="TIMES">2</field>
+                              <statement name="DO">
+                                <block type="move_right"></block>
+                              </statement>
+                              <next>
+                                <block type="move_up"></block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="controls_repeat">
+                          <field name="TIMES">2</field>
+                          <statement name="DO">
+                            <block type="move_right"></block>
+                          </statement>
+                          <next>
+                            <block type="controls_repeat">
+                              <field name="TIMES">5</field>
+                              <statement name="DO">
+                                <block type="move_up"></block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </xml>`,
+"dropdown": false,
+"readOnly": false,
+"editDisabled": true,
+"alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"412": {
+  "gridHeight": 5,
+  "gridWidth": 6,
+  "flurbCellX": 0,
+  "flurbCellY": 0,
+  "fruitCellX": 4,
+  "fruitCellY": 3,
+  "flurbPosition": { "x": 0, "y": 0 },
+  "lavaPos": [],
+  "xml": `
+  <xml>
+    <variables>
+      <variable>num1</variable>
+      <variable>num2</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="variables_set">
+      <field name="VAR">num1</field>
+      <value name="VALUE">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set">
+          <field name="VAR">num2</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set">
+              <field name="VAR">product</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">MULTIPLY</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">num1</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <field name="VAR">num2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_ifelse">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <field name="OP">GT</field>
+                      <value name="A">
+                        <block type="variables_get">
+                          <field name="VAR">product</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">${getRandomInt(100)}</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="controls_if">
+                      <mutation else="1"></mutation>
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <field name="OP">GT</field>
+                          <value name="A">
+                            <block type="variables_get">
+                              <field name="VAR">num1</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="variables_get">
+                              <field name="VAR">num2</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="controls_repeat">
+                          <field name="TIMES">4</field>
+                          <statement name="DO">
+                            <block type="move_right"></block>
+                          </statement>
+                          <next>
+                            <block type="controls_repeat">
+                              <field name="TIMES">3</field>
+                              <statement name="DO">
+                                <block type="move_up"></block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="move_down"></block>
+                      </statement>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="controls_repeat">
+                      <field name="TIMES">4</field>
+                      <statement name="DO">
+                        <block type="move_left"></block>
+                      </statement>
+                      <next>
+                        <block type="controls_repeat">
+                          <field name="TIMES">3</field>
+                          <statement name="DO">
+                            <block type="move_up"></block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </xml>`,
+  "dropdown": false,
+  "readOnly": false,
+  "editDisabled": true,
+  "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"413": {
+  "gridHeight": 5,
+  "gridWidth": 6,
+  "flurbCellX": 0,
+  "flurbCellY": 0,
+  "fruitCellX": 4,
+  "fruitCellY": 3,
+  "flurbPosition": { "x": 0, "y": 0 },
+  "lavaPos": [],
+  "xml": `
+  <xml>
+    <variables>
+      <variable>num1</variable>
+      <variable>num2</variable>
+      <variable>num3</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="variables_set">
+      <field name="VAR">num1</field>
+      <value name="VALUE">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set">
+          <field name="VAR">num2</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+        <block type="variables_set">
+          <field name="VAR">num3</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set">
+              <field name="VAR">product</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">MULTIPLY</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">num1</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <field name="VAR">num2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_ifelse">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <field name="OP">GT</field>
+                      <value name="A">
+                        <block type="variables_get">
+                          <field name="VAR">product</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">${getRandomInt(100)}</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="controls_if">
+                      <mutation else="1"></mutation>
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <field name="OP">GT</field>
+                          <value name="A">
+                            <block type="variables_get">
+                              <field name="VAR">num1</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="variables_get">
+                              <field name="VAR">num3</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="controls_repeat">
+                          <field name="TIMES">5</field>
+                          <statement name="DO">
+                            <block type="move_right"></block>
+                          </statement>
+                          <next>
+                            <block type="controls_repeat">
+                              <field name="TIMES">3</field>
+                              <statement name="DO">
+                                <block type="move_left"></block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="move_down"></block>
+                      </statement>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="controls_repeat">
+                      <field name="TIMES">4</field>
+                      <statement name="DO">
+                        <block type="move_left"></block>
+                      </statement>
+                      <next>
+                        <block type="controls_repeat">
+                          <field name="TIMES">3</field>
+                          <statement name="DO">
+                            <block type="move_up"></block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+              </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </xml>`,
+  "dropdown": false,
+  "readOnly": false,
+  "editDisabled": true,
+  "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"414": {
+  gridHeight: 3,
+  gridWidth: 5,
+  flurbCellX: 0,
+  flurbCellY: 0,
+  fruitCellX: 4,
+  fruitCellY: 0,
+  flurbPosition: {x: 0, y: 0},
+  lavaPos: [[1,0,"|"], [2,0,"|"], [3,0,"|"], [1,1,"|"], [2,1,"|"], [3,1,"|"]],
+  "xml": `
+  <xml>
+    <variables>
+      <variable>num1</variable>
+      <variable>num2</variable>
+      <variable>num3</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="variables_set">
+      <field name="VAR">num1</field>
+      <value name="VALUE">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set">
+          <field name="VAR">num2</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+        <block type="variables_set">
+          <field name="VAR">num3</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set">
+              <field name="VAR">product</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">MULTIPLY</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">num1</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <field name="VAR">num2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_ifelse">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <field name="OP">GT</field>
+                      <value name="A">
+                        <block type="variables_get">
+                          <field name="VAR">product</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">${getRandomInt(100)}</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="controls_if">
+                      <mutation else="1"></mutation>
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <field name="OP">GT</field>
+                          <value name="A">
+                            <block type="variables_get">
+                              <field name="VAR">num1</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="variables_get">
+                              <field name="VAR">num3</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="controls_repeat">
+                          <field name="TIMES">5</field>
+                          <statement name="DO">
+                            <block type="move_right"></block>
+                          </statement>
+                          <next>
+                            <block type="controls_repeat">
+                              <field name="TIMES">3</field>
+                              <statement name="DO">
+                                <block type="move_left"></block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="move_down"></block>
+                      </statement>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="controls_repeat">
+                      <field name="TIMES">4</field>
+                      <statement name="DO">
+                        <block type="move_left"></block>
+                      </statement>
+                      <next>
+                        <block type="controls_repeat">
+                          <field name="TIMES">3</field>
+                          <statement name="DO">
+                            <block type="move_up"></block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+              </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </xml>`,
+  "dropdown": false,
+  "readOnly": false,
+  "editDisabled": true,
+  "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"415": {
+  "gridHeight": 6,
+  "gridWidth": 6,
+  "flurbCellX": 0,
+  "flurbCellY": 5,
+  "fruitCellX": 5,
+  "fruitCellY": 0,
+  "flurbPosition": { "x": 0, "y": 5 },
+  "lavaPos": [[0, 0, "|"], [1, 3, "|"], [3, 3, "|"], [4, 4, "|"], [2, 1, "|"], [2, 4, "|"], [3, 1, "|"], [1, 2, "|"], [5, 5, "|"]],
+  "xml": `
+  <xml>
+    <variables>
+      <variable>num1</variable>
+      <variable>num2</variable>
+      <variable>num3</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="variables_set">
+      <field name="VAR">num1</field>
+      <value name="VALUE">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set">
+          <field name="VAR">num2</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+        <block type="variables_set">
+          <field name="VAR">num3</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set">
+              <field name="VAR">product</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">MULTIPLY</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">num1</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <field name="VAR">num2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_ifelse">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <field name="OP">GT</field>
+                      <value name="A">
+                        <block type="variables_get">
+                          <field name="VAR">product</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">${getRandomInt(100)}</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="controls_if">
+                      <mutation else="1"></mutation>
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <field name="OP">GT</field>
+                          <value name="A">
+                            <block type="variables_get">
+                              <field name="VAR">num1</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="variables_get">
+                              <field name="VAR">num3</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="controls_repeat">
+                          <field name="TIMES">5</field>
+                          <statement name="DO">
+                            <block type="move_right"></block>
+                          </statement>
+                          <next>
+                            <block type="controls_repeat">
+                              <field name="TIMES">3</field>
+                              <statement name="DO">
+                                <block type="move_right"></block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="move_up"></block>
+                      </statement>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="controls_repeat">
+                      <field name="TIMES">4</field>
+                      <statement name="DO">
+                        <block type="move_left"></block>
+                      </statement>
+                      <next>
+                        <block type="controls_repeat">
+                          <field name="TIMES">3</field>
+                          <statement name="DO">
+                            <block type="move_up"></block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+              </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </xml>`,
+  "dropdown": false,
+  "readOnly": false,
+  "editDisabled": true,
+  "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"416": {
+  "gridHeight": 8,
+  "gridWidth": 8,
+  "flurbCellX": 0,
+  "flurbCellY": 7,
+  "fruitCellX": 7,
+  "fruitCellY": 0,
+  "flurbPosition": { "x": 0, "y": 7 },
+  "lavaPos": [
+    [1, 6, "|"], [2, 6, "|"], [3, 6, "|"], [4, 6, "|"], [5, 6, "|"], [6, 6, "|"],
+    [2, 5, "|"], [3, 5, "|"], [4, 5, "|"], [5, 5, "|"],
+    [1, 3, "|"], [2, 3, "|"], [3, 3, "|"],
+    [0, 2, "|"], [1, 2, "|"], [2, 2, "|"],
+    [1, 1, "|"], [0, 0, "|"], [7, 7, "|"]
+  ],
+  "xml": `
+  <xml>
+    <variables>
+      <variable>num1</variable>
+      <variable>num2</variable>
+      <variable>num3</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="variables_set">
+      <field name="VAR">num1</field>
+      <value name="VALUE">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set">
+          <field name="VAR">num2</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+        <block type="variables_set">
+          <field name="VAR">num3</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set">
+              <field name="VAR">product</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">MULTIPLY</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">num1</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <field name="VAR">num2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_ifelse">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <field name="OP">GT</field>
+                      <value name="A">
+                        <block type="variables_get">
+                          <field name="VAR">product</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">${getRandomInt(100)}</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="controls_if">
+                      <mutation else="1"></mutation>
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <field name="OP">GT</field>
+                          <value name="A">
+                            <block type="variables_get">
+                              <field name="VAR">num1</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="variables_get">
+                              <field name="VAR">num3</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="controls_repeat">
+                          <field name="TIMES">5</field>
+                          <statement name="DO">
+                            <block type="move_right"></block>
+                          </statement>
+                          <next>
+                            <block type="controls_repeat">
+                              <field name="TIMES">3</field>
+                              <statement name="DO">
+                                <block type="move_right"></block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="move_up"></block>
+                      </statement>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="controls_repeat">
+                      <field name="TIMES">4</field>
+                      <statement name="DO">
+                        <block type="move_left"></block>
+                      </statement>
+                      <next>
+                        <block type="controls_repeat">
+                          <field name="TIMES">3</field>
+                          <statement name="DO">
+                            <block type="move_up"></block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+              </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </xml>`,
+  "dropdown": false,
+  "readOnly": false,
+  "editDisabled": true,
+  "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"417": {
+  "gridHeight": 8,
+  "gridWidth": 8,
+  "flurbCellX": 7,
+  "flurbCellY": 2,
+  "fruitCellX": 1,
+  "fruitCellY": 3,
+  "flurbPosition": {"x": 7, "y": 0},
+  "lavaPos": [
+    [0, 0, "|"], [1, 0, "|"], [2, 0, "|"], [3, 0, "|"], [4, 0, "|"], [5, 0, "|"], 
+    [6, 0, "|"], [7, 0, "|"], [0, 1, "|"], [0, 2, "|"], [1, 2, "|"], [2, 2, "|"],
+    [4, 2, "|"], [5, 2, "|"], [6, 2, "|"], [0, 3, "|"], [2, 3, "|"], [4, 3, "|"],
+    [6, 3, "|"], [7, 3, "|"], [0, 4, "|"], [2, 4, "|"], [4, 4, "|"], [5, 4, "|"],
+    [7, 4, "|"], [0, 6, "|"], [1, 6, "|"], [2, 6, "|"], [3, 6, "|"], [4, 6, "|"],
+    [5, 6, "|"], [6, 6, "|"], [0, 7, "|"], [1, 7, "|"], [2, 7, "|"], [7, 7, "|"]
+  ],
+  "xml": `
+  <xml>
+    <variables>
+      <variable>num1</variable>
+      <variable>num2</variable>
+      <variable>num3</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="variables_set">
+      <field name="VAR">num1</field>
+      <value name="VALUE">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set">
+          <field name="VAR">num2</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+        <block type="variables_set">
+          <field name="VAR">num3</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set">
+              <field name="VAR">product</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">MULTIPLY</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">num1</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <field name="VAR">num2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_ifelse">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <field name="OP">GT</field>
+                      <value name="A">
+                        <block type="variables_get">
+                          <field name="VAR">product</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">${getRandomInt(100)}</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="controls_if">
+                      <mutation else="1"></mutation>
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <field name="OP">GT</field>
+                          <value name="A">
+                            <block type="variables_get">
+                              <field name="VAR">num1</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="variables_get">
+                              <field name="VAR">num3</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="controls_repeat">
+                          <field name="TIMES">5</field>
+                          <statement name="DO">
+                            <block type="move_down"></block>
+                          </statement>
+                          <next>
+                            <block type="controls_repeat">
+                              <field name="TIMES">3</field>
+                              <statement name="DO">
+                                <block type="move_right"></block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="move_up"></block>
+                      </statement>
+                      <next>
+                          <block type="move_left"></block>
+                        </next>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="controls_repeat">
+                      <field name="TIMES">4</field>
+                      <statement name="DO">
+                        <block type="move_left"></block>
+                      </statement>
+                      <next>
+                        <block type="controls_repeat">
+                          <field name="TIMES">3</field>
+                          <statement name="DO">
+                            <block type="move_up"></block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+              </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </xml>`,
+  "dropdown": false,
+  "readOnly": false,
+  "editDisabled": true,
+  "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"418": {
+  "gridHeight": 8,
+  "gridWidth": 8,
+  "flurbCellX": 7,
+  "flurbCellY": 0,
+  "fruitCellX": 5,
+  "fruitCellY": 6,
+  "flurbPosition": { "x": 4, "y": 0 },
+  "lavaPos": [[0, 2, "|"], [1, 0, "|"], [2, 2, "|"], [2, 3, "|"], [3, 0, "|"], [4, 2, "|"]
+              [4, 2, "|"], [5, 2, "|"], [6, 2, "|"], [0, 3, "|"], [2, 3, "|"], [4, 3, "|"],
+              [6, 3, "|"], [7, 3, "|"], [0, 4, "|"], [2, 4, "|"], [4, 4, "|"], [5, 4, "|"],
+              [7, 4, "|"], [0, 6, "|"], [1, 6, "|"], [2, 6, "|"], [3, 6, "|"], [4, 6, "|"]],
+  "xml": `
+  <xml>
+    <variables>
+      <variable>num1</variable>
+      <variable>num2</variable>
+      <variable>num3</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="variables_set">
+      <field name="VAR">num1</field>
+      <value name="VALUE">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set">
+          <field name="VAR">num2</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+        <block type="variables_set">
+          <field name="VAR">num3</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set">
+              <field name="VAR">product</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">MULTIPLY</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">num1</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <field name="VAR">num2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_ifelse">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <field name="OP">GT</field>
+                      <value name="A">
+                        <block type="variables_get">
+                          <field name="VAR">product</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">${getRandomInt(100)}</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="controls_if">
+                      <mutation else="1"></mutation>
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <field name="OP">GT</field>
+                          <value name="A">
+                            <block type="variables_get">
+                              <field name="VAR">num1</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="variables_get">
+                              <field name="VAR">num3</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="controls_repeat">
+                          <field name="TIMES">5</field>
+                          <statement name="DO">
+                            <block type="move_right">
+                              <next>
+                                <block type="move_left">
+                                  <next>
+                                    <block type="move_down"></block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="controls_repeat">
+                              <field name="TIMES">3</field>
+                              <statement name="DO">
+                                <block type="move_right">
+                                  <next>
+                                    <block type="move_down"></block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="move_up"></block>
+                      </statement>
+                      <next>
+                        <block type="move_down"></block>
+                      </next>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="controls_repeat">
+                      <field name="TIMES">4</field>
+                      <statement name="DO">
+                        <block type="move_left"></block>
+                      </statement>
+                      <next>
+                            <block type="move_up"></block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+              </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </xml>`,
+  "dropdown": false,
+  "readOnly": false,
+  "editDisabled": true,
+  "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"419": {
+  "gridHeight": 8,
+  "gridWidth": 8,
+  "flurbCellX": 0,
+  "flurbCellY": 7,
+  "fruitCellX": 0,
+  "fruitCellY": 3,
+  "flurbPosition": { "x": 0, "y": 7 },
+  "lavaPos": [[0, 5, "|"], [1, 1, "|"], [1, 4, "|"], [2, 2, "|"], [2, 6, "|"], [3, 1, "|"], [3, 4, "|"], [4, 2, "|"], [4, 5, "|"], [4, 7, "|"], [5, 1, "|"], [5, 4, "|"], [5, 6, "|"], [6, 3, "|"], [6, 7, "|"]],
+  "xml": `
+  <xml>
+    <variables>
+      <variable>num1</variable>
+      <variable>num2</variable>
+      <variable>num3</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="variables_set">
+      <field name="VAR">num1</field>
+      <value name="VALUE">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set">
+          <field name="VAR">num2</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+        <block type="variables_set">
+          <field name="VAR">num3</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set">
+              <field name="VAR">product</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">MULTIPLY</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">num1</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <field name="VAR">num2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_ifelse">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <field name="OP">GT</field>
+                      <value name="A">
+                        <block type="variables_get">
+                          <field name="VAR">product</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">${getRandomInt(100)}</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="controls_if">
+                      <mutation else="1"></mutation>
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <field name="OP">GT</field>
+                          <value name="A">
+                            <block type="variables_get">
+                              <field name="VAR">num1</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="variables_get">
+                              <field name="VAR">num3</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="controls_repeat">
+                          <field name="TIMES">5</field>
+                          <statement name="DO">
+                            <block type="move_right"></block>
+                          </statement>
+                          <next>
+                            <block type="controls_repeat">
+                              <field name="TIMES">3</field>
+                              <statement name="DO">
+                                <block type="move_right"></block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="move_up"></block>
+                      </statement>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="controls_repeat">
+                      <field name="TIMES">4</field>
+                      <statement name="DO">
+                        <block type="move_left"></block>
+                      </statement>
+                      <next>
+                        <block type="controls_repeat">
+                          <field name="TIMES">3</field>
+                          <statement name="DO">
+                            <block type="move_up"></block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+              </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </xml>`,
+  "dropdown": false,
+  "readOnly": false,
+  "editDisabled": true,
+  "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"420": {
+  "gridHeight": 5,
+  "gridWidth": 5,
+  "flurbCellX": 0,
+  "flurbCellY": 0,
+  "fruitCellX": 4,
+  "fruitCellY": 1,
+  "flurbPosition": { "x": 0, "y": 0 },
+  "lavaPos": [[0, 1, "|"], [0, 2, "|"], [1, 3, "|"], [2, 0, "|"], [2, 1, "|"], [3, 2, "|"], [3, 3, "|"], [4, 0, "|"]],
+  "xml": `
+  <xml>
+    <variables>
+      <variable>num1</variable>
+      <variable>num2</variable>
+      <variable>num3</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="variables_set">
+      <field name="VAR">num1</field>
+      <value name="VALUE">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set">
+          <field name="VAR">num2</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+        <block type="variables_set">
+          <field name="VAR">num3</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">${getRandomInt(10)}</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set">
+              <field name="VAR">product</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">MULTIPLY</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">num1</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="variables_get">
+                      <field name="VAR">num2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_ifelse">
+                  <value name="IF0">
+                    <block type="logic_compare">
+                      <field name="OP">GT</field>
+                      <value name="A">
+                        <block type="variables_get">
+                          <field name="VAR">product</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">${getRandomInt(100)}</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="controls_if">
+                      <mutation else="1"></mutation>
+                      <value name="IF0">
+                        <block type="logic_compare">
+                          <field name="OP">GT</field>
+                          <value name="A">
+                            <block type="variables_get">
+                              <field name="VAR">num1</field>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="variables_get">
+                              <field name="VAR">num3</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="controls_repeat">
+                          <field name="TIMES">5</field>
+                          <statement name="DO">
+                            <block type="move_right"></block>
+                          </statement>
+                          <next>
+                            <block type="controls_repeat">
+                              <field name="TIMES">3</field>
+                              <statement name="DO">
+                                <block type="move_right"></block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="move_down"></block>
+                      </statement>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="controls_repeat">
+                      <field name="TIMES">4</field>
+                      <statement name="DO">
+                        <block type="move_down"></block>
+                      </statement>
+                      <next> 
+                        <block type="move_up"></block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+              </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </xml>`,
+  "dropdown": false,
+  "readOnly": false,
+  "editDisabled": true,
+  "alertMessage": "Update the code so that the flurb makes it to the fruit!"
 }
 }
 
