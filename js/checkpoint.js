@@ -7074,6 +7074,1951 @@ const levelValues = {
   "readOnly": false,
   "editDisabled": true,
   "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+
+
+
+
+"200": {
+  gridHeight: 2,
+  gridWidth: 3,
+  flurbCellX: 1,
+  flurbCellY: 1,
+  fruitCellX: 1,
+  fruitCellY: 0,
+  flurbPosition: {x: 1, y: 1},
+  lavaPos: [],
+  "xml":
+    `<xml>
+    <variables>
+      <variable>x</variable>
+    </variables>
+    <block type="procedures_defnoreturn">
+      <mutation>
+        <arg name="x"></arg>
+      </mutation>
+      <field name="NAME">get_fruit</field>
+      <comment pinned="false" h="80" w="160">Get the fruit</comment>
+      <statement name="STACK">
+        <block type="controls_if">
+          <mutation else="1"></mutation>
+          <value name="IF0">
+            <block type="logic_compare">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="variables_get">
+                  <field name="VAR">x</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="math_number">
+                  <field name="NUM">${getRandomInt(10)}</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="move_up"></block>
+          </statement>
+          <statement name="ELSE">
+            <block type="move_down"></block>
+          </statement>
+        </block>
+      </statement>
+    </block>
+    <block type="procedures_callnoreturn" x="48" y="214">
+      <mutation name="get_fruit">
+        <arg name="x"></arg>
+      </mutation>
+      <value name="ARG0">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+    </block>
+  </xml>`,
+    "dropdown": true,
+    "readOnly": true,
+    "alertMessage": "Will the flurb make it to the fruit???"
+},
+"201": {
+  gridHeight: 2,
+  gridWidth: 3,
+  flurbCellX: 2,
+  flurbCellY: 0,
+  fruitCellX: 2,
+  fruitCellY: 1,
+  flurbPosition: {x: 2, y: 0},
+  lavaPos: [],
+  "xml":
+    `<xml>
+    <variables>
+      <variable>x</variable>
+    </variables>
+    <block type="procedures_defnoreturn">
+      <mutation>
+        <arg name="x"></arg>
+      </mutation>
+      <field name="NAME">get_fruit</field>
+      <comment pinned="false" h="80" w="160">Get the fruit</comment>
+      <statement name="STACK">
+        <block type="controls_if">
+          <mutation else="1"></mutation>
+          <value name="IF0">
+            <block type="logic_compare">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="variables_get">
+                  <field name="VAR">x</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="math_number">
+                  <field name="NUM">${getRandomInt(10)}</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="move_up"></block>
+          </statement>
+          <statement name="ELSE">
+            <block type="move_down"></block>
+          </statement>
+        </block>
+      </statement>
+    </block>
+    <block type="procedures_callnoreturn" x="48" y="214">
+      <mutation name="get_fruit">
+        <arg name="x"></arg>
+      </mutation>
+      <value name="ARG0">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+    </block>
+  </xml>`,
+  "dropdown": true,
+  "readOnly": true,
+  "alertMessage": "Will the flurb make it to the fruit???"
+},
+"202": {
+  gridHeight: 2,
+  gridWidth: 3,
+  flurbCellX: 0,
+  flurbCellY: 0,
+  fruitCellX: 1,
+  fruitCellY: 1,
+  flurbPosition: {x: 0, y: 0},
+  lavaPos: [],
+  "xml":
+    `<xml>
+    <variables>
+      <variable>steps</variable>
+    </variables>
+    <block type="procedures_defnoreturn">
+      <mutation>
+        <arg name="steps"></arg>
+      </mutation>
+      <field name="NAME">get_fruit</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="controls_ifelse">
+          <value name="IF0">
+            <block type="logic_compare">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="variables_get">
+                  <field name="VAR">steps</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="math_number">
+                  <field name="NUM">${getRandomInt(10)}</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="move_right">
+              <next>
+                <block type="move_up"></block>
+              </next>
+            </block>
+          </statement>
+          <statement name="ELSE">
+            <block type="move_down">
+              <next>
+                <block type="move_right"></block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
+    <block type="procedures_callnoreturn" x="80" y="265">
+      <mutation name="get_fruit">
+        <arg name="steps"></arg>
+      </mutation>
+      <value name="ARG0">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+    </block>
+  </xml>`,
+  "dropdown": true,
+  "readOnly": true,
+  "alertMessage": "Will the flurb make it to the fruit???"
+},
+"203": {
+  gridHeight: 2,
+  gridWidth: 3,
+  flurbCellX: 2,
+  flurbCellY: 0,
+  fruitCellX: 0,
+  fruitCellY: 0,
+  flurbPosition: {x: 2, y: 0},
+  lavaPos: [],
+  "xml":
+    `<xml>
+    <variables>
+      <variable>x</variable>
+      <variable>y</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="procedures_defnoreturn">
+      <mutation>
+        <arg name="x"></arg>
+        <arg name="y"></arg>
+      </mutation>
+      <field name="NAME">eat</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="variables_set">
+          <field name="VAR">product</field>
+          <value name="VALUE">
+            <block type="math_arithmetic">
+              <field name="OP">MULTIPLY</field>
+              <value name="A">
+                <block type="variables_get">
+                  <field name="VAR">x</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="variables_get">
+                  <field name="VAR">y</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <next>
+            <block type="controls_ifelse">
+              <value name="IF0">
+                <block type="logic_compare">
+                  <field name="OP">EQ</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">product</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <field name="NUM">${getRandomInt(100)}</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="move_left">
+                  <next>
+                    <block type="move_left"></block>
+                  </next>
+                </block>
+              </statement>
+              <statement name="ELSE">
+                <block type="move_right">
+                  <next>
+                    <block type="move_right"></block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block type="procedures_callnoreturn" x="25" y="289">
+      <mutation name="eat">
+        <arg name="x"></arg>
+        <arg name="y"></arg>
+      </mutation>
+      <value name="ARG0">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+      <value name="ARG1">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+    </block>
+  </xml>`,
+  "dropdown": true,
+  "readOnly": true,
+  "alertMessage": "Will the flurb make it to the fruit???"
+},
+"204": {
+  gridHeight: 2,
+  gridWidth: 3,
+  flurbCellX: 0,
+  flurbCellY: 0,
+  fruitCellX: 2,
+  fruitCellY: 1,
+  flurbPosition: {x: 0, y: 0},
+  lavaPos: [],
+  "xml":
+    `<xml>
+    <variables>
+      <variable>num1</variable>
+      <variable>num2</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="procedures_defnoreturn">
+      <mutation>
+        <arg name="num1"></arg>
+        <arg name="num2"></arg>
+      </mutation>
+      <field name="NAME">do something</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="variables_set">
+          <field name="VAR">product</field>
+          <value name="VALUE">
+            <block type="math_arithmetic">
+              <field name="OP">MULTIPLY</field>
+              <value name="A">
+                <block type="variables_get">
+                  <field name="VAR">num1</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="variables_get">
+                  <field name="VAR">num2</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <next>
+            <block type="controls_ifelse">
+              <value name="IF0">
+                <block type="logic_compare">
+                  <field name="OP">GTE</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">product</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <field name="NUM">${getRandomInt(100)}</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="move_left">
+                  <next>
+                    <block type="move_left">
+                      <next>
+                        <block type="move_up"></block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <statement name="ELSE">
+                <block type="move_right">
+                  <next>
+                    <block type="move_right">
+                      <next>
+                        <block type="move_down"></block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block type="procedures_callnoreturn" x="33" y="353">
+      <mutation name="do something">
+        <arg name="num1"></arg>
+        <arg name="num2"></arg>
+      </mutation>
+      <value name="ARG0">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+      <value name="ARG1">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+    </block>
+  </xml>`,
+  "dropdown": true,
+  "readOnly": true,
+  "alertMessage": "Will the flurb make it to the fruit???"
+},
+"205": {
+"gridHeight": 4,
+"gridWidth": 7,
+"flurbCellX": 3,
+"flurbCellY": 0,
+"fruitCellX": 2,
+"fruitCellY": 3,
+"flurbPosition": { "x": 3, "y": 0 },
+"lavaPos": [],
+"xml":`
+<xml>
+	<variables>
+		<variable>num1</variable>
+		<variable>num2</variable>
+		<variable>product</variable>
+	</variables>
+	<block type="procedures_defnoreturn">
+		<mutation>
+			<arg name="num1"></arg>
+			<arg name="num2"></arg>
+		</mutation>
+		<field name="NAME">do something</field>
+		<comment pinned="false" h="80" w="160">Describe this function...</comment>
+		<statement name="STACK">
+			<block type="variables_set">
+				<field name="VAR">product</field>
+				<value name="VALUE">
+					<block type="math_arithmetic">
+						<field name="OP">MULTIPLY</field>
+						<value name="A">
+							<block type="variables_get">
+								<field name="VAR">num1</field>
+							</block>
+						</value>
+						<value name="B">
+							<block type="variables_get">
+								<field name="VAR">num2</field>
+							</block>
+						</value>
+					</block>
+				</value>
+				<next>
+					<block type="controls_ifelse">
+						<value name="IF0">
+							<block type="logic_compare">
+								<field name="OP">EQ</field>
+								<value name="A">
+									<block type="math_number">
+										<field name="NUM">${getRandomInt(100)}</field>
+									</block>
+								</value>
+								<value name="B">
+									<block type="variables_get">
+										<field name="VAR">product</field>
+									</block>
+								</value>
+							</block>
+						</value>
+						<statement name="DO0">
+							<block type="controls_repeat">
+								<field name="TIMES">3</field>
+								<statement name="DO">
+									<block type="move_down"></block>
+								</statement>
+								<next>
+									<block type="move_right"></block>
+								</next>
+							</block>
+						</statement>
+						<statement name="ELSE">
+							<block type="move_left">
+								<next>
+									<block type="controls_repeat">
+										<field name="TIMES">3</field>
+										<statement name="DO">
+											<block type="move_down"></block>
+										</statement>
+									</block>
+								</next>
+							</block>
+						</statement>
+					</block>
+				</next>
+			</block>
+		</statement>
+	</block>
+	<block type="procedures_callnoreturn" x="31" y="378">
+		<mutation name="do something">
+			<arg name="num1"></arg>
+			<arg name="num2"></arg>
+		</mutation>
+		<value name="ARG0">
+			<block type="math_number">
+				<field name="NUM">${getRandomInt(10)}</field>
+			</block>
+		</value>
+		<value name="ARG1">
+			<block type="math_number">
+				<field name="NUM">${getRandomInt(10)}</field>
+			</block>
+		</value>
+	</block>
+</xml>`,
+"dropdown": true,
+"readOnly": true,
+"alertMessage": "Will the flurb make it to the fruit???"
+},
+"206": {
+"gridHeight": 5,
+"gridWidth": 6,
+"flurbCellX": 2,
+"flurbCellY": 0,
+"fruitCellX": 4,
+"fruitCellY": 3,
+"flurbPosition": { "x": 2, "y": 0 },
+"lavaPos": [],
+"xml": 
+  `<xml>
+	<variables>
+		<variable>num1</variable>
+		<variable>num2</variable>
+		<variable>product</variable>
+	</variables>
+	<block type="procedures_defnoreturn">
+		<mutation>
+			<arg name="num1"></arg>
+			<arg name="num2"></arg>
+		</mutation>
+		<field name="NAME">get_fruit</field>
+		<comment pinned="false" h="80" w="160">Describe this function...</comment>
+		<statement name="STACK">
+			<block type="variables_set">
+				<field name="VAR">product</field>
+				<value name="VALUE">
+					<block type="math_arithmetic">
+						<field name="OP">MULTIPLY</field>
+						<value name="A">
+							<block type="variables_get">
+								<field name="VAR">num1</field>
+							</block>
+						</value>
+						<value name="B">
+							<block type="variables_get">
+								<field name="VAR">num2</field>
+							</block>
+						</value>
+					</block>
+				</value>
+				<next>
+					<block type="controls_ifelse">
+						<value name="IF0">
+							<block type="logic_compare">
+								<field name="OP">LT</field>
+								<value name="A">
+									<block type="variables_get">
+										<field name="VAR">product</field>
+									</block>
+								</value>
+								<value name="B">
+									<block type="math_number">
+										<field name="NUM">${getRandomInt(100)}</field>
+									</block>
+								</value>
+							</block>
+						</value>
+						<statement name="DO0">
+							<block type="move_left">
+								<next>
+									<block type="controls_repeat">
+										<field name="TIMES">4</field>
+										<statement name="DO">
+											<block type="move_down"></block>
+										</statement>
+									</block>
+								</next>
+							</block>
+						</statement>
+						<statement name="ELSE">
+							<block type="procedures_callnoreturn" x="-317" y="-653">
+								<mutation name="take_path">
+									<arg name="num1"></arg>
+									<arg name="num2"></arg>
+								</mutation>
+								<value name="ARG0">
+									<block type="variables_get">
+										<field name="VAR">num1</field>
+									</block>
+								</value>
+								<value name="ARG1">
+									<block type="variables_get">
+										<field name="VAR">num2</field>
+									</block>
+								</value>
+							</block>
+						</statement>
+					</block>
+				</next>
+			</block>
+		</statement>
+	</block>
+	<block type="procedures_defnoreturn" x="0" y="350">
+		<mutation>
+			<arg name="num1"></arg>
+			<arg name="num2"></arg>
+		</mutation>
+		<field name="NAME">take_path</field>
+		<comment pinned="false" h="80" w="160">Describe this function...</comment>
+		<statement name="STACK">
+			<block type="controls_if">
+				<mutation else="1"></mutation>
+				<value name="IF0">
+					<block type="logic_compare">
+						<field name="OP">LT</field>
+						<value name="A">
+							<block type="variables_get">
+								<field name="VAR">num1</field>
+							</block>
+						</value>
+						<value name="B">
+							<block type="variables_get">
+								<field name="VAR">num2</field>
+							</block>
+						</value>
+					</block>
+				</value>
+				<statement name="DO0">
+					<block type="controls_repeat">
+						<field name="TIMES">4</field>
+						<statement name="DO">
+							<block type="move_down"></block>
+						</statement>
+						<next>
+							<block type="controls_repeat">
+								<field name="TIMES">2</field>
+								<statement name="DO">
+									<block type="move_right"></block>
+								</statement>
+								<next>
+									<block type="move_up"></block>
+								</next>
+							</block>
+						</next>
+					</block>
+				</statement>
+				<statement name="ELSE">
+					<block type="move_right"></block>
+				</statement>
+			</block>
+		</statement>
+	</block>
+	<block type="procedures_callnoreturn" x="0" y="665">
+		<mutation name="get_fruit">
+			<arg name="num1"></arg>
+			<arg name="num2"></arg>
+		</mutation>
+		<value name="ARG0">
+			<block type="math_number">
+				<field name="NUM">${getRandomInt(10)}</field>
+			</block>
+		</value>
+		<value name="ARG1">
+			<block type="math_number">
+				<field name="NUM">${getRandomInt(10)}</field>
+			</block>
+		</value>
+	</block>
+</xml>`,
+"dropdown": true,
+"readOnly": true,
+"alertMessage": "Will the flurb make it to the fruit???"
+},
+"207": {
+  "gridHeight": 5,
+  "gridWidth": 6,
+  "flurbCellX": 0,
+  "flurbCellY": 0,
+  "fruitCellX": 4,
+  "fruitCellY": 3,
+  "flurbPosition": { "x": 0, "y": 0 },
+  "lavaPos": [],
+  "xml": `<xml>
+	<variables>
+		<variable>num1</variable>
+		<variable>num2</variable>
+		<variable>product</variable>
+	</variables>
+	<block type="procedures_defnoreturn">
+		<mutation>
+			<arg name="num1"></arg>
+			<arg name="num2"></arg>
+		</mutation>
+		<field name="NAME">do something</field>
+		<comment pinned="false" h="80" w="160">Describe this function...</comment>
+		<statement name="STACK">
+			<block type="variables_set">
+				<field name="VAR">product</field>
+				<value name="VALUE">
+					<block type="math_arithmetic">
+						<field name="OP">MULTIPLY</field>
+						<value name="A">
+							<block type="variables_get">
+								<field name="VAR">num1</field>
+							</block>
+						</value>
+						<value name="B">
+							<block type="variables_get">
+								<field name="VAR">num2</field>
+							</block>
+						</value>
+					</block>
+				</value>
+				<next>
+					<block type="controls_ifelse">
+						<value name="IF0">
+							<block type="logic_compare">
+								<field name="OP">GT</field>
+								<value name="A">
+									<block type="variables_get">
+										<field name="VAR">product</field>
+									</block>
+								</value>
+								<value name="B">
+									<block type="math_number">
+										<field name="NUM">${getRandomInt(100)}</field>
+									</block>
+								</value>
+							</block>
+						</value>
+						<statement name="DO0">
+							<block type="controls_if">
+								<mutation else="1"></mutation>
+								<value name="IF0">
+									<block type="logic_compare">
+										<field name="OP">GT</field>
+										<value name="A">
+											<block type="variables_get">
+												<field name="VAR">num1</field>
+											</block>
+										</value>
+										<value name="B">
+											<block type="variables_get">
+												<field name="VAR">num2</field>
+											</block>
+										</value>
+									</block>
+								</value>
+								<statement name="DO0">
+									<block type="controls_repeat">
+										<field name="TIMES">4</field>
+										<statement name="DO">
+											<block type="move_right"></block>
+										</statement>
+										<next>
+											<block type="controls_repeat">
+												<field name="TIMES">3</field>
+												<statement name="DO">
+													<block type="move_down"></block>
+												</statement>
+											</block>
+										</next>
+									</block>
+								</statement>
+								<statement name="ELSE">
+									<block type="move_down"></block>
+								</statement>
+							</block>
+						</statement>
+						<statement name="ELSE">
+							<block type="controls_repeat">
+								<field name="TIMES">4</field>
+								<statement name="DO">
+									<block type="move_left"></block>
+								</statement>
+								<next>
+									<block type="controls_repeat">
+										<field name="TIMES">3</field>
+										<statement name="DO">
+											<block type="move_up"></block>
+										</statement>
+									</block>
+								</next>
+							</block>
+						</statement>
+					</block>
+				</next>
+			</block>
+		</statement>
+	</block>
+	<block type="procedures_callnoreturn" x="25" y="550">
+		<mutation name="do something">
+			<arg name="num1"></arg>
+			<arg name="num2"></arg>
+		</mutation>
+		<value name="ARG0">
+			<block type="math_number">
+				<field name="NUM">${getRandomInt(10)}</field>
+			</block>
+		</value>
+		<value name="ARG1">
+			<block type="math_number">
+				<field name="NUM">${getRandomInt(10)}</field>
+			</block>
+		</value>
+	</block>
+</xml>`,
+  "dropdown": true,
+  "readOnly": true,
+  "alertMessage": "Will the flurb make it to the fruit???"
+}, 
+"208": {
+  gridHeight: 2,
+  gridWidth: 3,
+  flurbCellX: 2,
+  flurbCellY: 0,
+  fruitCellX: 0,
+  fruitCellY: 0,
+  flurbPosition: {x: 2, y: 0},
+  lavaPos: [],
+  "xml":
+    `<xml>
+    <variables>
+      <variable>num1</variable>
+      <variable>num2</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="procedures_defnoreturn">
+      <mutation>
+        <arg name="num1"></arg>
+        <arg name="num2"></arg>
+      </mutation>
+      <field name="NAME">do something</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="variables_set">
+          <field name="VAR">product</field>
+          <value name="VALUE">
+            <block type="math_arithmetic">
+              <field name="OP">MULTIPLY</field>
+              <value name="A">
+                <block type="variables_get">
+                  <field name="VAR">num1</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="variables_get">
+                  <field name="VAR">num2</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <next>
+            <block type="controls_ifelse">
+              <value name="IF0">
+                <block type="logic_compare">
+                  <field name="OP">EQ</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">product</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <field name="NUM">${getRandomInt(100)}</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="move_left">
+                  <next>
+                    <block type="move_right"></block>
+                  </next>
+                </block>
+              </statement>
+              <statement name="ELSE">
+                <block type="move_right">
+                  <next>
+                    <block type="move_left"></block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block type="procedures_callnoreturn" x="42" y="332">
+      <mutation name="do something">
+        <arg name="num1"></arg>
+        <arg name="num2"></arg>
+      </mutation>
+      <value name="ARG0">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+      <value name="ARG1">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+    </block>
+  </xml>`,
+  "dropdown": false,
+  "readOnly": false,
+  "editDisabled": true,
+  "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"209": {
+  gridHeight: 2,
+  gridWidth: 3,
+  flurbCellX: 0,
+  flurbCellY: 0,
+  fruitCellX: 2,
+  fruitCellY: 1,
+  flurbPosition: {x: 0, y: 0},
+  lavaPos: [],
+  "xml":
+    `<xml>
+    <variables>
+      <variable>num1</variable>
+      <variable>num2</variable>
+      <variable>product</variable>
+    </variables>
+    <block type="procedures_defnoreturn">
+      <mutation>
+        <arg name="num1"></arg>
+        <arg name="num2"></arg>
+      </mutation>
+      <field name="NAME">get_fruit</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="variables_set">
+          <field name="VAR">product</field>
+          <value name="VALUE">
+            <block type="math_arithmetic">
+              <field name="OP">MULTIPLY</field>
+              <value name="A">
+                <block type="variables_get">
+                  <field name="VAR">num1</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="variables_get">
+                  <field name="VAR">num2</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <next>
+            <block type="controls_ifelse">
+              <value name="IF0">
+                <block type="logic_compare">
+                  <field name="OP">GTE</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">product</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <field name="NUM">${getRandomInt(100)}</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="move_right">
+                  <next>
+                    <block type="move_left">
+                      <next>
+                        <block type="move_up"></block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <statement name="ELSE">
+                <block type="move_right">
+                  <next>
+                    <block type="move_left">
+                      <next>
+                        <block type="move_down"></block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block type="procedures_callnoreturn" x="15" y="353">
+      <mutation name="get_fruit">
+        <arg name="num1"></arg>
+        <arg name="num2"></arg>
+      </mutation>
+      <value name="ARG0">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+      <value name="ARG1">
+        <block type="math_number">
+          <field name="NUM">${getRandomInt(10)}</field>
+        </block>
+      </value>
+    </block>
+  </xml>`,
+  "dropdown": false,
+  "readOnly": false,
+  "editDisabled": true,
+  "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"210": {
+"gridHeight": 4,
+"gridWidth": 7,
+"flurbCellX": 3,
+"flurbCellY": 0,
+"fruitCellX": 2,
+"fruitCellY": 3,
+"flurbPosition": { "x": 3, "y": 0 },
+"lavaPos": [],
+"xml":`<xml>
+<variables>
+  <variable>num1</variable>
+  <variable>num2</variable>
+  <variable>product</variable>
+</variables>
+<block type="procedures_defnoreturn">
+  <mutation>
+    <arg name="num1"></arg>
+    <arg name="num2"></arg>
+  </mutation>
+  <field name="NAME">get_fruit</field>
+  <comment pinned="false" h="80" w="160">Describe this function...</comment>
+  <statement name="STACK">
+    <block type="variables_set">
+      <field name="VAR">product</field>
+      <value name="VALUE">
+        <block type="math_arithmetic">
+          <field name="OP">MULTIPLY</field>
+          <value name="A">
+            <block type="variables_get">
+              <field name="VAR">num1</field>
+            </block>
+          </value>
+          <value name="B">
+            <block type="variables_get">
+              <field name="VAR">num2</field>
+            </block>
+          </value>
+        </block>
+      </value>
+      <next>
+        <block type="controls_ifelse">
+          <value name="IF0">
+            <block type="logic_compare">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="math_number">
+                  <field name="NUM">${getRandomInt(100)}</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="variables_get">
+                  <field name="VAR">product</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="controls_repeat">
+              <field name="TIMES">3</field>
+              <statement name="DO">
+                <block type="move_down"></block>
+              </statement>
+              <next>
+                <block type="move_right"></block>
+              </next>
+            </block>
+          </statement>
+          <statement name="ELSE">
+            <block type="procedures_callnoreturn">
+              <mutation name="move_flurb"></mutation>
+            </block>
+          </statement>
+        </block>
+      </next>
+    </block>
+  </statement>
+</block>
+<block type="procedures_defnoreturn" x="22" y="285">
+  <field name="NAME">move_flurb</field>
+  <comment pinned="false" h="80" w="160">Describe this function...</comment>
+  <statement name="STACK">
+    <block type="move_left">
+      <next>
+        <block type="controls_repeat">
+          <field name="TIMES">3</field>
+          <statement name="DO">
+            <block type="move_up"></block>
+          </statement>
+        </block>
+      </next>
+    </block>
+  </statement>
+</block>
+<block type="procedures_callnoreturn" x="22" y="445">
+  <mutation name="get_fruit">
+    <arg name="num1"></arg>
+    <arg name="num2"></arg>
+  </mutation>
+  <value name="ARG0">
+    <block type="math_number">
+      <field name="NUM">${getRandomInt(10)}</field>
+    </block>
+  </value>
+  <value name="ARG1">
+    <block type="math_number">
+      <field name="NUM">${getRandomInt(10)}</field>
+    </block>
+  </value>
+</block>
+</xml>`,
+"dropdown": false,
+"readOnly": false,
+"editDisabled": true,
+"alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"211": {
+"gridHeight": 5,
+"gridWidth": 6,
+"flurbCellX": 2,
+"flurbCellY": 0,
+"fruitCellX": 4,
+"fruitCellY": 3,
+"flurbPosition": { "x": 2, "y": 0 },
+"lavaPos": [],
+"xml": 
+  `<xml>
+	<variables>
+		<variable>num1</variable>
+		<variable>num2</variable>
+		<variable>product</variable>
+	</variables>
+	<block type="procedures_defnoreturn">
+		<mutation>
+			<arg name="num1" varid="?rU=g?Xxon:LB8s^8uU-"></arg>
+			<arg name="num2" varid=";mCi$;,8-{/]5I/FGRZc"></arg>
+		</mutation>
+		<field name="NAME">do something</field>
+		<comment pinned="false" h="80" w="160">Describe this function...</comment>
+		<statement name="STACK">
+			<block type="variables_set">
+				<field name="VAR">product</field>
+				<value name="VALUE">
+					<block type="math_arithmetic">
+						<field name="OP">MULTIPLY</field>
+						<value name="A">
+							<block type="variables_get">
+								<field name="VAR">num1</field>
+							</block>
+						</value>
+						<value name="B">
+							<block type="variables_get">
+								<field name="VAR">num2</field>
+							</block>
+						</value>
+					</block>
+				</value>
+				<next>
+					<block type="controls_ifelse">
+						<value name="IF0">
+							<block type="logic_compare">
+								<field name="OP">LT</field>
+								<value name="A">
+									<block type="variables_get">
+										<field name="VAR">product</field>
+									</block>
+								</value>
+								<value name="B">
+									<block type="math_number">
+										<field name="NUM">${getRandomInt(100)}</field>
+									</block>
+								</value>
+							</block>
+						</value>
+						<statement name="DO0">
+							<block type="move_left">
+								<next>
+									<block type="controls_repeat">
+										<field name="TIMES">4</field>
+										<statement name="DO">
+											<block type="move_down"></block>
+										</statement>
+									</block>
+								</next>
+							</block>
+						</statement>
+						<statement name="ELSE">
+							<block type="controls_if">
+								<mutation else="1"></mutation>
+								<value name="IF0">
+									<block type="logic_compare">
+										<field name="OP">LT</field>
+										<value name="A">
+											<block type="variables_get">
+												<field name="VAR">num1</field>
+											</block>
+										</value>
+										<value name="B">
+											<block type="variables_get">
+												<field name="VAR">num2</field>
+											</block>
+										</value>
+									</block>
+								</value>
+								<statement name="DO0">
+									<block type="procedures_callnoreturn">
+										<mutation name="do something2"></mutation>
+									</block>
+								</statement>
+								<statement name="ELSE">
+									<block type="controls_repeat">
+										<field name="TIMES">2</field>
+										<statement name="DO">
+											<block type="move_right"></block>
+										</statement>
+										<next>
+											<block type="controls_repeat">
+												<field name="TIMES">5</field>
+												<statement name="DO">
+													<block type="move_up"></block>
+												</statement>
+											</block>
+										</next>
+									</block>
+								</statement>
+							</block>
+						</statement>
+					</block>
+				</next>
+			</block>
+		</statement>
+	</block>
+	<block type="procedures_defnoreturn" x="380" y="100">
+		<field name="NAME">do something2</field>
+		<comment pinned="false" h="80" w="160">Describe this function...</comment>
+		<statement name="STACK">
+			<block type="controls_repeat">
+				<field name="TIMES">4</field>
+				<statement name="DO">
+					<block type="move_down"></block>
+				</statement>
+				<next>
+					<block type="controls_repeat">
+						<field name="TIMES">2</field>
+						<statement name="DO">
+							<block type="move_right"></block>
+						</statement>
+						<next>
+							<block type="move_up"></block>
+						</next>
+					</block>
+				</next>
+			</block>
+		</statement>
+	</block>
+	<block type="procedures_callnoreturn" x="390" y="325">
+		<mutation name="do something">
+			<arg name="num1"></arg>
+			<arg name="num2"></arg>
+		</mutation>
+		<value name="ARG0">
+			<block type="math_number">
+				<field name="NUM">${getRandomInt(10)}</field>
+			</block>
+		</value>
+		<value name="ARG1">
+			<block type="math_number">
+				<field name="NUM">${getRandomInt(10)}</field>
+			</block>
+		</value>
+	</block>
+</xml>`,
+"dropdown": false,
+"readOnly": false,
+"editDisabled": true,
+"alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"212": {
+  "gridHeight": 5,
+  "gridWidth": 6,
+  "flurbCellX": 0,
+  "flurbCellY": 0,
+  "fruitCellX": 4,
+  "fruitCellY": 3,
+  "flurbPosition": { "x": 0, "y": 0 },
+  "lavaPos": [],
+  "xml": `<xml>
+	<variables>
+		<variable>x</variable>
+		<variable>y</variable>
+		<variable>product</variable>
+		<variable>num1</variable>
+		<variable>num2</variable>
+	</variables>
+	<block type="procedures_defnoreturn" x="32" y="2">
+    <mutation>
+			<arg name="num1"></arg>
+			<arg name="num2"></arg>
+		</mutation>
+		<field name="NAME">get_fruit</field>
+		<comment pinned="false" h="80" w="160">Describe this function...</comment>
+		<statement name="STACK">
+			<block type="variables_set">
+				<field name="VAR">product</field>
+				<value name="VALUE">
+					<block type="math_arithmetic">
+						<field name="OP">MULTIPLY</field>
+						<value name="A">
+							<block type="variables_get">
+								<field name="VAR">num1</field>
+							</block>
+						</value>
+						<value name="B">
+							<block type="variables_get">
+								<field name="VAR">num2</field>
+							</block>
+						</value>
+					</block>
+				</value>
+				<next>
+					<block type="controls_ifelse">
+						<value name="IF0">
+							<block type="logic_compare">
+								<field name="OP">GT</field>
+								<value name="A">
+									<block type="variables_get">
+										<field name="VAR">product</field>
+									</block>
+								</value>
+								<value name="B">
+									<block type="math_number">
+										<field name="NUM">${getRandomInt(100)}</field>
+									</block>
+								</value>
+							</block>
+						</value>
+						<statement name="DO0">
+							<block type="controls_if">
+								<mutation else="1"></mutation>
+								<value name="IF0">
+									<block type="logic_compare">
+										<field name="OP">GT</field>
+										<value name="A">
+											<block type="variables_get">
+												<field name="VAR">num1</field>
+											</block>
+										</value>
+										<value name="B">
+											<block type="variables_get">
+												<field name="VAR">num2</field>
+											</block>
+										</value>
+									</block>
+								</value>
+								<statement name="DO0">
+									<block type="controls_repeat">
+										<field name="TIMES">4</field>
+										<statement name="DO">
+											<block type="move_right"></block>
+										</statement>
+										<next>
+											<block type="controls_repeat">
+												<field name="TIMES">3</field>
+												<statement name="DO">
+													<block type="move_up"></block>
+												</statement>
+											</block>
+										</next>
+									</block>
+								</statement>
+								<statement name="ELSE">
+									<block type="move_down"></block>
+								</statement>
+							</block>
+						</statement>
+						<statement name="ELSE">
+							<block type="procedures_callnoreturn">
+								<mutation name="move_flurb">
+									<arg name="x"></arg>
+									<arg name="y"></arg>
+								</mutation>
+								<value name="ARG0">
+									<block type="math_number">
+										<field name="NUM">${getRandomInt(10)}</field>
+									</block>
+								</value>
+								<value name="ARG1">
+									<block type="math_number">
+										<field name="NUM">${getRandomInt(10)}</field>
+									</block>
+								</value>
+							</block>
+						</statement>
+					</block>
+				</next>
+			</block>
+		</statement>
+	</block>
+	<block type="procedures_defnoreturn" x="320" y="150">
+		<mutation>
+			<arg name="x"></arg>
+			<arg name="y"></arg>
+		</mutation>
+		<field name="NAME">move_flurb</field>
+		<comment pinned="false" h="80" w="160">Describe this function...</comment>
+		<statement name="STACK">
+			<block type="controls_repeat_ext">
+				<value name="TIMES">
+					<block type="variables_get">
+						<field name="VAR">x</field>
+					</block>
+				</value>
+				<statement name="DO">
+					<block type="move_left"></block>
+				</statement>
+				<next>
+					<block type="controls_repeat_ext">
+						<value name="TIMES">
+							<block type="variables_get">
+								<field name="VAR">y</field>
+							</block>
+						</value>
+						<statement name="DO">
+							<block type="move_up"></block>
+						</statement>
+					</block>
+				</next>
+			</block>
+		</statement>
+	</block>
+	<block type="procedures_callnoreturn" x="315" y="370">
+		<mutation name="get_fruit">
+			<arg name="num1"></arg>
+			<arg name="num2"></arg>
+		</mutation>
+		<value name="ARG0">
+			<block type="math_number">
+				<field name="NUM">${getRandomInt(10)}</field>
+			</block>
+		</value>
+		<value name="ARG1">
+			<block type="math_number">
+				<field name="NUM">${getRandomInt(10)}</field>
+			</block>
+		</value>
+	</block>
+</xml>`,
+  "dropdown": false,
+  "readOnly": false,
+  "editDisabled": true,
+  "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"213": {
+  "gridHeight": 5,
+  "gridWidth": 6,
+  "flurbCellX": 0,
+  "flurbCellY": 0,
+  "fruitCellX": 4,
+  "fruitCellY": 3,
+  "flurbPosition": { "x": 0, "y": 0 },
+  "lavaPos": [],
+  "xml": `<xml>
+	<variables>
+		<variable>num1</variable>
+		<variable>num2</variable>
+		<variable>num3</variable>
+		<variable>product</variable>
+	</variables>
+	<block type="procedures_defnoreturn" x="30" y="7">
+		<mutation>
+			<arg name="num1"></arg>
+			<arg name="num2"></arg>
+			<arg name="num3"></arg>
+		</mutation>
+		<field name="NAME">do something</field>
+		<comment pinned="false" h="80" w="160">Describe this function...</comment>
+		<statement name="STACK">
+			<block type="variables_set">
+				<field name="VAR">product</field>
+				<value name="VALUE">
+					<block type="math_arithmetic">
+						<field name="OP">MULTIPLY</field>
+						<value name="A">
+							<block type="variables_get">
+								<field name="VAR">num1</field>
+							</block>
+						</value>
+						<value name="B">
+							<block type="variables_get">
+								<field name="VAR">num2</field>
+							</block>
+						</value>
+					</block>
+				</value>
+				<next>
+					<block type="controls_ifelse">
+						<value name="IF0">
+							<block type="logic_compare">
+								<field name="OP">GT</field>
+								<value name="A">
+									<block type="variables_get">
+										<field name="VAR">product</field>
+									</block>
+								</value>
+								<value name="B">
+									<block type="math_number">
+										<field name="NUM">${getRandomInt(100)}</field>
+									</block>
+								</value>
+							</block>
+						</value>
+						<statement name="DO0">
+							<block type="controls_if">
+								<mutation else="1"></mutation>
+								<value name="IF0">
+									<block type="logic_compare">
+										<field name="OP">GT</field>
+										<value name="A">
+											<block type="variables_get">
+												<field name="VAR">num1</field>
+											</block>
+										</value>
+										<value name="B">
+											<block type="variables_get">
+												<field name="VAR">num3</field>
+											</block>
+										</value>
+									</block>
+								</value>
+								<statement name="DO0">
+									<block type="controls_repeat">
+										<field name="TIMES">5</field>
+										<statement name="DO">
+											<block type="move_right"></block>
+										</statement>
+										<next>
+											<block type="controls_repeat">
+												<field name="TIMES">3</field>
+												<statement name="DO">
+													<block type="move_left"></block>
+												</statement>
+											</block>
+										</next>
+									</block>
+								</statement>
+								<statement name="ELSE">
+									<block type="move_down"></block>
+								</statement>
+							</block>
+						</statement>
+						<statement name="ELSE">
+							<block type="controls_repeat">
+								<field name="TIMES">4</field>
+								<statement name="DO">
+									<block type="move_left"></block>
+								</statement>
+								<next>
+									<block type="controls_repeat">
+										<field name="TIMES">3</field>
+										<statement name="DO">
+											<block type="move_up"></block>
+										</statement>
+									</block>
+								</next>
+							</block>
+						</statement>
+					</block>
+				</next>
+			</block>
+		</statement>
+	</block>
+	<block type="procedures_callnoreturn" x="327" y="228">
+		<mutation name="do something">
+			<arg name="num1"></arg>
+			<arg name="num2"></arg>
+			<arg name="num3"></arg>
+		</mutation>
+		<value name="ARG0">
+			<block type="math_number">
+				<field name="NUM">${getRandomInt(10)}</field>
+			</block>
+		</value>
+		<value name="ARG1">
+			<block type="math_number">
+				<field name="NUM">${getRandomInt(10)}</field>
+			</block>
+		</value>
+		<value name="ARG2">
+			<block type="math_number">
+				<field name="NUM">${getRandomInt(10)}</field>
+			</block>
+		</value>
+	</block>
+</xml>`,
+  "dropdown": false,
+  "readOnly": false,
+  "editDisabled": true,
+  "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"214": {
+  gridHeight: 3,
+  gridWidth: 5,
+  flurbCellX: 0,
+  flurbCellY: 0,
+  fruitCellX: 4,
+  fruitCellY: 0,
+  flurbPosition: {x: 0, y: 0},
+  lavaPos: [[1,0,"|"], [2,0,"|"], [3,0,"|"], [1,1,"|"], [2,1,"|"], [3,1,"|"]],
+  "xml": `<xml>
+	<variables>
+		<variable>num1</variable>
+		<variable>num2</variable>
+		<variable>num3</variable>
+		<variable>product</variable>
+	</variables>
+	<block type="procedures_defnoreturn" x="33" y="14">
+		<mutation>
+			<arg name="num1"></arg>
+			<arg name="num2"></arg>
+			<arg name="num3"></arg>
+		</mutation>
+		<field name="NAME">get_fruit</field>
+		<comment pinned="false" h="80" w="160">Describe this function...</comment>
+		<statement name="STACK">
+			<block type="variables_set">
+				<field name="VAR">product</field>
+				<value name="VALUE">
+					<block type="math_arithmetic">
+						<field name="OP">MULTIPLY</field>
+						<value name="A">
+							<block type="variables_get">
+								<field name="VAR">num1</field>
+							</block>
+						</value>
+						<value name="B">
+							<block type="variables_get">
+								<field name="VAR">num2</field>
+							</block>
+						</value>
+					</block>
+				</value>
+				<next>
+					<block type="controls_ifelse">
+						<value name="IF0">
+							<block type="logic_compare">
+								<field name="OP">GT</field>
+								<value name="A">
+									<block type="variables_get">
+										<field name="VAR">product</field>
+									</block>
+								</value>
+								<value name="B">
+									<block type="math_number">
+										<field name="NUM">${getRandomInt(100)}</field>
+									</block>
+								</value>
+							</block>
+						</value>
+						<statement name="DO0">
+							<block type="controls_if">
+								<mutation else="1"></mutation>
+								<value name="IF0">
+									<block type="logic_compare">
+										<field name="OP">GT</field>
+										<value name="A">
+											<block type="variables_get">
+												<field name="VAR">num1</field>
+											</block>
+										</value>
+										<value name="B">
+											<block type="variables_get">
+												<field name="VAR">num3</field>
+											</block>
+										</value>
+									</block>
+								</value>
+								<statement name="DO0">
+									<block type="controls_repeat">
+										<field name="TIMES">5</field>
+										<statement name="DO">
+											<block type="move_right"></block>
+										</statement>
+										<next>
+											<block type="controls_repeat">
+												<field name="TIMES">3</field>
+												<statement name="DO">
+													<block type="move_left"></block>
+												</statement>
+											</block>
+										</next>
+									</block>
+								</statement>
+								<statement name="ELSE">
+									<block type="move_down"></block>
+								</statement>
+							</block>
+						</statement>
+						<statement name="ELSE">
+							<block type="controls_repeat">
+								<field name="TIMES">4</field>
+								<statement name="DO">
+									<block type="move_left"></block>
+								</statement>
+								<next>
+									<block type="controls_repeat">
+										<field name="TIMES">3</field>
+										<statement name="DO">
+											<block type="move_up"></block>
+										</statement>
+									</block>
+								</next>
+							</block>
+						</statement>
+					</block>
+				</next>
+			</block>
+		</statement>
+	</block>
+	<block type="procedures_callnoreturn" x="309" y="254">
+		<mutation name="get_fruit">
+			<arg name="num1"></arg>
+			<arg name="num2"></arg>
+			<arg name="num3"></arg>
+		</mutation>
+		<value name="ARG0">
+			<block type="math_number">
+				<field name="NUM">${getRandomInt(10)}</field>
+			</block>
+		</value>
+		<value name="ARG1">
+			<block type="math_number">
+				<field name="NUM">${getRandomInt(10)}</field>
+			</block>
+		</value>
+		<value name="ARG2">
+			<block type="math_number">
+				<field name="NUM">${getRandomInt(10)}</field>
+			</block>
+		</value>
+	</block>
+</xml>`,
+  "dropdown": false,
+  "readOnly": false,
+  "editDisabled": true,
+  "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+},
+"215": {
+  "gridHeight": 6,
+  "gridWidth": 6,
+  "flurbCellX": 0,
+  "flurbCellY": 5,
+  "fruitCellX": 5,
+  "fruitCellY": 0,
+  "flurbPosition": { "x": 0, "y": 5 },
+  "lavaPos": [[0, 0, "|"], [1, 3, "|"], [3, 3, "|"], [4, 4, "|"], [2, 1, "|"], [2, 4, "|"], [3, 1, "|"], [1, 2, "|"], [5, 5, "|"]],
+  "xml": `<xml>
+	<variables>
+		<variable>num1</variable>
+		<variable>num2</variable>
+		<variable>num3</variable>
+		<variable>x</variable>
+		<variable>y</variable>
+		<variable>product</variable>
+	</variables>
+	<block type="procedures_defnoreturn" x="26" y="0">
+		<mutation>
+			<arg name="num1"></arg>
+			<arg name="num2"></arg>
+			<arg name="num3"></arg>
+		</mutation>
+		<field name="NAME">get_fruit</field>
+		<comment pinned="false" h="80" w="160">Describe this function...</comment>
+		<statement name="STACK">
+			<block type="variables_set">
+				<field name="VAR">product</field>
+				<value name="VALUE">
+					<block type="math_arithmetic">
+						<field name="OP">MULTIPLY</field>
+						<value name="A">
+							<block type="variables_get">
+								<field name="VAR">num1</field>
+							</block>
+						</value>
+						<value name="B">
+							<block type="variables_get">
+								<field name="VAR">num2</field>
+							</block>
+						</value>
+					</block>
+				</value>
+				<next>
+					<block type="controls_ifelse">
+						<value name="IF0">
+							<block type="logic_compare">
+								<field name="OP">GT</field>
+								<value name="A">
+									<block type="variables_get">
+										<field name="VAR">product</field>
+									</block>
+								</value>
+								<value name="B">
+									<block type="math_number">
+										<field name="NUM">${getRandomInt(100)}</field>
+									</block>
+								</value>
+							</block>
+						</value>
+						<statement name="DO0">
+							<block type="controls_if">
+								<mutation else="1"></mutation>
+								<value name="IF0">
+									<block type="logic_compare">
+										<field name="OP">GT</field>
+										<value name="A">
+											<block type="variables_get">
+												<field name="VAR">num1</field>
+											</block>
+										</value>
+										<value name="B">
+											<block type="variables_get">
+												<field name="VAR">num3</field>
+											</block>
+										</value>
+									</block>
+								</value>
+								<statement name="DO0">
+									<block type="controls_repeat">
+										<field name="TIMES">5</field>
+										<statement name="DO">
+											<block type="move_right"></block>
+										</statement>
+										<next>
+											<block type="controls_repeat">
+												<field name="TIMES">3</field>
+												<statement name="DO">
+													<block type="move_right"></block>
+												</statement>
+											</block>
+										</next>
+									</block>
+								</statement>
+								<statement name="ELSE">
+									<block type="move_up"></block>
+								</statement>
+							</block>
+						</statement>
+						<statement name="ELSE">
+							<block type="procedures_callnoreturn">
+								<mutation name="move_flurb">
+									<arg name="x"></arg>
+									<arg name="y"></arg>
+								</mutation>
+								<value name="ARG0">
+									<block type="math_number">
+										<field name="NUM">0</field>
+									</block>
+								</value>
+								<value name="ARG1">
+									<block type="math_number">
+										<field name="NUM">0</field>
+									</block>
+								</value>
+							</block>
+						</statement>
+					</block>
+				</next>
+			</block>
+		</statement>
+	</block>
+	<block type="procedures_callnoreturn" x="355" y="360">
+		<mutation name="get_fruit">
+			<arg name="num1"></arg>
+			<arg name="num2"></arg>
+			<arg name="num3"></arg>
+		</mutation>
+		<value name="ARG0">
+			<block type="math_number">
+				<field name="NUM">${getRandomInt(10)}</field>
+			</block>
+		</value>
+		<value name="ARG1">
+			<block type="math_number">
+				<field name="NUM">${getRandomInt(10)}</field>
+			</block>
+		</value>
+		<value name="ARG2">
+			<block type="math_number">
+				<field name="NUM">${getRandomInt(10)}</field>
+			</block>
+		</value>
+	</block>
+	<block type="procedures_defnoreturn" x="300" y="150">
+		<mutation>
+			<arg name="x"></arg>
+			<arg name="y"></arg>
+		</mutation>
+		<field name="NAME">move_flurb</field>
+		<comment pinned="false" h="80" w="160">Describe this function...</comment>
+		<statement name="STACK">
+			<block type="controls_repeat_ext">
+				<value name="TIMES">
+					<block type="variables_get">
+						<field name="VAR">x</field>
+					</block>
+				</value>
+				<statement name="DO">
+					<block type="move_left"></block>
+				</statement>
+				<next>
+					<block type="controls_repeat_ext">
+						<value name="TIMES">
+							<block type="variables_get">
+								<field name="VAR">y</field>
+							</block>
+						</value>
+						<statement name="DO">
+							<block type="move_up"></block>
+						</statement>
+					</block>
+				</next>
+			</block>
+		</statement>
+	</block>
+</xml>`,
+  "dropdown": false,
+  "readOnly": false,
+  "editDisabled": true,
+  "alertMessage": "Update the code so that the flurb makes it to the fruit!"
 }
 }
 
@@ -7322,6 +9267,8 @@ async function runCode() {
   var xmlText = Blockly.Xml.domToText(xmlDom);
   console.log(xmlText);
   var code = Blockly.JavaScript.workspaceToCode(workspace);
+  code = code.replace(/^function/gm, "async function")
+  code = code.replace(/(^[a-zA-Z0-9_]+\([0-9,\s]*\);$)/gm, "await $1")
   console.log(code)
   await eval("(async () => {" + code + "})()");
   if(flurbCell.querySelector('#flurb') && flurbCell.querySelector('#apple')) {

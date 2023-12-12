@@ -71,21 +71,25 @@
     </div>
     <div class="row" style="background-color: #f2f2f2; min-height:75vh">
         <xml id="toolbox" style="display: none">
-            <block type="move_up"></block>
-            <block type="move_down"></block>
-            <block type="move_left"></block>
-            <block type="move_right"></block>
-            <block type="controls_repeat"></block>
+            <category name="Move">
+                <block type="move_up"></block>
+                <block type="move_down"></block>
+                <block type="move_left"></block>
+                <block type="move_right"></block>
+            </category>
+            <category name="Control Logic">
+                <block type="controls_if"></block>
+                <block type="logic_compare"></block>
+                <block type="controls_repeat"></block>
+                <block type="controls_repeat_ext"></block>
+            </category>
             <!-- <block type="math_random_int"></block> -->
-            <block type="math_number"></block>
-            <block type="controls_if"></block>
-            <block type="logic_compare"></block>
-            <block type="variables_set"></block>
-            <block type="variables_get"></block>
-            <block type="math_arithmetic" inline="true"></block>
-            <block type="procedures_defnoreturn"></block>
-            <!-- <block type="procedures_callnoreturn">
-            </block> -->
+            <category name="Math">
+                <block type="math_number"></block>
+                <block type="math_arithmetic" inline="true"></block>
+            </category>
+            <category name="Variables" custom="VARIABLE"></category>
+            <category name="Functions" custom="PROCEDURE"></category>
         </xml>
         <div id="blocklyDiv" style="height: auto; width: 45%; border-radius: 5px; margin-left: 0.5%;"></div>
         <div class="col-1" style="align-items: center">
