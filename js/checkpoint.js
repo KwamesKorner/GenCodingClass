@@ -9092,32 +9092,32 @@ Blockly.defineBlocksWithJsonArray([
 ]);
 
 Blockly.JavaScript['move_forward'] = function(block) {
-    return 'moveForward(); await sleep(500);\n';
+    return 'moveForward(); if(alerts.size > 0){return;} await sleep(500);\n';
 };
 
 Blockly.JavaScript['turn_right'] = function(block) {
-    return 'turnRight(); await sleep(250);\n';
+    return 'turnRight(); if(alerts.size > 0){return;} await sleep(250);\n';
 };
 
 Blockly.JavaScript['turn_left'] = function(block) {
-    return 'turnLeft(); await sleep(250);\n';
+    return 'turnLeft(); if(alerts.size > 0){return;} await sleep(250);\n';
 };
 
 Blockly.JavaScript['move_up'] = function(block) {
-    return 'moveUp(); await sleep(250);\n';
+    return 'moveUp(); if(alerts.size > 0){return;} await sleep(250);\n';
 };
 
 Blockly.JavaScript['move_down'] = function(block) {
     // return 'setTimeout(() => { moveDown(); }, 2000);\n'
-    return 'moveDown(); await sleep(250);\n';
+    return 'moveDown(); if(alerts.size > 0){return;} await sleep(250);\n';
 };
 
 Blockly.JavaScript['move_left'] = function(block) {
-    return 'moveLeft(); await sleep(250);\n';
+    return 'moveLeft(); if(alerts.size > 0){return;} await sleep(250);\n';
 };
 
 Blockly.JavaScript['move_right'] = function(block) {
-    return 'moveRight(); await sleep(250);\n';
+    return 'moveRight(); if(alerts.size > 0){return;} await sleep(250);\n';
 };
 
 var alerts = new Set()
@@ -9268,7 +9268,7 @@ async function runCode() {
   console.log(xmlText);
   var code = Blockly.JavaScript.workspaceToCode(workspace);
   code = code.replace(/^function/gm, "async function")
-  code = code.replace(/(^[a-zA-Z0-9_]+\([0-9,\s]*\);$)/gm, "await $1")
+  code = code.replace(/([a-zA-Z0-9_]+_[a-zA-Z0-9_]+\([0-9,\s]*\);)/gm, "await $1")
   console.log(code)
   await eval("(async () => {" + code + "})()");
   if(flurbCell.querySelector('#flurb') && flurbCell.querySelector('#apple')) {
@@ -9297,6 +9297,7 @@ async function runCode() {
       }
       flurbPosition = {x: flurbCellX, y: flurbCellY};
       updateFlurbPosition()
+		return;
     }
     flurbCell.removeChild(flurbCell.querySelector('#apple'));
     await sleep(100)
