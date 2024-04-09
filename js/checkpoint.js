@@ -9328,6 +9328,7 @@ async function runCode() {
   else {
     await sleep(500)
     alert("Try Again!");
+    alerts.clear();
     if (dropdown){
       location.reload()
     }
