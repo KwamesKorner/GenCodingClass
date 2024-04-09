@@ -9327,6 +9327,9 @@ async function runCode() {
   
   else {
     await sleep(500)
+    for(var error of alerts){
+        alert(error)
+    }
     alert("Try Again!");
     alerts.clear();
     if (dropdown){
