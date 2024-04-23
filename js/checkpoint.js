@@ -9019,7 +9019,7 @@ const levelValues = {
   "readOnly": false,
   "editDisabled": true,
   "alertMessage": "Update the code so that the flurb makes it to the fruit!"
-}
+},
 "216": {
         gridHeight: 3,
         gridWidth: 5,
