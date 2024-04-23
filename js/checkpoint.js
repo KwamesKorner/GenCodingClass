@@ -9250,6 +9250,7 @@ const readOnly = levelValues[level]["readOnly"]
 const editDisabled = levelValues[level]["editDisabled"]
 const dropdown = levelValues[level]["dropdown"]
 const loopValidation = levelValues[level]["loopValidation"]
+const functionValidation = levelValues[level]["functionValidation"]
 
 if(dropdown) {
   document.getElementById("condition").style.display = "block";
