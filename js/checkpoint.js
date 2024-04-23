@@ -9020,6 +9020,216 @@ const levelValues = {
   "editDisabled": true,
   "alertMessage": "Update the code so that the flurb makes it to the fruit!"
 }
+"216": {
+        gridHeight: 3,
+        gridWidth: 5,
+        flurbCellX: 0,
+        flurbCellY: 0,
+        fruitCellX: 4,
+        fruitCellY: 0,
+        flurbPosition: {x: 0, y: 0},
+        lavaPos: [[1,0,"|"], [2,0,"|"], [3,0,"|"], [1,1,"|"], [2,1,"|"], [3,1,"|"]],
+        "xml": false,
+        alertMessage: "",
+        loopValidation: true,
+			functionValidation: true
+    },
+    "217": {
+        gridHeight: 3,
+        gridWidth: 5,
+        flurbCellX: 0,
+        flurbCellY: 2,
+        fruitCellX: 4,
+        fruitCellY: 0,
+        flurbPosition: {x: 0, y: 2},
+        lavaPos: [[0,0,"|"], [1,0, "|"], [2,0, "|"], [0,1,"|"], [3,2,"|"], [4,2,"|"]],
+        "xml": false,
+        alertMessage: "",
+        loopValidation: true,
+			functionValidation: true
+    },
+    "218": {
+        gridHeight: 3,
+        gridWidth: 5,
+        flurbCellX: 4,
+        flurbCellY: 0,
+        fruitCellX: 0,
+        fruitCellY: 2,
+        flurbPosition: {x: 4, y: 0},
+        lavaPos: [[0,0,"|"], [1,0,"|"], [2,0,"|"], [3,0,"|"], [0,1,"|"], [1,1,"|"], [3,2,"|"], [4,2,"|"]],
+        "xml": false,
+        alertMessage: "",
+        loopValidation: true,
+			functionValidation: true
+    },
+    "219": {
+      "gridHeight": 5,
+      "gridWidth": 5,
+      "flurbCellX": 0,
+      "flurbCellY": 0,
+      "fruitCellX": 4,
+      "fruitCellY": 4,
+      "flurbPosition": { "x": 0, "y": 0 },
+      "lavaPos": [[0, 2, "|"], [1, 2, "|"], [2, 0, "|"], [3, 2, "|"], [4, 2, "|"]],
+      "xml": false,
+      "alertMessage": "Find the one true path to the Fruit!",
+      "loopValidation": true,
+		"functionValidation": true
+    },
+    "220": {
+      "gridHeight": 5,
+      "gridWidth": 5,
+      "flurbCellX": 0,
+      "flurbCellY": 0,
+      "fruitCellX": 4,
+      "fruitCellY": 1,
+      "flurbPosition": { "x": 0, "y": 0 },
+      "lavaPos": [[0, 1, "|"], [0, 2, "|"], [1, 3, "|"], [2, 0, "|"], [2, 1, "|"], [3, 2, "|"], [3, 3, "|"], [4, 0, "|"]],
+      "xml": false,
+      "alertMessage": "Navigate through the labyrinth to reach the Fruit!",
+      "loopValidation": true,
+		"functionValidation": true
+    },
+    "221": {
+      "gridHeight": 5,
+      "gridWidth": 5,
+      "flurbCellX": 4,
+      "flurbCellY": 0,
+      "fruitCellX": 0,
+      "fruitCellY": 4,
+      "flurbPosition": { "x": 4, "y": 0 },
+      "lavaPos": [[0, 2, "|"], [1, 0, "|"], [2, 2, "|"], [2, 3, "|"], [3, 0, "|"], [4, 2, "|"]],
+      "xml": false,
+      "alertMessage": "Navigate through the lava maze to reach the Fruit!",
+      "loopValidation": true,
+		"functionValidation": true
+    },
+    "222": {
+      "gridHeight": 5,
+      "gridWidth": 5,
+      "flurbCellX": 0,
+      "flurbCellY": 2,
+      "fruitCellX": 4,
+      "fruitCellY": 4,
+      "flurbPosition": { "x": 0, "y": 2 },
+      "lavaPos": [[0, 3, "|"], [0, 4, "|"], [1, 0, "|"], [1, 2, "|"], [2, 2, "|"], [3, 0, "|"], [3, 3, "|"], [4, 1, "|"]],
+      "xml": false,
+      "alertMessage": "Wind your way through to the Fruit!",
+      "loopValidation": true,
+		"functionValidation": true
+    },
+    "223": {
+      "gridHeight": 5,
+      "gridWidth": 5,
+      "flurbCellX": 0,
+      "flurbCellY": 2,
+      "fruitCellX": 4,
+      "fruitCellY": 1,
+      "flurbPosition": { "x": 0, "y": 2 },
+      "lavaPos": [[1, 0, "|"], [2, 0, "|"], [0, 1, "|"], [4, 0, "|"], [2, 2, "|"], [3, 2, "|"], [0, 3, "|"], [1, 4, "|"], [4, 4, "|"]],
+      "xml": false,
+      "alertMessage": "Zigzag to success!",
+      "loopValidation": true,
+		"functionValidation": true
+    },
+    "224": {
+      "gridHeight": 5,
+      "gridWidth": 5,
+      "flurbCellX": 4,
+      "flurbCellY": 0,
+      "fruitCellX": 0,
+      "fruitCellY": 4,
+      "flurbPosition": { "x": 4, "y": 0 },
+      "lavaPos": [[0, 0, "|"], [2, 0, "|"], [3, 0, "|"], [4, 4, "|"], [2, 2, "|"], [3, 2, "|"], [0, 3, "|"], [3, 3, "|"], [4, 3, "|"], [2, 4, "|"]],
+      "xml": false,
+      "alertMessage": "There's more than meets the eye.",
+      "loopValidation": true,
+		"functionValidation": true
+    },
+    "225": {
+      "gridHeight": 6,
+      "gridWidth": 6,
+      "flurbCellX": 0,
+      "flurbCellY": 0,
+      "fruitCellX": 5,
+      "fruitCellY": 5,
+      "flurbPosition": { "x": 0, "y": 0 },
+      "lavaPos": [[2, 2, "|"], [3, 3, "|"], [4, 1, "|"], [1, 4, "|"], [5, 0, "|"], [0, 5, "|"]],
+      "xml": false,
+      "alertMessage": "A larger grid awaits! Find your way to the fruit.",
+      "loopValidation": true,
+		"functionValidation": true
+    },
+    "226": {
+      "gridHeight": 6,
+      "gridWidth": 6,
+      "flurbCellX": 0,
+      "flurbCellY": 5,
+      "fruitCellX": 5,
+      "fruitCellY": 0,
+      "flurbPosition": { "x": 0, "y": 5 },
+      "lavaPos": [[0, 0, "|"], [1, 3, "|"], [3, 3, "|"], [4, 4, "|"], [2, 1, "|"], [2, 4, "|"], [3, 1, "|"], [1, 2, "|"], [5, 5, "|"]],
+      "xml": false,
+      "alertMessage": "The path is narrower with more obstacles. Tread carefully!",
+      "loopValidation": true,
+		"functionValidation": true
+    },
+    "227": {
+      "gridHeight": 7,
+      "gridWidth": 7,
+      "flurbCellX": 0,
+      "flurbCellY": 0,
+      "fruitCellX": 6,
+      "fruitCellY": 6,
+      "flurbPosition": { "x": 0, "y": 0 },
+      "lavaPos": [[0, 5, "|"], [5, 0, "|"], [5, 5, "|"], [1, 4, "|"], [4, 1, "|"], [3, 3, "|"], [2, 2, "|"], [4, 6, "|"], [6, 3, "|"]],
+      "xml": false,
+      "alertMessage": "A growing grid and more lava. Plan your moves wisely!",
+      "loopValidation": true,
+		"functionValidation": true
+    },
+    "228": {
+      "gridHeight": 7,
+      "gridWidth": 7,
+      "flurbCellX": 3,
+      "flurbCellY": 3,
+      "fruitCellX": 0,
+      "fruitCellY": 6,
+      "flurbPosition": { "x": 3, "y": 3 },
+      "lavaPos": [[1, 1, "|"], [3, 0, "|"], [3, 1, "|"], [2, 5, "|"], [3, 6, "|"], [4, 4, "|"], [5, 5, "|"], [1, 4, "|"], [2, 3, "|"], [4, 3, "|"], [5, 3, "|"], [6, 3, "|"]],
+      "xml": false,
+      "alertMessage": "Traverse from bottom left to top right. The lava won't make it easy!",
+      "loopValidation": true,
+		"functionValidation": true
+    },
+    "229": {
+      "gridHeight": 8,
+      "gridWidth": 8,
+      "flurbCellX": 0,
+      "flurbCellY": 7,
+      "fruitCellX": 7,
+      "fruitCellY": 0,
+      "flurbPosition": { "x": 0, "y": 7 },
+      "lavaPos": [[0, 5, "|"], [1, 1, "|"], [1, 4, "|"], [2, 2, "|"], [2, 6, "|"], [3, 1, "|"], [3, 4, "|"], [4, 2, "|"], [4, 5, "|"], [4, 7, "|"], [5, 1, "|"], [5, 4, "|"], [5, 6, "|"], [6, 3, "|"], [6, 7, "|"]],
+      "xml": false,
+      "alertMessage": "Lava pockets are everywhere. Navigate with precision!",
+      "loopValidation": true,
+		"functionValidation": true
+    },
+    "230": {
+      "gridHeight": 8,
+      "gridWidth": 8,
+      "flurbCellX": 0,
+      "flurbCellY": 0,
+      "fruitCellX": 7,
+      "fruitCellY": 7,
+      "flurbPosition": { "x": 0, "y": 0 },
+      "lavaPos": [[7,0, "|"],[0,7, "|"], [1, 1, "|"], [2, 3, "|"], [3, 5, "|"], [4, 2, "|"], [4, 6, "|"], [5, 4, "|"], [6, 3, "|"], [6, 6, "|"]],
+      "xml": false,
+      "alertMessage": "The ultimate challenge on an 8x8 grid. Best of luck!",
+      "loopValidation": true,
+		"functionValidation": true
+    }
 }
 
 var msg = levelValues[level]["alertMessage"]
@@ -9280,6 +9490,14 @@ async function runCode() {
             return;
         }
     }
+	 if(functionValidation) {
+        if(code.indexOf("function") == -1) {
+            alert("You got the fruit, but you didn't use the Function Block. Try Again!");
+            flurbPosition = {x: flurbCellX, y: flurbCellY};
+            updateFlurbPosition()
+            return;
+        }
+    }
     else if(alerts.size > 0) {
       for(var error of alerts){
         alert(error)
@@ -9327,11 +9545,7 @@ async function runCode() {
   
   else {
     await sleep(500)
-    for(var error of alerts){
-        alert(error)
-    }
     alert("Try Again!");
-    alerts.clear();
     if (dropdown){
       location.reload()
     }
