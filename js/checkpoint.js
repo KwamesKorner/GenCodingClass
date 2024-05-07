@@ -9258,7 +9258,7 @@ const levelValues = {
     "dropdown": false,
     "readOnly": false,
     "editDisabled": false,
-    "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+    "alertMessage": "Update the code so that the flurb makes it to the fruit!",
     "loopValidation": true,
 		"functionValidation": true
   },
@@ -9322,7 +9322,7 @@ const levelValues = {
     "dropdown": false,
     "readOnly": false,
     "editDisabled": false,
-    "alertMessage": "Update the code so that the flurb makes it to the fruit!"
+    "alertMessage": "Update the code so that the flurb makes it to the fruit!",
     "loopValidation": true,
 		"functionValidation": true
   },
