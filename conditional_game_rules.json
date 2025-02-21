@@ -1,0 +1,752 @@
+[
+  {
+    "rule": "If the card is red,click 'Kite', else click 'Tiger'.",
+    "actions": [
+      "Kite",
+      "Tiger"
+    ]
+  },
+  {
+    "rule": "If the card is black,click 'Hat', else click 'Lion'.",
+    "actions": [
+      "Hat",
+      "Lion"
+    ]
+  },
+  {
+    "rule": "If the card is red,click 'Fish', else click 'Queen'.",
+    "actions": [
+      "Fish",
+      "Queen"
+    ]
+  },
+  {
+    "rule": "If the card is black,click 'Jellybean', else click 'Tiger'.",
+    "actions": [
+      "Jellybean",
+      "Tiger"
+    ]
+  },
+  {
+    "rule": "If the card is red,click 'Lion', else click 'Moon'.",
+    "actions": [
+      "Lion",
+      "Moon"
+    ]
+  },
+  {
+    "rule": "If the card is black,click 'Rocket', else click 'Orange'.",
+    "actions": [
+      "Rocket",
+      "Orange"
+    ]
+  },
+  {
+    "rule": "If the card is red,click 'Notebook', else click 'Orange'.",
+    "actions": [
+      "Notebook",
+      "Orange"
+    ]
+  },
+  {
+    "rule": "If the card is black,click 'Moon', else click 'Notebook'.",
+    "actions": [
+      "Moon",
+      "Notebook"
+    ]
+  },
+  {
+    "rule": "If the card is red,click 'Orange', else click 'Fish'.",
+    "actions": [
+      "Orange",
+      "Fish"
+    ]
+  },
+  {
+    "rule": "If the card is black,click 'Banana', else click 'Pencil'.",
+    "actions": [
+      "Banana",
+      "Pencil"
+    ]
+  },
+  {
+    "rule": "If the card is red,click 'Tiger', else click 'Dog'.",
+    "actions": [
+      "Tiger",
+      "Dog"
+    ]
+  },
+  {
+    "rule": "If the card is black,click 'Notebook', else click 'Jellybean'.",
+    "actions": [
+      "Notebook",
+      "Jellybean"
+    ]
+  },
+  {
+    "rule": "If the card is red,click 'Apple', else click 'Queen'.",
+    "actions": [
+      "Apple",
+      "Queen"
+    ]
+  },
+  {
+    "rule": "If the card is black,click 'Notebook', else click 'Moon'.",
+    "actions": [
+      "Notebook",
+      "Moon"
+    ]
+  },
+  {
+    "rule": "If the card is red,click 'Guitar', else click 'Hat'.",
+    "actions": [
+      "Guitar",
+      "Hat"
+    ]
+  },
+  {
+    "rule": "If the card is black,click 'Guitar', else click 'Notebook'.",
+    "actions": [
+      "Guitar",
+      "Notebook"
+    ]
+  },
+  {
+    "rule": "If the card is red,click 'Moon', else click 'Pencil'.",
+    "actions": [
+      "Moon",
+      "Pencil"
+    ]
+  },
+  {
+    "rule": "If the card is black,click 'Orange', else click 'Moon'.",
+    "actions": [
+      "Orange",
+      "Moon"
+    ]
+  },
+  {
+    "rule": "If the card is red,click 'Dog', else click 'Hat'.",
+    "actions": [
+      "Dog",
+      "Hat"
+    ]
+  },
+  {
+    "rule": "If the card is black,click 'Guitar', else click 'Notebook'.",
+    "actions": [
+      "Guitar",
+      "Notebook"
+    ]
+  },
+  {
+    "rule": "If the card is red,click 'Notebook', else click 'Hat'.",
+    "actions": [
+      "Notebook",
+      "Hat"
+    ]
+  },
+  {
+    "rule": "If the card is black,click 'Notebook', else click 'Tiger'.",
+    "actions": [
+      "Notebook",
+      "Tiger"
+    ]
+  },
+  {
+    "rule": "If the card is red,click 'Queen', else click 'Tiger'.",
+    "actions": [
+      "Queen",
+      "Tiger"
+    ]
+  },
+  {
+    "rule": "If the card is black,click 'Orange', else click 'Moon'.",
+    "actions": [
+      "Orange",
+      "Moon"
+    ]
+  },
+  {
+    "rule": "If the card is red,click 'Orange', else click 'Apple'.",
+    "actions": [
+      "Orange",
+      "Apple"
+    ]
+  },
+  {
+    "rule": "If the card is a number card and even,click 'Notebook', else click 'Moon'.",
+    "actions": [
+      "Notebook",
+      "Moon"
+    ]
+  },
+  {
+    "rule": "If the card is a number card and even,click 'Eagle', else click 'Banana'.",
+    "actions": [
+      "Eagle",
+      "Banana"
+    ]
+  },
+  {
+    "rule": "If the card is a number card and even,click 'Car', else click 'Kite'.",
+    "actions": [
+      "Car",
+      "Kite"
+    ]
+  },
+  {
+    "rule": "If the card is an even number card,click 'Banana', else click 'Ice Cream'.",
+    "actions": [
+      "Banana",
+      "Ice Cream"
+    ]
+  },
+  {
+    "rule": "If the card is an even number card and red,click 'Hat', else click 'Orange'.",
+    "actions": [
+      "Hat",
+      "Orange"
+    ]
+  },
+  {
+    "rule": "If the card is an even number card and red,click 'Banana', else click 'Hat'.",
+    "actions": [
+      "Banana",
+      "Hat"
+    ]
+  },
+  {
+    "rule": "If the card is an even number card and red,click 'Car', else click 'Ice Cream'.",
+    "actions": [
+      "Car",
+      "Ice Cream"
+    ]
+  },
+  {
+    "rule": "If the card is an odd number card,click 'Tiger', else click 'Hat'.",
+    "actions": [
+      "Tiger",
+      "Hat"
+    ]
+  },
+  {
+    "rule": "If the card is an odd number card and black,click 'Hat', else click 'Kite'.",
+    "actions": [
+      "Hat",
+      "Kite"
+    ]
+  },
+  {
+    "rule": "If the card is a number card and even,click 'Eagle', else click 'Fish'.",
+    "actions": [
+      "Eagle",
+      "Fish"
+    ]
+  },
+  {
+    "rule": "If the card is a number card and even,click 'Lion', else click 'Fish'.",
+    "actions": [
+      "Lion",
+      "Fish"
+    ]
+  },
+  {
+    "rule": "If the card is a number card and even,click 'Guitar', else click 'Rocket'.",
+    "actions": [
+      "Guitar",
+      "Rocket"
+    ]
+  },
+  {
+    "rule": "If the card is an odd number card,click 'Eagle', else click 'Queen'.",
+    "actions": [
+      "Eagle",
+      "Queen"
+    ]
+  },
+  {
+    "rule": "If the card is an odd number card,click 'Fish', else click 'Lion'.",
+    "actions": [
+      "Fish",
+      "Lion"
+    ]
+  },
+  {
+    "rule": "If the card is an even number card and red,click 'Orange', else click 'Fish'.",
+    "actions": [
+      "Orange",
+      "Fish"
+    ]
+  },
+  {
+    "rule": "If the card is an odd number card and black,click 'Pencil', else click 'Hat'.",
+    "actions": [
+      "Pencil",
+      "Hat"
+    ]
+  },
+  {
+    "rule": "If the card is an odd number card and black,click 'Car', else click 'Guitar'.",
+    "actions": [
+      "Car",
+      "Guitar"
+    ]
+  },
+  {
+    "rule": "If the card is a number card and even,click 'Car', else click 'Dog'.",
+    "actions": [
+      "Car",
+      "Dog"
+    ]
+  },
+  {
+    "rule": "If the card is an even number card and red,click 'Lion', else click 'Dog'.",
+    "actions": [
+      "Lion",
+      "Dog"
+    ]
+  },
+  {
+    "rule": "If the card is an even number card and red,click 'Ice Cream', else click 'Queen'.",
+    "actions": [
+      "Ice Cream",
+      "Queen"
+    ]
+  },
+  {
+    "rule": "If the card is a number card and even,click 'Ice Cream', else click 'Dog'.",
+    "actions": [
+      "Ice Cream",
+      "Dog"
+    ]
+  },
+  {
+    "rule": "If the card is an odd number card,click 'Ice Cream', else click 'Guitar'.",
+    "actions": [
+      "Ice Cream",
+      "Guitar"
+    ]
+  },
+  {
+    "rule": "If the card is an even number card and red,click 'Pencil', else click 'Hat'.",
+    "actions": [
+      "Pencil",
+      "Hat"
+    ]
+  },
+  {
+    "rule": "If the card is an odd number card,click 'Kite', else click 'Moon'.",
+    "actions": [
+      "Kite",
+      "Moon"
+    ]
+  },
+  {
+    "rule": "If the card is an odd number card and black,click 'Banana', else click 'Jellybean'.",
+    "actions": [
+      "Banana",
+      "Jellybean"
+    ]
+  },
+  {
+    "rule": "If the card is a number card and even,click 'Ice Cream', else if it is a number card and odd,click 'Apple', otherwise click 'Rocket'.",
+    "actions": [
+      "Ice Cream",
+      "Apple",
+      "Rocket"
+    ]
+  },
+  {
+    "rule": "If the card is a number card and even,click 'Orange', else if it is a number card and odd,click 'Car', otherwise click 'Lion'.",
+    "actions": [
+      "Orange",
+      "Car",
+      "Lion"
+    ]
+  },
+  {
+    "rule": "If the card is a spade and an even number card,click 'Queen', else if it is a heart and an odd number card,click 'Hat', otherwise click 'Car'.",
+    "actions": [
+      "Queen",
+      "Hat",
+      "Car"
+    ]
+  },
+  {
+    "rule": "If the card is a spade and an even number card,click 'Queen', else if it is a heart and an odd number card,click 'Orange', otherwise click 'Kite'.",
+    "actions": [
+      "Queen",
+      "Orange",
+      "Kite"
+    ]
+  },
+  {
+    "rule": "If the card is a number card and even,click 'Fish', else if it is a number card and odd,click 'Orange', otherwise click 'Banana'.",
+    "actions": [
+      "Fish",
+      "Orange",
+      "Banana"
+    ]
+  },
+  {
+    "rule": "If the card is an even number card and divisible by 4,click 'Jellybean', else if it is an odd number card and greater than 7,click 'Star', otherwise click 'Car'.",
+    "actions": [
+      "Jellybean",
+      "Star",
+      "Car"
+    ]
+  },
+  {
+    "rule": "If the card is an even number card and divisible by 4,click 'Car', else if it is an odd number card and greater than 7,click 'Eagle', otherwise click 'Notebook'.",
+    "actions": [
+      "Car",
+      "Eagle",
+      "Notebook"
+    ]
+  },
+  {
+    "rule": "If the card is a number card less than 5 and even,click 'Ice Cream', else if it is a number card greater than 7 and odd,click 'Guitar', otherwise click 'Tiger'.",
+    "actions": [
+      "Ice Cream",
+      "Guitar",
+      "Tiger"
+    ]
+  },
+  {
+    "rule": "If the card is a spade and an even number card,click 'Eagle', else if it is a heart and an odd number card,click 'Guitar', otherwise click 'Moon'.",
+    "actions": [
+      "Eagle",
+      "Guitar",
+      "Moon"
+    ]
+  },
+  {
+    "rule": "If the card is a spade and an even number card,click 'Queen', else if it is a heart and an odd number card,click 'Pencil', otherwise click 'Jellybean'.",
+    "actions": [
+      "Queen",
+      "Pencil",
+      "Jellybean"
+    ]
+  },
+  {
+    "rule": "If the card is a number card and even,click 'Hat', else if it is a number card and odd,click 'Rocket', otherwise click 'Orange'.",
+    "actions": [
+      "Hat",
+      "Rocket",
+      "Orange"
+    ]
+  },
+  {
+    "rule": "If the card is a number card less than 5 and even,click 'Kite', else if it is a number card greater than 7 and odd,click 'Pencil', otherwise click 'Apple'.",
+    "actions": [
+      "Kite",
+      "Pencil",
+      "Apple"
+    ]
+  },
+  {
+    "rule": "If the card is a number card and even,click 'Orange', else if it is a number card and odd,click 'Kite', otherwise click 'Star'.",
+    "actions": [
+      "Orange",
+      "Kite",
+      "Star"
+    ]
+  },
+  {
+    "rule": "If the card is an even number card and divisible by 4,click 'Queen', else if it is an odd number card and greater than 7,click 'Lion', otherwise click 'Star'.",
+    "actions": [
+      "Queen",
+      "Lion",
+      "Star"
+    ]
+  },
+  {
+    "rule": "If the card is a number card less than 5 and even,click 'Orange', else if it is a number card greater than 7 and odd,click 'Jellybean', otherwise click 'Dog'.",
+    "actions": [
+      "Orange",
+      "Jellybean",
+      "Dog"
+    ]
+  },
+  {
+    "rule": "If the card is a number card and even,click 'Orange', else if it is a number card and odd,click 'Hat', otherwise click 'Moon'.",
+    "actions": [
+      "Orange",
+      "Hat",
+      "Moon"
+    ]
+  },
+  {
+    "rule": "If the card is an even number card and divisible by 4,click 'Kite', else if it is an odd number card and greater than 7,click 'Star', otherwise click 'Tiger'.",
+    "actions": [
+      "Kite",
+      "Star",
+      "Tiger"
+    ]
+  },
+  {
+    "rule": "If the card is a number card and even,click 'Apple', else if it is a number card and odd,click 'Notebook', otherwise click 'Jellybean'.",
+    "actions": [
+      "Apple",
+      "Notebook",
+      "Jellybean"
+    ]
+  },
+  {
+    "rule": "If the card is a spade and an even number card,click 'Banana', else if it is a heart and an odd number card,click 'Eagle', otherwise click 'Kite'.",
+    "actions": [
+      "Banana",
+      "Eagle",
+      "Kite"
+    ]
+  },
+  {
+    "rule": "If the card is a number card and even,click 'Eagle', else if it is a number card and odd,click 'Notebook', otherwise click 'Jellybean'.",
+    "actions": [
+      "Eagle",
+      "Notebook",
+      "Jellybean"
+    ]
+  },
+  {
+    "rule": "If the card is an even number card and divisible by 4,click 'Banana', else if it is an odd number card and greater than 7,click 'Rocket', otherwise click 'Dog'.",
+    "actions": [
+      "Banana",
+      "Rocket",
+      "Dog"
+    ]
+  },
+  {
+    "rule": "If the card is a number card less than 5 and even,click 'Car', else if it is a number card greater than 7 and odd,click 'Moon', otherwise click 'Ice Cream'.",
+    "actions": [
+      "Car",
+      "Moon",
+      "Ice Cream"
+    ]
+  },
+  {
+    "rule": "If the card is a spade and an even number card,click 'Guitar', else if it is a heart and an odd number card,click 'Banana', otherwise click 'Orange'.",
+    "actions": [
+      "Guitar",
+      "Banana",
+      "Orange"
+    ]
+  },
+  {
+    "rule": "If the card is an even number card and divisible by 4,click 'Ice Cream', else if it is an odd number card and greater than 7,click 'Guitar', otherwise click 'Orange'.",
+    "actions": [
+      "Ice Cream",
+      "Guitar",
+      "Orange"
+    ]
+  },
+  {
+    "rule": "If the card is a spade and an even number card,click 'Star', else if it is a heart and an odd number card,click 'Kite', otherwise click 'Dog'.",
+    "actions": [
+      "Star",
+      "Kite",
+      "Dog"
+    ]
+  },
+  {
+    "rule": "If the card is a number card divisible by 3 and black,click 'Pencil', else if it is red and greater than 9,click 'Guitar', otherwise click 'Fish'.",
+    "actions": [
+      "Pencil",
+      "Guitar",
+      "Fish"
+    ]
+  },
+  {
+    "rule": "If the card is a diamond and even,click 'Car', else if it is a club and odd,click 'Jellybean', otherwise click 'Orange'.",
+    "actions": [
+      "Car",
+      "Jellybean",
+      "Orange"
+    ]
+  },
+  {
+    "rule": "If the card is a number card divisible by 3 and black,click 'Hat', else if it is red and greater than 9,click 'Dog', otherwise click 'Lion'.",
+    "actions": [
+      "Hat",
+      "Dog",
+      "Lion"
+    ]
+  },
+  {
+    "rule": "If the card is a spade or a diamond and greater than 7,click 'Star', else if it is a club and less than 5,click 'Jellybean', otherwise click 'Banana'.",
+    "actions": [
+      "Star",
+      "Jellybean",
+      "Banana"
+    ]
+  },
+  {
+    "rule": "If the card is a red number card and even,click 'Rocket', else if it is a black number card and odd,click 'Dog', otherwise click 'Queen'.",
+    "actions": [
+      "Rocket",
+      "Dog",
+      "Queen"
+    ]
+  },
+  {
+    "rule": "If the card is a number card divisible by 3 and black,click 'Eagle', else if it is red and greater than 9,click 'Ice Cream', otherwise click 'Kite'.",
+    "actions": [
+      "Eagle",
+      "Ice Cream",
+      "Kite"
+    ]
+  },
+  {
+    "rule": "If the card is a number card divisible by 3 and black,click 'Eagle', else if it is red and greater than 9,click 'Dog', otherwise click 'Orange'.",
+    "actions": [
+      "Eagle",
+      "Dog",
+      "Orange"
+    ]
+  },
+  {
+    "rule": "If the card is a diamond and even,click 'Eagle', else if it is a club and odd,click 'Ice Cream', otherwise click 'Jellybean'.",
+    "actions": [
+      "Eagle",
+      "Ice Cream",
+      "Jellybean"
+    ]
+  },
+  {
+    "rule": "If the card is a red number card and even,click 'Moon', else if it is a black number card and odd,click 'Banana', otherwise click 'Guitar'.",
+    "actions": [
+      "Moon",
+      "Banana",
+      "Guitar"
+    ]
+  },
+  {
+    "rule": "If the card is a red number card and even,click 'Queen', else if it is a black number card and odd,click 'Jellybean', otherwise click 'Moon'.",
+    "actions": [
+      "Queen",
+      "Jellybean",
+      "Moon"
+    ]
+  },
+  {
+    "rule": "If the card is a diamond and even,click 'Apple', else if it is a club and odd,click 'Ice Cream', otherwise click 'Hat'.",
+    "actions": [
+      "Apple",
+      "Ice Cream",
+      "Hat"
+    ]
+  },
+  {
+    "rule": "If the card is a diamond and even,click 'Banana', else if it is a club and odd,click 'Moon', otherwise click 'Car'.",
+    "actions": [
+      "Banana",
+      "Moon",
+      "Car"
+    ]
+  },
+  {
+    "rule": "If the card is a diamond and even,click 'Moon', else if it is a club and odd,click 'Jellybean', otherwise click 'Rocket'.",
+    "actions": [
+      "Moon",
+      "Jellybean",
+      "Rocket"
+    ]
+  },
+  {
+    "rule": "If the card is a diamond and even,click 'Kite', else if it is a club and odd,click 'Orange', otherwise click 'Eagle'.",
+    "actions": [
+      "Kite",
+      "Orange",
+      "Eagle"
+    ]
+  },
+  {
+    "rule": "If the card is an even number card and red,click 'Moon', else if it is odd and a heart,click 'Eagle', otherwise click 'Pencil'.",
+    "actions": [
+      "Moon",
+      "Eagle",
+      "Pencil"
+    ]
+  },
+  {
+    "rule": "If the card is an even number card and red,click 'Dog', else if it is odd and a heart,click 'Fish', otherwise click 'Orange'.",
+    "actions": [
+      "Dog",
+      "Fish",
+      "Orange"
+    ]
+  },
+  {
+    "rule": "If the card is an even number card and red,click 'Jellybean', else if it is odd and a heart,click 'Tiger', otherwise click 'Pencil'.",
+    "actions": [
+      "Jellybean",
+      "Tiger",
+      "Pencil"
+    ]
+  },
+  {
+    "rule": "If the card is a spade or a diamond and greater than 7,click 'Tiger', else if it is a club and less than 5,click 'Dog', otherwise click 'Jellybean'.",
+    "actions": [
+      "Tiger",
+      "Dog",
+      "Jellybean"
+    ]
+  },
+  {
+    "rule": "If the card is a number card divisible by 3 and black,click 'Kite', else if it is red and greater than 9,click 'Hat', otherwise click 'Fish'.",
+    "actions": [
+      "Kite",
+      "Hat",
+      "Fish"
+    ]
+  },
+  {
+    "rule": "If the card is an even number card and red,click 'Tiger', else if it is odd and a heart,click 'Moon', otherwise click 'Queen'.",
+    "actions": [
+      "Tiger",
+      "Moon",
+      "Queen"
+    ]
+  },
+  {
+    "rule": "If the card is a spade or a diamond and greater than 7,click 'Jellybean', else if it is a club and less than 5,click 'Car', otherwise click 'Notebook'.",
+    "actions": [
+      "Jellybean",
+      "Car",
+      "Notebook"
+    ]
+  },
+  {
+    "rule": "If the card is a number card divisible by 3 and black,click 'Car', else if it is red and greater than 9,click 'Rocket', otherwise click 'Moon'.",
+    "actions": [
+      "Car",
+      "Rocket",
+      "Moon"
+    ]
+  },
+  {
+    "rule": "If the card is a diamond and even,click 'Jellybean', else if it is a club and odd,click 'Orange', otherwise click 'Pencil'.",
+    "actions": [
+      "Jellybean",
+      "Orange",
+      "Pencil"
+    ]
+  },
+  {
+    "rule": "If the card is a number card divisible by 3 and black,click 'Pencil', else if it is red and greater than 9,click 'Orange', otherwise click 'Moon'.",
+    "actions": [
+      "Pencil",
+      "Orange",
+      "Moon"
+    ]
+  },
+  {
+    "rule": "If the card is a diamond and even,click 'Hat', else if it is a club and odd,click 'Pencil', otherwise click 'Car'.",
+    "actions": [
+      "Hat",
+      "Pencil",
+      "Car"
+    ]
+  }
+]

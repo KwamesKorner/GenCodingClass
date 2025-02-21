@@ -1,107 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <title>Empower</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-    <style>
-        #progress-bar {
-            background-color: blue;
-            height: 20px;
-            width: 100%;
-            transition: width 1s linear;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conditionals Card Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+    .game-container {
+      text-align: center;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .rule {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    .card {
+      margin: 20px 0;
+    }
+    .card img {
+      width: 150px;
+      height: auto;
+    }
+    .buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .buttons button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      transition: background-color 0.2s;
+    }
+    .buttons button:hover {
+      background-color: #0056b3;
+    }
+    .score {
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+  </style>
 </head>
-
 <body>
-    <!-- Navbar Start -->
-    <div class="container-fluid p-1">
-        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
-            <a href="index.html" class="navbar-brand ml-lg-3">
-                <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-code mr-3"></i>Empower</h1>
-            </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </nav>
+  <div class="game-container">
+    <div class="rule" id="rule">Loading rule...</div>
+    <div class="card">
+      <img id="card-image" src="" alt="Playing Card">
     </div>
-    <div class="row" style="background-color: #f2f2f2; min-height:75vh">
-        <div class="col-lg-8" style="margin: 0 auto; background-color: #ffffff !important;">
-            <div class="mb-7">
-                <div id="progress-bar"></div>
-                <div class="section-title position-relative mb-6" style="margin-top:5%; margin-bottom: 5%;">
-                    <button id="gameplay" class="btn btn-primary px-4" onclick="generateRandomCodeBlock()">Get Code</button><br/><br/>
-                    <div id="block"></div>
-                </div>
+    <div class="buttons" id="buttons-container"></div>
+    <div class="score" id="score">Score: 0</div>
+  </div>
 
-                <div id="values" class="section-title position-relative mb-6" style="margin-top:5%; margin-bottom: 5%;">
-                </div>
+  <script>
+    let score = 0;
+    let level = 1;
+    let rules = {};
+    let startTime;
+    let currentCard = {};
 
-                <div id="vars" class="section-title position-relative mb-6" style="margin-top:5%; margin-bottom: 5%;">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer Start -->
-    <div class="container-fluid position-relative overlay-top bg-dark text-white-50 py-5">
-        <div class="container mt-1 pt-1">
-            <div class="row">
-                <div class="col-md-6 mb-5">
-                    <a href="index.html" class="navbar-brand">
-                        <h1 class="mt-n2 text-uppercase text-white"><i class="fa fa-code mr-3"></i>Empower</h1>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid bg-dark text-white-50 border-top py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-                    <p class="m-0">Copyright &copy; <a class="text-white" href="#">KX Technology Group, LLC</a>. All Rights Reserved.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
+    // Load rules from the JSON file
+    async function loadRules() {
+      try {
+        const response = await fetch('conditional_game_rules.json'); // Replace with your hosted file location if needed
+        rules = await response.json();
+      } catch (error) {
+        console.error('Error loading rules:', error);
+      }
+    }
 
+    // Function to fetch a card from the Deck of Cards API
+    async function fetchCard() {
+      try {
+        const response = await fetch('https://deckofcardsapi.com/api/deck/new/draw/?count=1');
+        const data = await response.json();
+        const card = data.cards[0];
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+        // Store metadata about the card
+        currentCard = {
+          value: card.value,
+          suit: card.suit,
+          color: card.suit === 'HEARTS' || card.suit === 'DIAMONDS' ? 'Red' : 'Black',
+          number: !isNaN(parseInt(card.value)) ? parseInt(card.value) : null // Number for even/odd checks
+        };
+        return card;
+      } catch (error) {
+        console.error('Error fetching card:', error);
+      }
+    }
 
+    // Function to display a new card and the corresponding rule
+    async function displayNewCard() {
+      const card = await fetchCard();
+      if (card) {
+        document.getElementById('card-image').src = card.image;
+        document.getElementById('card-image').alt = `${card.value} of ${card.suit}`;
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        // Display the rule for the current level
+        const currentRule = rules[level - 1];
+        document.getElementById('rule').textContent = currentRule.rule;
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-    <script src="js/conditionalGame.js"></script>
+        // Dynamically create buttons based on actions
+        const buttonsContainer = document.getElementById('buttons-container');
+        buttonsContainer.innerHTML = ''; // Clear existing buttons
+        currentRule.actions.forEach((action) => {
+          const button = document.createElement('button');
+          button.textContent = action;
+          button.onclick = () => checkAnswer(action);
+          buttonsContainer.appendChild(button);
+        });
+
+        startTime = new Date().getTime();
+      }
+    }
+
+    // Function to check the player's answer
+function checkAnswer(playerChoice) {
+  const endTime = new Date().getTime();
+  const timeTaken = (endTime - startTime) / 1000;
+
+  // Get the current rule and evaluate the player's choice
+  const currentRule = rules[level - 1].rule;
+  const isCorrect = evaluateCondition(currentRule, playerChoice);
+	console.log(isCorrect)
+	console.log("hello!!")
+  // Update score based on correctness
+  if (isCorrect) {
+    score += Math.max(10 - timeTaken, 1); // Increase score for correct answer
+  } else {
+    score -= 2; // Decrease score for incorrect answer
+  }
+
+  // Prevent negative scores
+  if (score < 0) score = 0;
+
+  // Update score display
+  document.getElementById('score').textContent = `Score: ${score.toFixed(1)}`;
+
+  // Progress to the next level
+  level++;
+  if (level > rules.length) {
+    alert('Congratulations! You have completed all levels!');
+    level = 1; // Reset to level 1
+  }
+
+  // Display the next card and rule
+  displayNewCard();
+}
+    // Function to dynamically evaluate the condition for the current rule
+function evaluateCondition(rule, playerChoice) {
+  const card = currentCard; // Current card metadata
+
+  // Parse the rule into conditions and actions
+  const conditions = [];
+  const actions = [];
+  const segments = rule.split(", ");
+  console.log(card.color)
+  console.log(card.value)
+  // Parse each segment of the rule
+  segments.forEach((segment) => {
+    console.log(segment)
+    const match = segment.match(/if the card is (\w.+),click '(\w.+)'/i);
+    if (match) {
+	  console.log("match")
+    // Add condition and action
+    conditions.push(match[1].trim());
+    actions.push(match[2].trim());
+    } else {
+	    console.log("otherwise")
+      // Check for the "otherwise" clause
+      const elseMatch = segment.match(/else click '(\w.+)'/i);
+      if (elseMatch) {
+		    console.log("otherwise match")
+        actions.push(elseMatch[1].trim());
+        conditions.push("true"); // Default "otherwise" condition is always true
+      }
+    } 
+  });
+	console.log(conditions)
+
+  // Evaluate each condition in order
+  for (let i = 0; i < conditions.length; i++) {
+    if (evaluateCardCondition(conditions[i], card)) {
+		  console.log(playerChoice)
+		  console.log(actions[i])
+      return playerChoice === actions[i];
+    }
+  }
+  // Default: no condition matched (this shouldn't happen with valid rules)
+  return false;
+}
+
+// Helper function to evaluate individual card conditions
+function evaluateCardCondition(condition, card) {
+  try {
+    return eval(
+      condition
+        .replace(/red/g, `'${card.color}' === 'Red'`)
+        .replace(/black/g, `'${card.color}' === 'Black'`)
+        .replace(/heart/g, `'${card.suit}' === 'HEARTS'`)
+        .replace(/diamond/g, `'${card.suit}' === 'DIAMONDS'`)
+        .replace(/spade/g, `'${card.suit}' === 'SPADES'`)
+        .replace(/club/g, `'${card.suit}' === 'CLUBS'`)
+        .replace(/even/g, `${card.number} % 2 === 0`)
+        .replace(/odd/g, `${card.number} % 2 !== 0`)
+        .replace(/greater than (\d+)/g, `${card.number} > $1`)
+        .replace(/less than (\d+)/g, `${card.number} < $1`)
+        .replace(/divisible by (\d+)/g, `${card.number} % $1 === 0`)
+        .replace(/Ace/g, `'${card.value}' === 'ACE'`)
+        .replace(/King/g, `'${card.value}' === 'KING'`)
+        .replace(/Queen/g, `'${card.value}' === 'QUEEN'`)
+        .replace(/Jack/g, `'${card.value}' === 'JACK'`)
+        .replace(/number card/g, `!isNaN(${card.number})`)
+    );
+  } catch (error) {
+    console.error("Error evaluating condition:", condition, error);
+    return false;
+  }
+}
+
+    // Initialize the game
+    loadRules().then(() => {
+      displayNewCard();
+    });
+  </script>
 </body>
-
 </html>
